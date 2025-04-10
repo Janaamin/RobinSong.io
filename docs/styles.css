@@ -45,3 +45,25 @@ footer {
   color: #666;
   margin: 40px 0 20px;
 }
+
+
+.logo {
+  max-width: 120px;
+  margin-top: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #ECA08D;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #C0483A;
+}
