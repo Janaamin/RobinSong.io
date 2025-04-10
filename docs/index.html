@@ -6,14 +6,52 @@
   <title>Robin: Bird Song ID</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .preview-section {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #FFF8F4;
+    }
+
+    .preview-section h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #222E50;
+    }
+
+    .screenshot-gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 1rem 0;
+      justify-content: center;
+    }
+
+    .screenshot-gallery img {
+      height: 500px;
+      max-height: 80vh;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ddd;
+    }
+
+    .screenshot-gallery::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .screenshot-gallery img {
+        height: 400px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="hero">
     <img src="assets/img/robinLogov2_72ppi.png" alt="Robin Logo" class="logo" />
     <h1>Discover Birds Through Sound</h1>
-    <p class="tagline">
-      Robin is your AI-powered birdwatching companion. Identify birds in real-time, explore local habitats, and learn as you listen.
-    </p>
+    <p class="tagline">Your AI-powered birdwatching companion. Identify birds in real-time, explore local habitats, and learn as you listen.</p>
     <a href="#about" class="cta-button">Explore the App</a>
   </header>
 
@@ -38,11 +76,22 @@
     </ul>
   </section>
 
+  <section class="preview-section">
+    <h2>See Robin in Action</h2>
+    <div class="screenshot-gallery">
+      <img src="assets/img/400x800bb.png" alt="Screenshot 1" />
+      <img src="assets/img/400x800bb (1).png" alt="Screenshot 2" />
+      <img src="assets/img/400x800bb (2).png" alt="Screenshot 3" />
+      <img src="assets/img/400x800bb (3).png" alt="Screenshot 4" />
+      <img src="assets/img/400x800bb (4).png" alt="Screenshot 5" />
+    </div>
+  </section>
+
   <section>
     <h2>Need Help?</h2>
     <p>
-      Visit our <a href="contact.html">Contact</a> page or email us directly at
-      <a href="mailto:robinsd2024@gmail.com">robinsd2024@gmail.com</a> for support.
+      Visit our <a href="contact.html">Contact</a> page or email us at
+      <a href="mailto:robinsd2024@gmail.com">robinsd2024@gmail.com</a>.
     </p>
   </section>
 
