@@ -1,76 +1,47 @@
-:root {
-    --background: #F9DFD2;
-    --text: #222E50;
-    --accent: #ECA08D;
-    --primary: #C0483A;
-    --secondary: #8485BF;
-    --card: #EDD0C0;
-    --form: #FCEFE7;
-    --offwhite: #FFF8F4;
-  }
-  
-  body {
-    font-family: "Segoe UI", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background);
-    color: var(--text);
-  }
-  
-  header {
-    background-color: var(--primary);
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
-    border-bottom: 4px solid var(--accent);
-  }
-  
-  nav {
-    text-align: center;
-    background-color: var(--offwhite);
-    padding: 10px;
-  }
-  
-  nav a {
-    margin: 0 15px;
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    color: var(--accent);
-    text-decoration: underline;
-  }
-  
-  section, article {
-    background-color: var(--card);
-    margin: 40px auto;
-    padding: 30px;
-    max-width: 800px;
-    border-radius: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  
-  footer {
-    text-align: center;
-    font-size: 0.9em;
-    color: var(--text);
-    margin: 60px 0 20px;
-  }
-  @media (max-width: 600px) {
-    header h1 {
-      font-size: 1.5em;
-    }
-    
-    nav a {
-      display: block;
-      margin: 10px 0;
-    }
-  
-    section, article {
-      margin: 20px;
-      padding: 20px;
-    }
-  }
-  
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F9DFD2;
+  color: #222E50;
+}
+header.hero {
+  background-color: #C0483A;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  border-bottom: 4px solid #ECA08D;
+}
+.tagline {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+nav {
+  background-color: #FFF8F4;
+  padding: 10px;
+  text-align: center;
+}
+nav a {
+  margin: 0 15px;
+  color: #C0483A;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #ECA08D;
+}
+section {
+  background-color: #EDD0C0;
+  margin: 30px auto;
+  padding: 30px;
+  max-width: 800px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  margin: 40px 0 20px;
+}
