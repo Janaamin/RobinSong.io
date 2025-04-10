@@ -71,3 +71,34 @@ body {
 .cta-button:hover {
   background-color: #C0483A;
 }
+.scroll-container {
+  overflow: hidden;
+  width: 100%;
+  background-color: #FFF8F4;
+  padding: 1rem 0;
+}
+
+.scroll-track {
+  display: flex;
+  gap: 1rem;
+  animation: scroll 60s linear infinite;
+}
+
+.scroll-track img {
+  height: 480px;
+  max-height: 80vh;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .scroll-track img {
+    height: 400px;
+  }
+}
