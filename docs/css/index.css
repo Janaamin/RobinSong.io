@@ -85,6 +85,7 @@
   /* =====================
      SEE ROBIN IN ACTION
      ===================== */
+  /* Make the container narrower to highlight the phone. */
   .carousel-section {
     background-color: #FFF8F4;
     text-align: center;
@@ -92,6 +93,7 @@
     padding: 2rem;
     margin: 2rem auto;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 650px; /* <---- Smaller overall box */
   }
   
   .carousel-section h2 {
@@ -103,45 +105,63 @@
   /* PHONE MOCKUP CONTAINER */
   .phone-mockup {
     position: relative;
-    width: 414px;  /* Phone width */
-    height: 800px; /* Phone height */
-    background-color: #fff;
-    margin: 0 auto;
+    width: 380px;
+    height: 700px;
+    /* Subtle phone border: you can tweak color & thickness */
+    border: 8px solid #E6E6E6; 
     border-radius: 50px;
+    background-color: #fdfdfd;
+    margin: 0 auto;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     overflow: hidden;
   }
   
-  /* Optional "notch" at top to emulate phone speaker */
-  .phone-notch {
+  /* Phone Top bar (camera + speaker) */
+  .phone-top {
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
+    height: 55px;
+  }
+  
+  /* Camera hole */
+  .camera-hole {
+    position: absolute;
+    top: 16px;
     left: 50%;
     transform: translateX(-50%);
-    width: 120px;
-    height: 24px;
-    background-color: #ccc;
-    border-radius: 0 0 12px 12px;
-    margin-top: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: #333;
+    border-radius: 50%;
+  }
+  
+  /* Speaker bar */
+  .speaker-bar {
+    position: absolute;
+    top: 16px;
+    /* center horizontally */
+    left: calc(50% - 35px);
+    width: 70px;
+    height: 5px;
+    background-color: #444;
+    border-radius: 3px;
   }
   
   /* The screen area inside the phone */
   .phone-screen {
     position: absolute;
-    top: 48px;     /* space for notch */
+    top: 55px;  /* below top bar */
     left: 0;
     right: 0;
-    bottom: 48px;  /* space for home button */
+    bottom: 55px; /* above home button area */
     overflow: hidden;
-    /* Make sure the screen fills the phone’s interior */
-    width: 100%;
-    height: auto;
   }
   
   /* The carousel track inside the screen */
   .carousel-track {
     display: flex;
-    /* side-by-side slides, no wrapping */
     flex-wrap: nowrap;
     height: 100%;
     transition: transform 0.6s ease;
@@ -150,8 +170,8 @@
   /* Each slide is exactly 100% of phone-screen’s width */
   .slide {
     flex: 0 0 100%;
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     justify-content: center;
     position: relative;
   }
@@ -192,7 +212,7 @@
     bottom: 8px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
+    width: 70px;
     height: 8px;
     background-color: #ccc;
     border-radius: 4px;
@@ -210,19 +230,19 @@
     }
     .carousel-section {
       padding: 1rem;
+      max-width: 90%;
     }
     .phone-mockup {
-      width: 320px;
-      height: 600px;
-      border-radius: 40px;
+      width: 300px;
+      height: 550px;
+      border-radius: 30px;
     }
-    .phone-notch {
-      height: 20px;
-      border-radius: 0 0 10px 10px;
+    .phone-top {
+      height: 45px;
     }
     .phone-screen {
-      top: 40px;
-      bottom: 40px;
+      top: 45px;
+      bottom: 45px;
     }
     .phone-home-button {
       bottom: 5px;
