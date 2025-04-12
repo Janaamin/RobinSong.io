@@ -100,12 +100,11 @@
     margin-bottom: 1.5rem;
   }
   
-  /* PHONE MOCKUP CONTAINER
-     (Larger: 414x800 px) */
+  /* PHONE MOCKUP CONTAINER */
   .phone-mockup {
     position: relative;
-    width: 414px;
-    height: 800px;
+    width: 414px;  /* Phone width */
+    height: 800px; /* Phone height */
     background-color: #fff;
     margin: 0 auto;
     border-radius: 50px;
@@ -129,30 +128,34 @@
   /* The screen area inside the phone */
   .phone-screen {
     position: absolute;
-    top: 48px;   /* space for notch */
+    top: 48px;     /* space for notch */
     left: 0;
     right: 0;
-    bottom: 48px; /* space for home button */
+    bottom: 48px;  /* space for home button */
     overflow: hidden;
+    /* Make sure the screen fills the phone’s interior */
+    width: 100%;
+    height: auto;
   }
   
   /* The carousel track inside the screen */
   .carousel-track {
     display: flex;
+    /* side-by-side slides, no wrapping */
+    flex-wrap: nowrap;
     height: 100%;
     transition: transform 0.6s ease;
   }
   
-  /* Each slide is 100% of phone-screen's width */
+  /* Each slide is exactly 100% of phone-screen’s width */
   .slide {
     flex: 0 0 100%;
-    display: flex;
-    align-items: center;
+    display: flex; 
+    align-items: center; 
     justify-content: center;
     position: relative;
   }
   
-  /* Images themselves */
   .slide img {
     max-height: 90%;
     max-width: 90%;
@@ -161,7 +164,7 @@
     object-fit: cover;
   }
   
-  /* Slide captions in the lower portion of the slide */
+  /* Slide captions in the lower portion of each slide */
   .slide-caption {
     position: absolute;
     bottom: 10px;

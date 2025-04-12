@@ -133,12 +133,14 @@
   <script>
     // Simple auto-scrolling logic
     const track = document.querySelector('.carousel-track');
-    const slides = Array.from(document.querySelectorAll('.slide'));
+    const slides = Array.from(track.querySelectorAll('.slide'));
     let currentSlide = 0;
 
     function moveToNextSlide() {
       currentSlide++;
-      if (currentSlide >= slides.length) currentSlide = 0;
+      if (currentSlide >= slides.length) {
+        currentSlide = 0;
+      }
       track.style.transform = `translateX(-${currentSlide * 100}%)`;
     }
 
