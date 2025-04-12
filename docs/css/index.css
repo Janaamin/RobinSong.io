@@ -115,72 +115,15 @@
     overflow: hidden;
   }
   
-  /* TOP BAR (camera, speaker, microphone),
-     now only 35px tall
-  */
-  .phone-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 35px;
-  }
-  
-  /* Camera hole */
-  .camera-hole {
-    position: absolute;
-    top: 12px;
-    left: 20px;
-    width: 8px;
-    height: 8px;
-    background-color: #000;
-    border-radius: 50%;
-  }
-  
-  /* Speaker bar */
-  .speaker-bar {
-    position: absolute;
-    top: 10px;
-    left: calc(50% - 30px);
-    width: 60px;
-    height: 5px;
-    background-color: #000;
-    border-radius: 3px;
-  }
-  
-  /* Microphone icon (rectangle) */
-  .mic-icon {
-    position: absolute;
-    top: 8px;
-    right: 20px;
-    width: 10px;
-    height: 18px;
-    background-color: #000;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-  }
-  .mic-icon::after {
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    left: 2px;
-    width: 6px;
-    height: 3px;
-    background-color: #000;
-    border-radius: 2px;
-  }
-  
-  /* The screen area:
-     now from top: 35px to bottom: 35px
-  */
+  /* The screen area filling the phone; no top bar icons now */
   .phone-screen {
     position: absolute;
-    top: 35px;   
+    top: 0;   
     left: 0;
     right: 0;
-    bottom: 35px;
+    bottom: 35px; /* Make room for home button bar */
     overflow: hidden;
-    border-radius: 32px; 
+    border-radius: 34px; 
   }
   
   /* The carousel track inside the screen */
@@ -191,26 +134,26 @@
     transition: transform 0.6s ease;
   }
   
-  /* Each slide is exactly 100% of phone-screen’s width */
+  /* Each slide = 100% of phone screen’s width */
   .slide {
     flex: 0 0 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    border-radius: 34px;
     overflow: hidden;
-    border-radius: 32px; 
   }
   
   .slide img {
     width: 100%;
     height: 100%;
-    object-fit: contain; 
-    border-radius: 32px;
+    object-fit: contain; /* No cropping */
+    border-radius: 34px;
     box-shadow: 0 1px 5px rgba(0,0,0,0.2);
   }
   
-  /* Slide captions near the bottom */
+  /* Slide caption near bottom */
   .slide-caption {
     position: absolute;
     bottom: 10px;
@@ -232,7 +175,7 @@
     font-weight: 700;
   }
   
-  /* HOME BUTTON - smaller gap for the bottom bar */
+  /* Home button bar at bottom */
   .phone-home-button {
     position: absolute;
     bottom: 6px;
@@ -263,21 +206,15 @@
       height: 550px;
       border-radius: 32px;
     }
-    .phone-top {
-      height: 30px;
-    }
     .phone-screen {
-      top: 30px;
+      border-radius: 30px;
       bottom: 30px;
     }
-    .camera-hole {
-      top: 10px;
+    .slide {
+      border-radius: 30px;
     }
-    .speaker-bar {
-      top: 8px;
-    }
-    .mic-icon {
-      top: 6px;
+    .slide img {
+      border-radius: 30px;
     }
     .phone-home-button {
       bottom: 5px;
