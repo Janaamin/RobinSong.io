@@ -100,6 +100,8 @@
       height: 400px;
     }
   }
+  
+
   /* Carousel Section */
 .carousel-section {
   text-align: center;
@@ -130,14 +132,16 @@
 
 /* Each Slide */
 .slide {
-  width: 100%;       /* Each slide is 100% of .carousel width */
-  flex-shrink: 0;    /* Prevent shrinking */
-  position: relative; 
+  width: 100%;       /* Each slide takes the full width of the carousel */
+  flex-shrink: 0;
+  position: relative;
 }
 
-/* Slide Image */
+/* Updated Slide Image Styles */
 .slide img {
   width: 100%;
+  height: 400px;            /* Fixed height to keep images from getting too large */
+  object-fit: contain;      /* Ensures the entire image is visible (or use 'cover' if you prefer cropping) */
   display: block;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -166,27 +170,21 @@
 
 /* Keyframes for auto-sliding */
 @keyframes slide {
-  /* Show slide 1 from 0% to 19% */
   0%   { transform: translateX(0); }
   19%  { transform: translateX(0); }
   
-  /* Slide 2 from 20% to 39% */
   20%  { transform: translateX(-100%); }
   39%  { transform: translateX(-100%); }
   
-  /* Slide 3 from 40% to 59% */
   40%  { transform: translateX(-200%); }
   59%  { transform: translateX(-200%); }
   
-  /* Slide 4 from 60% to 79% */
   60%  { transform: translateX(-300%); }
   79%  { transform: translateX(-300%); }
   
-  /* Slide 5 from 80% to 99% */
   80%  { transform: translateX(-400%); }
   99%  { transform: translateX(-400%); }
   
-  /* Back to first slide at 100% */
   100% { transform: translateX(0); }
 }
 
@@ -194,6 +192,9 @@
 @media (max-width: 768px) {
   .carousel {
     max-width: 100%;
+  }
+  .slide img {
+    height: 300px;
   }
   .slide-caption {
     font-size: 0.9rem;
