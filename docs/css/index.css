@@ -103,52 +103,47 @@
   }
 }
 
-/* CAROUSEL SECTION */
+/* Updated Carousel Section: restrict the width to about a phone's size */
 .carousel-section {
   text-align: center;
   padding: 2rem 1rem;
   background-color: #FFF8F4;
+  max-width: 400px;    /* Limit the overall carousel section width */
+  margin: 30px auto;   /* Center it on the page */
 }
 
-.carousel-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #222E50;
-}
-
-/* Carousel Container: phone-sized */
 .carousel {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-  max-width: 360px; /* ✅ Constrain carousel to typical phone width */
+  width: 100%;         /* This will now fill the 400px container */
 }
 
-/* Inner track of slides */
+/* Inner track of slides: update width calculation for 5 slides */
 .carousel-inner {
   display: flex;
-  width: 500%; /* 5 slides => 5 x 100% */
+  width: calc(100% * 5);  /* 5 slides, each 100% of carousel width */
   animation: slide 25s infinite ease-in-out;
 }
 
 /* Each Slide */
 .slide {
-  width: 100%;       /* Each slide is the full .carousel width (360px) */
+  width: 100%;       /* Each slide takes 100% of the carousel width (i.e. 400px) */
   flex-shrink: 0;
   position: relative;
 }
 
-/* Slide Image: fill .carousel width */
+/* Slide Image: Adjust to fit within the carousel container */
 .slide img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: auto;            /* Keep aspect ratio */
+  object-fit: contain;      /* Show the full image without cropping */
   display: block;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Slide Caption Overlay */
+/* Slide Caption Overlay (if used) */
 .slide-caption {
   position: absolute;
   bottom: 20px;
@@ -184,10 +179,10 @@
   100% { transform: translateX(0); }
 }
 
-/* Smaller screens: narrower carousel and images */
+/* Responsive adjustments (if needed) */
 @media (max-width: 768px) {
-  .carousel {
-    max-width: 300px;
+  .carousel-section {
+    max-width: 300px;  /* Slightly smaller on very small screens */
   }
   .slide-caption {
     font-size: 0.9rem;
