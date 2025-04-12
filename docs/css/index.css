@@ -100,32 +100,42 @@
       height: 400px;
     }
   }
-  /* Carousel Section Styles */
+  /* Carousel Section */
 .carousel-section {
   text-align: center;
   padding: 2rem 1rem;
   background-color: #FFF8F4;
 }
 
+.carousel-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #222E50;
+}
+
+/* Carousel Container */
 .carousel {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 800px; /* Adjust as needed */
 }
 
+/* Inner track of slides */
 .carousel-inner {
   display: flex;
-  width: 500%; /* Since we have 5 slides */
-  animation: slide 25s infinite;
+  width: 500%; /* 5 slides => 5 x 100% */
+  animation: slide 25s infinite ease-in-out;
 }
 
+/* Each Slide */
 .slide {
-  width: 100%;
-  position: relative;
-  flex-shrink: 0;
+  width: 100%;       /* Each slide is 100% of .carousel width */
+  flex-shrink: 0;    /* Prevent shrinking */
+  position: relative; 
 }
 
+/* Slide Image */
 .slide img {
   width: 100%;
   display: block;
@@ -133,39 +143,62 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Slide Caption Overlay */
 .slide-caption {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
   padding: 1rem;
   border-radius: 8px;
-  text-align: left;
+  max-width: 80%;
 }
 
 .slide-caption h3 {
   margin: 0 0 0.5rem;
   color: #C0483A;
+  font-weight: 700;
 }
 
-/* Keyframes for auto-rotating slides */
+.slide-caption p {
+  margin: 0;
+}
+
+/* Keyframes for auto-sliding */
 @keyframes slide {
-  0% { transform: translateX(0%); }
-  18% { transform: translateX(0%); }
-  22% { transform: translateX(-100%); }
-  40% { transform: translateX(-100%); }
-  44% { transform: translateX(-200%); }
-  62% { transform: translateX(-200%); }
-  66% { transform: translateX(-300%); }
-  84% { transform: translateX(-300%); }
-  88% { transform: translateX(-400%); }
-  100% { transform: translateX(-400%); }
+  /* Show slide 1 from 0% to 19% */
+  0%   { transform: translateX(0); }
+  19%  { transform: translateX(0); }
+  
+  /* Slide 2 from 20% to 39% */
+  20%  { transform: translateX(-100%); }
+  39%  { transform: translateX(-100%); }
+  
+  /* Slide 3 from 40% to 59% */
+  40%  { transform: translateX(-200%); }
+  59%  { transform: translateX(-200%); }
+  
+  /* Slide 4 from 60% to 79% */
+  60%  { transform: translateX(-300%); }
+  79%  { transform: translateX(-300%); }
+  
+  /* Slide 5 from 80% to 99% */
+  80%  { transform: translateX(-400%); }
+  99%  { transform: translateX(-400%); }
+  
+  /* Back to first slide at 100% */
+  100% { transform: translateX(0); }
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
+  .carousel {
+    max-width: 100%;
+  }
   .slide-caption {
     font-size: 0.9rem;
     left: 10px;
     bottom: 10px;
+    max-width: 80%;
   }
 }
