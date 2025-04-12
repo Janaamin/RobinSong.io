@@ -115,15 +115,69 @@
     overflow: hidden;
   }
   
-  /* The screen area filling the phone; no top bar icons now */
-  .phone-screen {
+  /* ===============
+     Side Buttons
+     =============== */
+  /* Volume Buttons (left side).
+     Two separate rectangles to mimic up/down. */
+  .volume-button-up {
     position: absolute;
-    top: 0;   
+    left: -4px;
+    top: 80px; 
+    width: 4px;
+    height: 30px;
+    background-color: #111;
+    border-radius: 2px;
+  }
+  .volume-button-down {
+    position: absolute;
+    left: -4px;
+    top: 120px; 
+    width: 4px;
+    height: 30px;
+    background-color: #111;
+    border-radius: 2px;
+  }
+  /* Power Button (right side) */
+  .power-button {
+    position: absolute;
+    right: -4px;
+    top: 100px; 
+    width: 4px;
+    height: 40px;
+    background-color: #111;
+    border-radius: 2px;
+  }
+  
+  /* TOP BAR with speaker only (no camera/mic) */
+  .phone-top {
+    position: absolute;
+    top: 0;
     left: 0;
     right: 0;
-    bottom: 35px; /* Make room for home button bar */
+    height: 35px;
+  }
+  
+  /* Speaker bar */
+  .speaker-bar {
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 5px;
+    background-color: #000;
+    border-radius: 3px;
+  }
+  
+  /* The screen area: from top: 35px to bottom: 35px */
+  .phone-screen {
+    position: absolute;
+    top: 35px;   
+    left: 0;
+    right: 0;
+    bottom: 35px;
     overflow: hidden;
-    border-radius: 34px; 
+    border-radius: 32px; 
   }
   
   /* The carousel track inside the screen */
@@ -134,26 +188,26 @@
     transition: transform 0.6s ease;
   }
   
-  /* Each slide = 100% of phone screen’s width */
+  /* Each slide is exactly 100% of phone-screen’s width */
   .slide {
     flex: 0 0 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    border-radius: 34px;
     overflow: hidden;
+    border-radius: 32px; 
   }
   
   .slide img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* No cropping */
-    border-radius: 34px;
+    object-fit: cover; /* fill screen fully, with possible cropping */
+    border-radius: 32px;
     box-shadow: 0 1px 5px rgba(0,0,0,0.2);
   }
   
-  /* Slide caption near bottom */
+  /* Slide captions near the bottom */
   .slide-caption {
     position: absolute;
     bottom: 10px;
@@ -175,7 +229,7 @@
     font-weight: 700;
   }
   
-  /* Home button bar at bottom */
+  /* HOME BUTTON */
   .phone-home-button {
     position: absolute;
     bottom: 6px;
@@ -207,17 +261,38 @@
       border-radius: 32px;
     }
     .phone-screen {
-      border-radius: 30px;
+      border-radius: 28px;
+      top: 30px; 
       bottom: 30px;
     }
     .slide {
-      border-radius: 30px;
+      border-radius: 28px;
     }
     .slide img {
-      border-radius: 30px;
+      border-radius: 28px;
+    }
+    .phone-top {
+      height: 30px;
+    }
+    .speaker-bar {
+      top: 8px;
     }
     .phone-home-button {
       bottom: 5px;
+    }
+  
+    /* Adjust side buttons for smaller phone */
+    .volume-button-up {
+      top: 60px;
+      height: 25px;
+    }
+    .volume-button-down {
+      top: 90px;
+      height: 25px;
+    }
+    .power-button {
+      top: 80px;
+      height: 25px;
     }
   }
   
