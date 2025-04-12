@@ -85,7 +85,6 @@
   /* =====================
      SEE ROBIN IN ACTION
      ===================== */
-  /* Subtle gradient background for the section */
   .carousel-section {
     background: linear-gradient(135deg, #F9DFD2 0%, #EDD0C0 100%);
     text-align: center;
@@ -93,7 +92,7 @@
     padding: 2rem;
     margin: 2rem auto;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    max-width: 650px;
+    max-width: 650px; 
   }
   
   .carousel-section h2 {
@@ -102,88 +101,113 @@
     margin-bottom: 1.5rem;
   }
   
-  /* =============
-     PHONE MOCKUP
-     ============= */
-  /* Outer black shape with big corner radius (like an iPhone) */
+  /* PHONE MOCKUP */
   .phone-mockup {
     position: relative;
     width: 360px;
-    height: 720px;
-    background-color: #000; /* black phone bezel */
-    border-radius: 42px;
+    height: 680px;
+    /* Black border around phone */
+    border: 6px solid #000; 
+    border-radius: 40px;
+    background-color: #fff;
     margin: 0 auto;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    overflow: hidden; /* ensures the white screen inside is clipped */
+    overflow: hidden;
   }
   
-  /* The white "screen" covers the phone except for the notch area */
-  .phone-screen {
+  /* TOP BAR (camera, speaker, microphone),
+     now only 35px tall
+  */
+  .phone-top {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    background-color: #fff;
-    border-radius: 42px; /* match phone corners so no black shows in corners */
-    overflow: hidden;
-    z-index: 1; /* below the notch */
+    height: 35px;
   }
   
-  /* The black notch that dips into the white screen at top center */
-  .phone-notch {
+  /* Camera hole */
+  .camera-hole {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
+    top: 12px;
+    left: 20px;
+    width: 8px;
+    height: 8px;
     background-color: #000;
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
-    /* Slightly narrower than phone corners, so it curves in nicely */
-    margin: 0 auto;
-    z-index: 2;
+    border-radius: 50%;
   }
   
-  /* Optional home bar at bottom (like iPhone home indicator) */
-  .phone-home-bar {
+  /* Speaker bar */
+  .speaker-bar {
     position: absolute;
-    bottom: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70px;
-    height: 6px;
-    background-color: #333;
+    top: 10px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 5px;
+    background-color: #000;
     border-radius: 3px;
-    z-index: 2;
   }
   
-  /* 
-     CAROUSEL 
-     inside the phone screen
+  /* Microphone icon (rectangle) */
+  .mic-icon {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    width: 10px;
+    height: 18px;
+    background-color: #000;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .mic-icon::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 2px;
+    width: 6px;
+    height: 3px;
+    background-color: #000;
+    border-radius: 2px;
+  }
+  
+  /* The screen area:
+     now from top: 35px to bottom: 35px
   */
+  .phone-screen {
+    position: absolute;
+    top: 35px;   
+    left: 0;
+    right: 0;
+    bottom: 35px;
+    overflow: hidden;
+    border-radius: 32px; 
+  }
+  
+  /* The carousel track inside the screen */
   .carousel-track {
     display: flex;
     flex-wrap: nowrap;
-    width: 100%;
     height: 100%;
     transition: transform 0.6s ease;
   }
   
-  /* Each slide = full phone screen dimension */
+  /* Each slide is exactly 100% of phone-screen’s width */
   .slide {
     flex: 0 0 100%;
-    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px; 
   }
   
-  /* Fill the phone’s entire screen area */
   .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* fill fully, some edges may crop */
+    object-fit: contain; 
+    border-radius: 32px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
   }
   
   /* Slide captions near the bottom */
@@ -208,8 +232,20 @@
     font-weight: 700;
   }
   
+  /* HOME BUTTON - smaller gap for the bottom bar */
+  .phone-home-button {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 6px;
+    background-color: #999;
+    border-radius: 3px;
+  }
+  
   /* =====================
-     RESPONSIVE 
+     RESPONSIVE
      ===================== */
   @media (max-width: 768px) {
     .hero {
@@ -223,20 +259,28 @@
       max-width: 90%;
     }
     .phone-mockup {
-      width: 280px;
-      height: 560px;
-      border-radius: 36px;
+      width: 300px;
+      height: 550px;
+      border-radius: 32px;
     }
-    .phone-notch {
-      height: 40px;
-      border-bottom-left-radius: 14px;
-      border-bottom-right-radius: 14px;
+    .phone-top {
+      height: 30px;
     }
     .phone-screen {
-      border-radius: 36px;
+      top: 30px;
+      bottom: 30px;
     }
-    .phone-home-bar {
-      bottom: 10px;
+    .camera-hole {
+      top: 10px;
+    }
+    .speaker-bar {
+      top: 8px;
+    }
+    .mic-icon {
+      top: 6px;
+    }
+    .phone-home-button {
+      bottom: 5px;
     }
   }
   
