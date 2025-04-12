@@ -100,4 +100,72 @@
       height: 400px;
     }
   }
-  
+  /* Carousel Section Styles */
+.carousel-section {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #FFF8F4;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.carousel-inner {
+  display: flex;
+  width: 500%; /* Since we have 5 slides */
+  animation: slide 25s infinite;
+}
+
+.slide {
+  width: 100%;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.slide-caption h3 {
+  margin: 0 0 0.5rem;
+  color: #C0483A;
+}
+
+/* Keyframes for auto-rotating slides */
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  18% { transform: translateX(0%); }
+  22% { transform: translateX(-100%); }
+  40% { transform: translateX(-100%); }
+  44% { transform: translateX(-200%); }
+  62% { transform: translateX(-200%); }
+  66% { transform: translateX(-300%); }
+  84% { transform: translateX(-300%); }
+  88% { transform: translateX(-400%); }
+  100% { transform: translateX(-400%); }
+}
+
+@media (max-width: 768px) {
+  .slide-caption {
+    font-size: 0.9rem;
+    left: 10px;
+    bottom: 10px;
+  }
+}
