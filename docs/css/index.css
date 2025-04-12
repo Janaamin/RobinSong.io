@@ -6,7 +6,7 @@
   margin-top: 10px;
 }
 
-/* Hero tagline & CTA */
+/* Hero Tagline & CTA */
 .tagline {
   font-size: 1.2em;
   margin-top: 10px;
@@ -30,7 +30,7 @@
   transform: scale(1.03);
 }
 
-/* About section 2-column layout */
+/* About Section 2-Column Layout */
 .about-flex {
   display: flex;
   flex-wrap: wrap;
@@ -50,7 +50,7 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Screenshot preview section (if used) */
+/* Screenshot Preview Section (for reference, if needed) */
 .preview-section {
   text-align: center;
   padding: 2rem 1rem;
@@ -96,54 +96,56 @@
   display: none;
 }
 
-/* Scale down screenshots on smaller screens */
+/* Responsive for Screenshot Gallery */
 @media (max-width: 768px) {
   .screenshot-gallery img {
     height: 400px;
   }
 }
 
-/* Updated Carousel Section: restrict the width to about a phone's size */
+/* CAROUSEL SECTION */
+/* Restrict the carousel container to a phone-sized frame */
 .carousel-section {
   text-align: center;
   padding: 2rem 1rem;
   background-color: #FFF8F4;
-  max-width: 400px;    /* Limit the overall carousel section width */
-  margin: 30px auto;   /* Center it on the page */
+  margin: 20px auto;
+  max-width: 360px;   /* Phone width */
+  height: 250px;      /* Fixed height */
 }
 
 .carousel {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-  width: 100%;         /* This will now fill the 400px container */
+  width: 100%;
+  height: 100%;
 }
 
-/* Inner track of slides: update width calculation for 5 slides */
 .carousel-inner {
   display: flex;
-  width: calc(100% * 5);  /* 5 slides, each 100% of carousel width */
+  width: calc(360px * 5);  /* For 5 slides */
+  height: 100%;
   animation: slide 25s infinite ease-in-out;
 }
 
-/* Each Slide */
 .slide {
-  width: 100%;       /* Each slide takes 100% of the carousel width (i.e. 400px) */
+  width: 100%;
+  height: 100%;
   flex-shrink: 0;
   position: relative;
 }
 
-/* Slide Image: Adjust to fit within the carousel container */
 .slide img {
   width: 100%;
-  height: auto;            /* Keep aspect ratio */
-  object-fit: contain;      /* Show the full image without cropping */
+  height: 100%;
+  object-fit: contain;  /* Ensures the image fits without cropping */
   display: block;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Slide Caption Overlay (if used) */
+/* Slide Caption Overlay */
 .slide-caption {
   position: absolute;
   bottom: 20px;
@@ -179,10 +181,11 @@
   100% { transform: translateX(0); }
 }
 
-/* Responsive adjustments (if needed) */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .carousel-section {
-    max-width: 300px;  /* Slightly smaller on very small screens */
+    max-width: 300px;
+    height: 200px;
   }
   .slide-caption {
     font-size: 0.9rem;
