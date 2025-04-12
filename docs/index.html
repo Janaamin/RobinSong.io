@@ -4,54 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Robin: Bird Song ID</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/index.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .preview-section {
-      text-align: center;
-      padding: 2rem 1rem;
-      background-color: #FFF8F4;
-    }
-
-    .preview-section h2 {
-      font-family: 'Inter', sans-serif;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: #222E50;
-    }
-
-    .screenshot-gallery {
-      display: flex;
-      overflow-x: auto;
-      gap: 1rem;
-      padding: 1rem 0;
-      justify-content: center;
-    }
-
-    .screenshot-gallery img {
-      height: 500px;
-      max-height: 80vh;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      border: 1px solid #ddd;
-    }
-
-    .screenshot-gallery::-webkit-scrollbar {
-      display: none;
-    }
-
-    @media (max-width: 768px) {
-      .screenshot-gallery img {
-        height: 400px;
-      }
-    }
-  </style>
 </head>
 <body>
   <header class="hero">
     <img src="assets/img/robinLogov2_72ppi.png" alt="Robin Logo" class="logo" />
-    <h1>Identify Birds One Song at a Time.</h1>
-    <p class="tagline">Your AI-powered birdwatching companion. Identify birds in real-time, explore local habitats, and learn as you listen.</p>
+    <h1>🕊️ Discover Birds Through Sound</h1>
+    <p class="tagline">
+      Robin is your AI-powered birdwatching companion. Identify birds in real-time, explore local habitats, and learn as you listen.
+    </p>
     <a href="#about" class="cta-button">Explore the App</a>
   </header>
 
@@ -62,38 +25,36 @@
     <a href="permissions.html">Permissions</a>
     <a href="privacy.html">Privacy</a>
     <a href="contact.html">Contact</a>
-    <a href="team.html">Team</a> 
-    
+    <a href="team.html">Team</a>
   </nav>
 
-  <section id="about">
-    <h2>About Robin</h2>
-    <p>
-      Robin leverages cutting-edge AI and environmental data to help you connect with nature. Whether you're in your backyard or out on the trail, Robin listens for bird calls and identifies species instantly — no binoculars required.
-    </p>
-    <ul>
-      <li><strong>Real-time bird song recognition</strong> using your microphone</li>
-      <li><strong>Localized bird forecasts</strong> based on your location</li>
-      <li><strong>Voice guidance and accessibility</strong> for users of all abilities</li>
-    </ul>
+  <section id="about" class="about-flex">
+    <div class="about-text">
+      <h2>What is Robin?</h2>
+      <p>
+        Robin leverages cutting-edge AI and environmental data to help you connect with nature. Whether you're in your backyard or out on the trail, Robin listens for bird calls and identifies species instantly — no binoculars required.
+      </p>
+      <ul>
+        <li><strong>Real-time bird song recognition</strong> using your microphone</li>
+        <li><strong>Localized bird forecasts</strong> based on your location</li>
+        <li><strong>Voice guidance and accessibility</strong> for users of all abilities</li>
+      </ul>
+    </div>
+    <div class="about-visual">
+      <img src="assets/img/400x800bb (1).png" alt="Robin App Sample" />
+    </div>
   </section>
+
   <section class="preview-section">
     <h2>See Robin in Action</h2>
     <div class="screenshot-gallery">
-      <img src="assets/img/400x800bb.png" alt="Screenshot 1" />
-      <img src="assets/img/400x800bb (1).png" alt="Screenshot 2" />
-      <img src="assets/img/400x800bb (2).png" alt="Screenshot 3" />
-      <img src="assets/img/400x800bb (3).png" alt="Screenshot 4" />
-      <img src="assets/img/400x800bb (4).png" alt="Screenshot 5" />
-      <!-- Repeating images to enable smooth manual loop scroll -->
-      <img src="assets/img/400x800bb.png" alt="Screenshot 1 Duplicate" />
-      <img src="assets/img/400x800bb (1).png" alt="Screenshot 2 Duplicate" />
-      <img src="assets/img/400x800bb (2).png" alt="Screenshot 3 Duplicate" />
-      <img src="assets/img/400x800bb (3).png" alt="Screenshot 4 Duplicate" />
-      <img src="assets/img/400x800bb (4).png" alt="Screenshot 5 Duplicate" />
+      <figure><img src="assets/img/400x800bb.png" alt="Screenshot 1" /><figcaption>Forecast</figcaption></figure>
+      <figure><img src="assets/img/400x800bb (1).png" alt="Screenshot 2" /><figcaption>Live Detection</figcaption></figure>
+      <figure><img src="assets/img/400x800bb (2).png" alt="Screenshot 3" /><figcaption>Species Info</figcaption></figure>
+      <figure><img src="assets/img/400x800bb (3).png" alt="Screenshot 4" /><figcaption>Map</figcaption></figure>
+      <figure><img src="assets/img/400x800bb (4).png" alt="Screenshot 5" /><figcaption>Accessibility</figcaption></figure>
     </div>
   </section>
-  
 
   <section>
     <h2>Need Help?</h2>
