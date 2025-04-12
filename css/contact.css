@@ -1,0 +1,10 @@
+/* contact.css */
+p a {
+    color: #C0483A;
+    text-decoration: underline;
+  }
+  
+  p a:hover {
+    color: #ECA08D;
+  }
+  

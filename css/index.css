@@ -1,0 +1,48 @@
+/* index.css */
+.logo {
+    max-width: 80px;
+    margin-top: 10px;
+  }
+  
+  .tagline {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-weight: 400;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 30px;
+    background-color: #ECA08D;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #C0483A;
+    transform: scale(1.03);
+  }
+  
+  .about-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .about-text {
+    flex: 1 1 300px;
+    max-width: 500px;
+  }
+  
+  .about-visual img {
+    max-width: 240px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  

@@ -1,0 +1,10 @@
+/* features.css */
+h1, h2, h3 {
+    font-weight: 600;
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+  }
+  
