@@ -2,23 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Robin: Bird Song ID</title>
   <!-- Global and page-specific CSS -->
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
+
+  <!-- HERO SECTION -->
   <header class="hero">
-    <img src="assets/img/robin72.png" alt="Robin Logo" class="logo" />
-    <h1>🕊️ Discover Birds Through Sound</h1>
-    <p class="tagline">
-      Robin is your AI-powered birdwatching companion. Identify birds in real-time, explore local habitats, and learn as you listen.
-    </p>
-    <a href="#about" class="cta-button">Explore the App</a>
+    <!-- Optional decorative shapes in background (see index.css for .hero::after) -->
+    <div class="hero-content">
+      <img src="assets/img/robin72.png" alt="Robin Logo" class="logo" />
+      <h1 class="hero-title">Discover Birds Through Sound</h1>
+      <p class="tagline">
+        Robin is your AI-powered birdwatching companion. Identify birds in real-time, explore local habitats, and learn as you listen.
+      </p>
+      <a href="#about" class="cta-button">Explore the App</a>
+    </div>
   </header>
 
+  <!-- NAVIGATION -->
   <nav>
     <a href="index.html">Home</a>
     <a href="features.html">Features</a>
@@ -29,11 +35,12 @@
     <a href="team.html">Team</a>
   </nav>
 
+  <!-- ABOUT SECTION -->
   <section id="about" class="about-flex">
     <div class="about-text">
       <h2>What is Robin?</h2>
       <p>
-        Robin leverages cutting-edge AI and environmental data to help you connect with nature. Whether you're in your backyard or out on the trail, Robin listens for bird calls and identifies species instantly — no binoculars required.
+        Robin leverages cutting-edge AI and environmental data to help you connect with nature. Whether you're in your backyard or on the trail, Robin listens for bird calls and identifies species instantly — no binoculars required.
       </p>
       <ul>
         <li><strong>Real-time bird song recognition</strong> using your microphone</li>
@@ -46,11 +53,14 @@
     </div>
   </section>
 
-  <!-- Feature Carousel Section (Updated) -->
+  <!-- FEATURE CAROUSEL SECTION -->
   <section class="carousel-section">
     <h2>See Robin in Action</h2>
+
+    <!-- Carousel Wrapper -->
     <div class="carousel">
-      <div class="carousel-inner">
+      <!-- Slides -->
+      <div class="carousel-track">
         <!-- Slide 1 -->
         <div class="slide">
           <img src="assets/img/iden.png" alt="Forecast">
@@ -92,10 +102,23 @@
           </div>
         </div>
       </div>
+
+      <!-- Prev/Next Arrows (Optional) -->
+      <button class="carousel-button prev" aria-label="Previous Slide">&#10094;</button>
+      <button class="carousel-button next" aria-label="Next Slide">&#10095;</button>
+
+      <!-- Dots/Indicators (Optional) -->
+      <div class="carousel-dots">
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+        <span class="dot" data-slide="3"></span>
+        <span class="dot" data-slide="4"></span>
+        <span class="dot" data-slide="5"></span>
+      </div>
     </div>
   </section>
 
-  <!-- Support Section remains the same -->
+  <!-- SUPPORT SECTION -->
   <section>
     <h2>Need Help?</h2>
     <p>
@@ -104,8 +127,82 @@
     </p>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 RobinSong. All rights reserved.</p>
   </footer>
+
+  <!-- Minimal JavaScript for Carousel Interactivity (Optional) -->
+  <script>
+    // Grabbing carousel elements
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.next');
+    const prevButton = document.querySelector('.prev');
+    const dotsNav = document.querySelector('.carousel-dots');
+    const dots = Array.from(dotsNav.children);
+
+    let currentSlide = 0;
+    const slideWidth = slides[0].getBoundingClientRect().width;
+
+    // Arrange the slides next to one another
+    slides.forEach((slide, index) => {
+      slide.style.left = slideWidth * index + 'px';
+    });
+
+    const moveToSlide = (track, current, target) => {
+      track.style.transform = 'translateX(-' + target.style.left + ')';
+      currentSlide = slides.indexOf(target);
+      updateDots(currentSlide);
+    }
+
+    const updateDots = (currentSlideIndex) => {
+      dots.forEach(dot => dot.classList.remove('active-dot'));
+      dots[currentSlideIndex].classList.add('active-dot');
+    };
+
+    // Click Next
+    nextButton.addEventListener('click', () => {
+      const currentSlideEl = slides[currentSlide];
+      let nextSlideEl = slides[currentSlide + 1];
+      if (!nextSlideEl) {
+        // wrap around to first
+        nextSlideEl = slides[0];
+      }
+      moveToSlide(track, currentSlideEl, nextSlideEl);
+    });
+
+    // Click Prev
+    prevButton.addEventListener('click', () => {
+      const currentSlideEl = slides[currentSlide];
+      let prevSlideEl = slides[currentSlide - 1];
+      if (!prevSlideEl) {
+        // wrap around to last
+        prevSlideEl = slides[slides.length - 1];
+      }
+      moveToSlide(track, currentSlideEl, prevSlideEl);
+    });
+
+    // Click Dot
+    dotsNav.addEventListener('click', e => {
+      if (!e.target.matches('span')) return;
+      const targetDot = e.target;
+      const targetIndex = dots.indexOf(targetDot);
+      const targetSlide = slides[targetIndex];
+      moveToSlide(track, slides[currentSlide], targetSlide);
+    });
+
+    // Auto-play functionality (optional)
+    let autoPlay = setInterval(() => {
+      const currentSlideEl = slides[currentSlide];
+      let nextSlideEl = slides[currentSlide + 1];
+      if (!nextSlideEl) {
+        nextSlideEl = slides[0];
+      }
+      moveToSlide(track, currentSlideEl, nextSlideEl);
+    }, 5000);
+
+  </script>
+
 </body>
 </html>
