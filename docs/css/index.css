@@ -85,15 +85,18 @@
   /* =====================
      SEE ROBIN IN ACTION
      ===================== */
-  /* Make the container narrower to highlight the phone. */
+  /* 
+     More visually appealing background:
+     a subtle diagonal gradient using your brand's colors.
+  */
   .carousel-section {
-    background-color: #FFF8F4;
+    background: linear-gradient(135deg, #F9DFD2 0%, #EDD0C0 100%);
     text-align: center;
     border-radius: 16px;
     padding: 2rem;
     margin: 2rem auto;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    max-width: 650px; /* <---- Smaller overall box */
+    max-width: 650px; /* The entire section is narrower */
   }
   
   .carousel-section h2 {
@@ -102,21 +105,21 @@
     margin-bottom: 1.5rem;
   }
   
-  /* PHONE MOCKUP CONTAINER */
+  /* PHONE MOCKUP */
   .phone-mockup {
     position: relative;
-    width: 380px;
-    height: 700px;
-    /* Subtle phone border: you can tweak color & thickness */
-    border: 8px solid #E6E6E6; 
-    border-radius: 50px;
-    background-color: #fdfdfd;
+    width: 360px;
+    height: 680px;
+    /* Black border to mimic a phone bezel */
+    border: 10px solid #000; 
+    border-radius: 45px;
+    background-color: #fff;
     margin: 0 auto;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     overflow: hidden;
   }
   
-  /* Phone Top bar (camera + speaker) */
+  /* The top bar (camera, speaker, mic) */
   .phone-top {
     position: absolute;
     top: 0;
@@ -125,34 +128,43 @@
     height: 55px;
   }
   
-  /* Camera hole */
+  /* Camera hole (left) */
   .camera-hole {
     position: absolute;
-    top: 16px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 20px;
+    left: 25px;
     width: 8px;
     height: 8px;
-    background-color: #333;
+    background-color: #000;
     border-radius: 50%;
   }
   
-  /* Speaker bar */
+  /* Speaker bar (center) */
   .speaker-bar {
     position: absolute;
-    top: 16px;
-    /* center horizontally */
+    top: 18px;
     left: calc(50% - 35px);
     width: 70px;
     height: 5px;
-    background-color: #444;
+    background-color: #000;
     border-radius: 3px;
+  }
+  
+  /* Microphone hole (right) */
+  .mic-hole {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    border-radius: 50%;
   }
   
   /* The screen area inside the phone */
   .phone-screen {
     position: absolute;
-    top: 55px;  /* below top bar */
+    top: 55px;   /* below phone-top bar */
     left: 0;
     right: 0;
     bottom: 55px; /* above home button area */
@@ -176,11 +188,10 @@
     position: relative;
   }
   
+  /* Fill the phone screen to reduce white space */
   .slide img {
-    max-height: 90%;
-    max-width: 90%;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
   
@@ -212,7 +223,7 @@
     bottom: 8px;
     left: 50%;
     transform: translateX(-50%);
-    width: 70px;
+    width: 60px;
     height: 8px;
     background-color: #ccc;
     border-radius: 4px;
@@ -234,8 +245,8 @@
     }
     .phone-mockup {
       width: 300px;
-      height: 550px;
-      border-radius: 30px;
+      height: 570px;
+      border-radius: 35px;
     }
     .phone-top {
       height: 45px;
