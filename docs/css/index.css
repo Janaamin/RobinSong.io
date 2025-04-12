@@ -1,108 +1,109 @@
 /* index.css */
-.logo {
-    max-width: 80px;
-    margin-top: 10px;
-  }
-  
-  /* Hero tagline & CTA */
-  .tagline {
-    font-size: 1.2em;
-    margin-top: 10px;
-    font-weight: 400;
-  }
-  
-  .cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 14px 30px;
-    background-color: #ECA08D;
-    color: white;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #C0483A;
-    transform: scale(1.03);
-  }
-  
-  /* About section 2-column layout */
-  .about-flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .about-text {
-    flex: 1 1 300px;
-    max-width: 500px;
-  }
-  
-  .about-visual img {
-    max-width: 240px;
-    border-radius: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  
-  /* Screenshot preview section */
-  .preview-section {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: #FFF8F4;
-  }
-  
-  .preview-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #222E50;
-  }
-  
-  .screenshot-gallery {
-    display: flex;
-    overflow-x: auto;
-    gap: 1rem;
-    padding: 1rem 0;
-    justify-content: center;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  .screenshot-gallery figure {
-    text-align: center;
-  }
-  
-  .screenshot-gallery img {
-    height: 500px;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    border: 1px solid #ddd;
-    scroll-snap-align: start;
-  }
-  
-  .screenshot-gallery figcaption {
-    font-size: 0.9rem;
-    color: #C0483A;
-    margin-top: 0.5rem;
-    font-weight: 500;
-  }
-  
-  /* Hide scrollbar on WebKit */
-  .screenshot-gallery::-webkit-scrollbar {
-    display: none;
-  }
-  
-  @media (max-width: 768px) {
-    .screenshot-gallery img {
-      height: 400px;
-    }
-  }
-  
 
-  /* Carousel Section */
+/* LOGO */
+.logo {
+  max-width: 80px;
+  margin-top: 10px;
+}
+
+/* Hero tagline & CTA */
+.tagline {
+  font-size: 1.2em;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 30px;
+  background-color: #ECA08D;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #C0483A;
+  transform: scale(1.03);
+}
+
+/* About section 2-column layout */
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.about-visual img {
+  max-width: 240px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Screenshot preview section (if used) */
+.preview-section {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #FFF8F4;
+}
+
+.preview-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #222E50;
+}
+
+.screenshot-gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem 0;
+  justify-content: center;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.screenshot-gallery figure {
+  text-align: center;
+}
+
+.screenshot-gallery img {
+  height: 500px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+  scroll-snap-align: start;
+}
+
+.screenshot-gallery figcaption {
+  font-size: 0.9rem;
+  color: #C0483A;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.screenshot-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+/* Scale down screenshots on smaller screens */
+@media (max-width: 768px) {
+  .screenshot-gallery img {
+    height: 400px;
+  }
+}
+
+/* CAROUSEL SECTION */
 .carousel-section {
   text-align: center;
   padding: 2rem 1rem;
@@ -115,12 +116,12 @@
   color: #222E50;
 }
 
-/* Carousel Container */
+/* Carousel Container: phone-sized */
 .carousel {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-  max-width: 800px; /* Adjust as needed */
+  max-width: 360px; /* ✅ Constrain carousel to typical phone width */
 }
 
 /* Inner track of slides */
@@ -132,16 +133,16 @@
 
 /* Each Slide */
 .slide {
-  width: 100%;       /* Each slide takes the full width of the carousel */
+  width: 100%;       /* Each slide is the full .carousel width (360px) */
   flex-shrink: 0;
   position: relative;
 }
 
-/* Updated Slide Image Styles */
+/* Slide Image: fill .carousel width */
 .slide img {
   width: 100%;
-  height: 400px;            /* Fixed height to keep images from getting too large */
-  object-fit: contain;      /* Ensures the entire image is visible (or use 'cover' if you prefer cropping) */
+  height: auto;
+  object-fit: contain;
   display: block;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -168,33 +169,25 @@
   margin: 0;
 }
 
-/* Keyframes for auto-sliding */
+/* Keyframes for auto-sliding across 5 slides */
 @keyframes slide {
   0%   { transform: translateX(0); }
   19%  { transform: translateX(0); }
-  
   20%  { transform: translateX(-100%); }
   39%  { transform: translateX(-100%); }
-  
   40%  { transform: translateX(-200%); }
   59%  { transform: translateX(-200%); }
-  
   60%  { transform: translateX(-300%); }
   79%  { transform: translateX(-300%); }
-  
   80%  { transform: translateX(-400%); }
   99%  { transform: translateX(-400%); }
-  
   100% { transform: translateX(0); }
 }
 
-/* Responsive adjustments */
+/* Smaller screens: narrower carousel and images */
 @media (max-width: 768px) {
   .carousel {
-    max-width: 100%;
-  }
-  .slide img {
-    height: 300px;
+    max-width: 300px;
   }
   .slide-caption {
     font-size: 0.9rem;
