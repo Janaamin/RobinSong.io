@@ -1,8 +1,8 @@
 /* index.css */
 
-/* =========================
+/* =====================
    HERO SECTION
-   ========================= */
+   ===================== */
    .hero {
     position: relative;
     background-color: #C0483A;
@@ -10,25 +10,9 @@
     padding: 60px 20px;
     text-align: center;
     border-bottom: 4px solid #ECA08D;
-    overflow: hidden; /* for ::after shape */
-  }
-  
-  /* Decorative shape behind hero (optional) */
-  .hero::after {
-    content: "";
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    width: 100%;
-    height: 150px;
-    background: radial-gradient(circle at 50% 50%, rgba(236,160,141,0.2) 0%, rgba(192,72,58,0) 70%);
-    transform: skewY(-3deg);
-    z-index: 1;
   }
   
   .hero-content {
-    position: relative;
-    z-index: 2; /* above the ::after shape */
     max-width: 800px;
     margin: 0 auto;
   }
@@ -70,9 +54,9 @@
     transform: scale(1.03);
   }
   
-  /* =========================
+  /* =====================
      ABOUT SECTION
-     ========================= */
+     ===================== */
   .about-flex {
     display: flex;
     flex-wrap: wrap;
@@ -98,141 +82,121 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
   
-  /* =========================
-     CAROUSEL SECTION
-     ========================= */
+  /* =====================
+     SEE ROBIN IN ACTION
+     ===================== */
   .carousel-section {
     background-color: #FFF8F4;
-    padding: 2rem;
     text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
     border-radius: 16px;
+    padding: 2rem;
+    margin: 2rem auto;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
   
   .carousel-section h2 {
-    color: #C0483A;
-    margin-bottom: 1rem;
+    color: #222E50;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
   }
   
-  /* Carousel container */
-  .carousel {
+  /* PHONE MOCKUP CONTAINER */
+  .phone-mockup {
     position: relative;
-    max-width: 600px;
+    width: 300px;
+    height: 600px;
+    background-color: #fff;
     margin: 0 auto;
+    border-radius: 40px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     overflow: hidden;
   }
   
-  /* Carousel track holds all slides side by side */
+  /* Optional "notch" at top to emulate phone speaker */
+  .phone-notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 0 0 10px 10px;
+    margin-top: 8px;
+  }
+  
+  /* The screen area inside the phone */
+  .phone-screen {
+    position: absolute;
+    top: 40px;   /* space for notch */
+    left: 0;
+    right: 0;
+    bottom: 40px; /* space for home button */
+    overflow: hidden;
+  }
+  
+  /* The carousel track inside the screen */
   .carousel-track {
     display: flex;
+    height: 100%;
     transition: transform 0.6s ease;
   }
   
-  /* Individual slide */
+  /* Each slide is 100% of phone-screen's width */
   .slide {
-    min-width: 100%;
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    padding: 10px;
-    box-sizing: border-box;
   }
   
+  /* Images themselves */
   .slide img {
-    width: 100%;
-    border-radius: 12px;
-    max-height: 450px;
-    object-fit: contain;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-height: 90%;
+    max-width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    object-fit: cover;
   }
   
+  /* Slide captions in the lower portion of the slide */
   .slide-caption {
-    background: rgba(255,255,255,0.85);
     position: absolute;
-    bottom: 15px;
-    left: 15px;
-    padding: 0.5rem 0.75rem;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.85);
+    color: #222E50;
+    padding: 0.5rem 1rem;
     border-radius: 8px;
-    max-width: 70%;
+    max-width: 80%;
+    text-align: center;
+    font-size: 0.85rem;
   }
   
   .slide-caption h3 {
     margin: 0 0 0.2rem;
     color: #C0483A;
-    font-weight: 700;
     font-size: 1rem;
+    font-weight: 700;
   }
   
-  .slide-caption p {
-    margin: 0;
-    font-size: 0.8rem;
-    color: #222E50;
-  }
-  
-  /* Carousel Buttons */
-  .carousel-button {
+  /* Home button shape at the bottom */
+  .phone-home-button {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(192,72,58,0.8);
-    color: #fff;
-    border: none;
-    font-size: 2rem;
-    padding: 0 0.5rem;
-    cursor: pointer;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 8px;
+    background-color: #ccc;
     border-radius: 4px;
-    z-index: 10;
-    transition: background 0.3s;
   }
   
-  .carousel-button:hover {
-    background: rgba(192,72,58,1);
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
-  
-  /* Carousel Dots */
-  .carousel-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-  
-  .dot {
-    width: 12px;
-    height: 12px;
-    margin: 0 5px;
-    background-color: #ECA08D;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-    transition: transform 0.3s;
-  }
-  
-  .dot:hover {
-    transform: scale(1.2);
-  }
-  
-  .active-dot {
-    background-color: #C0483A;
-  }
-  
-  /* =========================
-     SUPPORT SECTION
-     ========================= */
-  section h2 {
-    color: #C0483A;
-  }
-  
-  /* =========================
-     RESPONSIVE BREAKPOINTS
-     ========================= */
+  /* =====================
+     RESPONSIVE
+     ===================== */
   @media (max-width: 768px) {
     .hero {
       padding: 40px 10px;
@@ -243,15 +207,9 @@
     .carousel-section {
       padding: 1rem;
     }
-    .slide img {
-      max-height: 300px;
-    }
-    .slide-caption {
-      font-size: 0.8rem;
-    }
-    .prev, .next {
-      font-size: 1.5rem;
-      top: 45%;
+    .phone-mockup {
+      width: 260px;
+      height: 520px;
     }
   }
   

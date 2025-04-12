@@ -4,16 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Robin: Bird Song ID</title>
-  <!-- Global and page-specific CSS -->
+
+  <!-- Global and index-specific CSS -->
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/index.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+
 </head>
 <body>
 
   <!-- HERO SECTION -->
   <header class="hero">
-    <!-- Optional decorative shapes in background (see index.css for .hero::after) -->
     <div class="hero-content">
       <img src="assets/img/robin72.png" alt="Robin Logo" class="logo" />
       <h1 class="hero-title">Discover Birds Through Sound</h1>
@@ -24,7 +25,7 @@
     </div>
   </header>
 
-  <!-- NAVIGATION -->
+  <!-- NAV -->
   <nav>
     <a href="index.html">Home</a>
     <a href="features.html">Features</a>
@@ -40,7 +41,7 @@
     <div class="about-text">
       <h2>What is Robin?</h2>
       <p>
-        Robin leverages cutting-edge AI and environmental data to help you connect with nature. Whether you're in your backyard or on the trail, Robin listens for bird calls and identifies species instantly — no binoculars required.
+        Robin leverages cutting-edge AI and environmental data to help you connect with nature. Whether you’re in your backyard or on the trail, Robin listens for bird calls and identifies species instantly — no binoculars required.
       </p>
       <ul>
         <li><strong>Real-time bird song recognition</strong> using your microphone</li>
@@ -49,72 +50,70 @@
       </ul>
     </div>
     <div class="about-visual">
+      <!-- Replace this sample with whichever image best represents your app -->
       <img src="assets/img/400x800bb (1).png" alt="Robin App Sample" />
     </div>
   </section>
 
-  <!-- FEATURE CAROUSEL SECTION -->
+  <!-- SEE ROBIN IN ACTION (PHONE EMULATOR) -->
   <section class="carousel-section">
     <h2>See Robin in Action</h2>
 
-    <!-- Carousel Wrapper -->
-    <div class="carousel">
-      <!-- Slides -->
-      <div class="carousel-track">
-        <!-- Slide 1 -->
-        <div class="slide">
-          <img src="assets/img/iden.png" alt="Forecast">
-          <div class="slide-caption">
-            <h3>Instant Forecast</h3>
-            <p>Get real-time bird forecasts using your device's microphone.</p>
+    <!-- Phone Mockup Container -->
+    <div class="phone-mockup">
+      <!-- (Optional) Top Notch / Speaker; purely decorative -->
+      <div class="phone-notch"></div>
+
+      <!-- The 'screen' area where slides appear -->
+      <div class="phone-screen">
+
+        <!-- Carousel track with multiple "slides" -->
+        <div class="carousel-track">
+          <!-- Slide 1 -->
+          <div class="slide">
+            <img src="assets/img/iden.png" alt="Instant Forecast">
+            <div class="slide-caption">
+              <h3>Instant Forecast</h3>
+              <p>Get real-time bird forecasts using your device’s microphone.</p>
+            </div>
           </div>
-        </div>
-        <!-- Slide 2 -->
-        <div class="slide">
-          <img src="assets/img/forecast.png" alt="Live Detection">
-          <div class="slide-caption">
-            <h3>Live Detection</h3>
-            <p>Experience immediate bird sound detection as it happens.</p>
+          <!-- Slide 2 -->
+          <div class="slide">
+            <img src="assets/img/forecast.png" alt="Live Detection">
+            <div class="slide-caption">
+              <h3>Live Detection</h3>
+              <p>Experience immediate bird sound detection as it happens.</p>
+            </div>
           </div>
-        </div>
-        <!-- Slide 3 -->
-        <div class="slide">
-          <img src="assets/img/robinChat.png" alt="Species Info">
-          <div class="slide-caption">
-            <h3>Species Information</h3>
-            <p>View detailed info on identified bird species.</p>
+          <!-- Slide 3 -->
+          <div class="slide">
+            <img src="assets/img/robinChat.png" alt="Species Info">
+            <div class="slide-caption">
+              <h3>Species Information</h3>
+              <p>View detailed info on identified bird species.</p>
+            </div>
           </div>
-        </div>
-        <!-- Slide 4 -->
-        <div class="slide">
-          <img src="assets/img/ex-chat.png" alt="Interactive Map">
-          <div class="slide-caption">
-            <h3>Interactive Maps</h3>
-            <p>Explore maps showing nearby bird sightings.</p>
+          <!-- Slide 4 -->
+          <div class="slide">
+            <img src="assets/img/ex-chat.png" alt="Interactive Map">
+            <div class="slide-caption">
+              <h3>Interactive Maps</h3>
+              <p>Explore maps showing nearby bird sightings.</p>
+            </div>
           </div>
-        </div>
-        <!-- Slide 5 -->
-        <div class="slide">
-          <img src="assets/img/history.png" alt="History & Trends">
-          <div class="slide-caption">
-            <h3>History & Trends</h3>
-            <p>Review your past birdwatching activities and trends.</p>
+          <!-- Slide 5 -->
+          <div class="slide">
+            <img src="assets/img/history.png" alt="History & Trends">
+            <div class="slide-caption">
+              <h3>History & Trends</h3>
+              <p>Review your past birdwatching activities and trends.</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Prev/Next Arrows (Optional) -->
-      <button class="carousel-button prev" aria-label="Previous Slide">&#10094;</button>
-      <button class="carousel-button next" aria-label="Next Slide">&#10095;</button>
-
-      <!-- Dots/Indicators (Optional) -->
-      <div class="carousel-dots">
-        <span class="dot" data-slide="1"></span>
-        <span class="dot" data-slide="2"></span>
-        <span class="dot" data-slide="3"></span>
-        <span class="dot" data-slide="4"></span>
-        <span class="dot" data-slide="5"></span>
-      </div>
+      <!-- (Optional) Home Button at bottom -->
+      <div class="phone-home-button"></div>
     </div>
   </section>
 
@@ -132,76 +131,21 @@
     <p>&copy; 2025 RobinSong. All rights reserved.</p>
   </footer>
 
-  <!-- Minimal JavaScript for Carousel Interactivity (Optional) -->
+  <!-- Basic JS for auto-slide (optional) -->
   <script>
-    // Grabbing carousel elements
+    // Simple auto-scrolling logic
     const track = document.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
-    const nextButton = document.querySelector('.next');
-    const prevButton = document.querySelector('.prev');
-    const dotsNav = document.querySelector('.carousel-dots');
-    const dots = Array.from(dotsNav.children);
-
+    const slides = Array.from(document.querySelectorAll('.slide'));
     let currentSlide = 0;
-    const slideWidth = slides[0].getBoundingClientRect().width;
 
-    // Arrange the slides next to one another
-    slides.forEach((slide, index) => {
-      slide.style.left = slideWidth * index + 'px';
-    });
-
-    const moveToSlide = (track, current, target) => {
-      track.style.transform = 'translateX(-' + target.style.left + ')';
-      currentSlide = slides.indexOf(target);
-      updateDots(currentSlide);
+    function moveToNextSlide() {
+      currentSlide++;
+      if (currentSlide >= slides.length) currentSlide = 0;
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
     }
 
-    const updateDots = (currentSlideIndex) => {
-      dots.forEach(dot => dot.classList.remove('active-dot'));
-      dots[currentSlideIndex].classList.add('active-dot');
-    };
-
-    // Click Next
-    nextButton.addEventListener('click', () => {
-      const currentSlideEl = slides[currentSlide];
-      let nextSlideEl = slides[currentSlide + 1];
-      if (!nextSlideEl) {
-        // wrap around to first
-        nextSlideEl = slides[0];
-      }
-      moveToSlide(track, currentSlideEl, nextSlideEl);
-    });
-
-    // Click Prev
-    prevButton.addEventListener('click', () => {
-      const currentSlideEl = slides[currentSlide];
-      let prevSlideEl = slides[currentSlide - 1];
-      if (!prevSlideEl) {
-        // wrap around to last
-        prevSlideEl = slides[slides.length - 1];
-      }
-      moveToSlide(track, currentSlideEl, prevSlideEl);
-    });
-
-    // Click Dot
-    dotsNav.addEventListener('click', e => {
-      if (!e.target.matches('span')) return;
-      const targetDot = e.target;
-      const targetIndex = dots.indexOf(targetDot);
-      const targetSlide = slides[targetIndex];
-      moveToSlide(track, slides[currentSlide], targetSlide);
-    });
-
-    // Auto-play functionality (optional)
-    let autoPlay = setInterval(() => {
-      const currentSlideEl = slides[currentSlide];
-      let nextSlideEl = slides[currentSlide + 1];
-      if (!nextSlideEl) {
-        nextSlideEl = slides[0];
-      }
-      moveToSlide(track, currentSlideEl, nextSlideEl);
-    }, 5000);
-
+    // Auto rotate every 4 seconds
+    setInterval(moveToNextSlide, 4000);
   </script>
 
 </body>
