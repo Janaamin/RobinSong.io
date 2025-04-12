@@ -1,0 +1,52 @@
+/* global.css */
+
+/* Base, shared styles across the entire site */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F9DFD2;
+    color: #222E50;
+  }
+  
+  header.hero {
+    background-color: #C0483A;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 4px solid #ECA08D;
+  }
+  
+  nav {
+    background-color: #FFF8F4;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    color: #C0483A;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  nav a:hover {
+    color: #ECA08D;
+  }
+  
+  section {
+    background-color: #EDD0C0;
+    margin: 30px auto;
+    padding: 30px;
+    max-width: 1000px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin: 40px 0 20px;
+  }
+  
