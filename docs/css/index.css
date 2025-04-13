@@ -55,6 +55,26 @@
   }
   
   /* =====================
+     NAV
+     ===================== */
+  nav {
+    background-color: #FFF8F4;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    color: #C0483A;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  nav a:hover {
+    color: #ECA08D;
+  }
+  
+  /* =====================
      ABOUT SECTION
      ===================== */
   .about-flex {
@@ -127,36 +147,47 @@
     overflow: hidden;
   }
   
+  /* Ringer switch on the left side (above volume buttons) */
+  .ringer-switch {
+    position: absolute;
+    left: -6px;
+    top: 50px;
+    width: 6px;
+    height: 20px;
+    background-color: #111;
+    border-radius: 3px;
+  }
+  
   /* Volume Buttons (left) */
   .volume-button-up {
     position: absolute;
-    left: -4px;
+    left: -6px;
     top: 80px; 
-    width: 4px;
+    width: 6px;
     height: 30px;
     background-color: #111;
-    border-radius: 2px;
+    border-radius: 3px;
   }
   
   .volume-button-down {
     position: absolute;
-    left: -4px;
+    left: -6px;
     top: 120px; 
-    width: 4px;
+    width: 6px;
     height: 30px;
     background-color: #111;
-    border-radius: 2px;
+    border-radius: 3px;
   }
   
   /* Power Button (right) */
   .power-button {
     position: absolute;
-    right: -4px;
+    right: -6px;
     top: 100px; 
-    width: 4px;
+    width: 6px;
     height: 40px;
     background-color: #111;
-    border-radius: 2px;
+    border-radius: 3px;
   }
   
   /* Top bar with speaker only */
@@ -200,10 +231,10 @@
   /* Each slide is 100% of phone-screen’s width */
   .slide {
     flex: 0 0 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
+    display: flex;
+    align-items: stretch; 
+    justify-content: center;
     overflow: hidden;
     border-radius: 32px; 
   }
@@ -212,30 +243,40 @@
     width: 100%;
     height: 100%;
     object-fit: cover; 
+    object-position: 50% 50%;
     border-radius: 32px;
     box-shadow: 0 1px 5px rgba(0,0,0,0.2);
   }
   
-  /* Slide caption near bottom */
+  /* Larger caption overlay at bottom */
   .slide-caption {
     position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255,255,255,0.85);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1.2rem;  
+    background: linear-gradient(
+      0deg,
+      rgba(255,255,255,1) 25%,
+      rgba(255,255,255,0.7) 60%,
+      rgba(255,255,255,0) 100%
+    );
     color: #222E50;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    max-width: 80%;
     text-align: center;
-    font-size: 0.85rem;
+    font-size: 1rem; /* bigger overall text */
   }
   
   .slide-caption h3 {
-    margin: 0 0 0.2rem;
+    margin-top: 0;
+    margin-bottom: 0.4rem;
     color: #C0483A;
-    font-size: 1rem;
+    font-size: 1.2rem; /* bigger heading */
     font-weight: 700;
+  }
+  
+  .slide-caption p {
+    margin-top: 0;
+    font-size: 1rem; /* bigger paragraph text */
   }
   
   /* Home button at the bottom */
@@ -261,9 +302,11 @@
     border-radius: 16px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
+  
   section h2 {
     color: #C0483A;
   }
+  
   footer {
     text-align: center;
     font-size: 0.9em;
@@ -301,16 +344,21 @@
     .slide img {
       border-radius: 28px;
     }
+    /* Adjust side buttons for smaller phone */
+    .ringer-switch {
+      top: 40px;
+      height: 18px;
+    }
     .volume-button-up {
-      top: 60px;
+      top: 65px;
       height: 25px;
     }
     .volume-button-down {
-      top: 90px;
+      top: 95px;
       height: 25px;
     }
     .power-button {
-      top: 80px;
+      top: 70px;
       height: 25px;
     }
   }
