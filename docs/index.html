@@ -58,72 +58,115 @@
   <section class="carousel-section">
     <h2>See Robin in Action</h2>
 
-    <!-- Phone Mockup Container -->
-    <div class="phone-mockup">
-      <!-- Ringer Switch on the left -->
-      <div class="ringer-switch"></div>
+    <!-- 3D Tilt Container -->
+    <div class="phone-container">
+      <!-- Phone Mockup -->
+      <div class="phone-mockup">
+        <!-- Ringer Switch on the left -->
+        <div class="ringer-switch"></div>
 
-      <!-- Volume Buttons on the left -->
-      <div class="volume-button-up"></div>
-      <div class="volume-button-down"></div>
+        <!-- Volume Buttons on the left -->
+        <div class="volume-button-up"></div>
+        <div class="volume-button-down"></div>
 
-      <!-- Power Button on the right -->
-      <div class="power-button"></div>
+        <!-- Power Button on the right -->
+        <div class="power-button"></div>
 
-      <!-- Top bar with speaker only -->
-      <div class="phone-top">
-        <div class="speaker-bar"></div>
-      </div>
+        <!-- Top bar with speaker -->
+        <div class="phone-top">
+          <div class="speaker-bar"></div>
+        </div>
 
-      <!-- The 'screen' area where slides appear -->
-      <div class="phone-screen">
-        <!-- Carousel track with multiple slides -->
-        <div class="carousel-track">
-          <!-- Slide 1 -->
-          <div class="slide">
-            <img src="assets/img/iden.png" alt="Instant Forecast">
-            <div class="slide-caption">
-              <h3>Instant Forecast</h3>
-              <p>Get real-time bird forecasts using your device’s microphone.</p>
+        <!-- Phone notch for realism -->
+        <div class="phone-notch"></div>
+
+        <!-- The 'screen' area where slides appear -->
+        <div class="phone-screen">
+          <!-- Status bar -->
+          <div class="status-bar">
+            <div class="status-left">
+              <div class="signal-bars">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+                <div class="bar bar-4"></div>
+              </div>
+              <div class="wifi"></div>
+            </div>
+            <div class="time">9:41</div>
+            <div class="status-right">
+              <div class="battery"></div>
             </div>
           </div>
-          <!-- Slide 2 -->
-          <div class="slide">
-            <img src="assets/img/forecast.png" alt="Live Detection">
-            <div class="slide-caption">
-              <h3>Live Detection</h3>
-              <p>Experience immediate bird sound detection as it happens.</p>
+
+          <!-- Loading animation logo -->
+          <img class="app-logo" src="assets/img/robin72.png" alt="Robin Logo">
+
+          <!-- Carousel track with multiple slides -->
+          <div class="carousel-track">
+            <!-- Slide 1 -->
+            <div class="slide">
+              <img src="assets/img/iden.png" alt="Instant Forecast">
+              <div class="slide-caption">
+                <h3>Instant Forecast</h3>
+                <p>Get real-time bird forecasts using your device’s microphone.</p>
+              </div>
+              <!-- Feature callout for first slide -->
+              <div class="feature-callout callout-right" id="callout-1">
+                <h4>AI-Powered Recognition</h4>
+                <p>Robin’s machine learning can identify 500+ birds by sound with 95% accuracy!</p>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+              <img src="assets/img/forecast.png" alt="Live Detection">
+              <div class="slide-caption">
+                <h3>Live Detection</h3>
+                <p>Experience immediate bird sound detection as it happens.</p>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+              <img src="assets/img/robinChat.png" alt="Species Info">
+              <div class="slide-caption">
+                <h3>Species Information</h3>
+                <p>View detailed info on identified bird species.</p>
+              </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="slide">
+              <img src="assets/img/exampchat.png" alt="Interactive Map">
+              <div class="slide-caption">
+                <h3>Interactive Maps</h3>
+                <p>Explore maps showing nearby bird sightings.</p>
+              </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="slide">
+              <img src="assets/img/history.png" alt="History & Trends">
+              <div class="slide-caption">
+                <h3>History & Trends</h3>
+                <p>Review your past birdwatching activities and trends.</p>
+              </div>
             </div>
           </div>
-          <!-- Slide 3 -->
-          <div class="slide">
-            <img src="assets/img/robinChat.png" alt="Species Info">
-            <div class="slide-caption">
-              <h3>Species Information</h3>
-              <p>View detailed info on identified bird species.</p>
-            </div>
-          </div>
-          <!-- Slide 4 -->
-          <div class="slide">
-            <img src="assets/img/exampchat.png" alt="Interactive Map">
-            <div class="slide-caption">
-              <h3>Interactive Maps</h3>
-              <p>Explore maps showing nearby bird sightings.</p>
-            </div>
-          </div>
-          <!-- Slide 5 -->
-          <div class="slide">
-            <img src="assets/img/history.png" alt="History & Trends">
-            <div class="slide-caption">
-              <h3>History & Trends</h3>
-              <p>Review your past birdwatching activities and trends.</p>
-            </div>
+
+          <!-- Progress Indicators -->
+          <div class="progress-indicators">
+            <div class="progress-dot active"></div>
+            <div class="progress-dot"></div>
+            <div class="progress-dot"></div>
+            <div class="progress-dot"></div>
+            <div class="progress-dot"></div>
           </div>
         </div>
-      </div>
 
-      <!-- Home Button at the bottom -->
-      <div class="phone-home-button"></div>
+        <!-- Phone reflection -->
+        <div class="phone-reflection"></div>
+
+        <!-- Home Button at the bottom -->
+        <div class="phone-home-button"></div>
+      </div>
     </div>
   </section>
 
@@ -141,23 +184,125 @@
     <p>&copy; 2025 RobinSong. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript for Auto-Slide Carousel -->
+  <!-- JavaScript -->
   <script>
-    // Simple auto-scrolling logic
+    // 3D tilt effect
+    const phoneContainer = document.querySelector('.phone-container');
+    const phoneMockup = document.querySelector('.phone-mockup');
+
+    phoneContainer.addEventListener('mousemove', function(e) {
+      const containerRect = phoneContainer.getBoundingClientRect();
+      const centerX = containerRect.left + containerRect.width / 2;
+      const centerY = containerRect.top + containerRect.height / 2;
+
+      // Calculate mouse position relative to center (in -1 to 1 range)
+      const mouseX = (e.clientX - centerX) / (containerRect.width / 2);
+      const mouseY = (e.clientY - centerY) / (containerRect.height / 2);
+
+      // Apply tilt effect (limited to small angles)
+      phoneMockup.style.transform = 
+        `rotateY(${mouseX * 5}deg) rotateX(${-mouseY * 5}deg)`;
+    });
+
+    phoneContainer.addEventListener('mouseleave', function() {
+      // Reset tilt when mouse leaves
+      phoneMockup.style.transform = 'rotateY(0deg) rotateX(0deg)';
+    });
+
+    // App loading animation
+    document.addEventListener('DOMContentLoaded', function() {
+      phoneMockup.classList.add('loading');
+      // Remove loading class after animation completes
+      setTimeout(() => {
+        phoneMockup.classList.remove('loading');
+      }, 3000);
+    });
+
+    // Enhanced Carousel
     const track = document.querySelector('.carousel-track');
     const slides = Array.from(track.querySelectorAll('.slide'));
     let currentSlide = 0;
 
+    function updateCurrentSlideClass() {
+      slides.forEach(slide => slide.classList.remove('current-slide'));
+      slides[currentSlide].classList.add('current-slide');
+    }
+
+    function updateProgressDots() {
+      const dots = document.querySelectorAll('.progress-dot');
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    function showCallout() {
+      // Hide all callouts
+      document.querySelectorAll('.feature-callout').forEach(callout => {
+        callout.classList.remove('active');
+      });
+      // Show the callout for the current slide if it exists
+      const currentCallout = document.getElementById(`callout-${currentSlide + 1}`);
+      if (currentCallout) {
+        setTimeout(() => {
+          currentCallout.classList.add('active');
+        }, 500); // Delay to show after slide transition
+      }
+    }
+
     function moveToNextSlide() {
       currentSlide++;
       if (currentSlide >= slides.length) {
+        // Smooth loop animation
         currentSlide = 0;
+        // Instant reset without animation
+        track.style.transition = 'none';
+        track.style.transform = `translateX(0)`;
+        // Force reflow
+        track.offsetHeight;
+        // Restore transition
+        track.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+      } else {
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
       }
-      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      updateCurrentSlideClass();
+      updateProgressDots();
+      showCallout();
     }
+
+    // Initialize
+    updateCurrentSlideClass();
+    updateProgressDots();
+    showCallout();
 
     // Auto rotate every 4 seconds
     setInterval(moveToNextSlide, 4000);
+
+    // Swipe functionality
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    track.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    track.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
+
+    function handleSwipe() {
+      if (touchEndX < touchStartX - 50) {
+        // Swipe left - next slide
+        moveToNextSlide();
+      } else if (touchEndX > touchStartX + 50) {
+        // Swipe right - previous slide
+        currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        updateCurrentSlideClass();
+        updateProgressDots();
+        showCallout();
+      }
+    }
   </script>
 
 </body>
