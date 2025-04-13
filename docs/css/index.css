@@ -1,298 +1,306 @@
 /* index.css */
 
+/* =========================
+   Custom Font Imports
+   ========================= */
+/* Adjust paths if your .ttf files are elsewhere */
+@font-face {
+  font-family: 'Caprasimo';
+  src: url('../fonts/Caprasimo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RadioCanada';
+  src: url('../fonts/RadioCanadaVariable.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Optional: Use RadioCanada for body text, Caprasimo for headings */
+body {
+  font-family: 'RadioCanada', 'Inter', sans-serif;
+  background-color: #F9DFD2; /* from your colors */
+  color: #222E50;           /* from your colors */
+  margin: 0;
+  padding: 0;
+}
+
 /* =====================
    HERO SECTION
    ===================== */
-   .hero {
-    position: relative;
-    background-color: #C0483A;
-    color: #fff;
-    padding: 60px 20px;
-    text-align: center;
-    border-bottom: 4px solid #ECA08D;
+.hero {
+  position: relative;
+  background-color: #C0483A;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 4px solid #ECA08D;
+}
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero-title {
+  font-size: 2rem;
+  margin-top: 1rem;
+  font-family: 'Caprasimo', cursive;
+}
+.logo {
+  max-width: 90px;
+  margin: 0 auto;
+  display: block;
+}
+.tagline {
+  font-size: 1.2em;
+  margin-top: 10px;
+  font-weight: 400;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 30px;
+  background-color: #ECA08D;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.cta-button:hover {
+  background-color: #FFD2C6;
+  transform: scale(1.03);
+}
+
+/* =====================
+   ABOUT SECTION
+   ===================== */
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+/* The new styled box for "What is Robin?" */
+.about-info-box {
+  background-color: #EDCAB9; /* identifycard color from your palette */
+  border-radius: 16px;
+  padding: 1.5rem;
+  flex: 1 1 400px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* The heading inside the about box */
+.robin-heading {
+  font-family: 'Caprasimo', cursive;
+  color: #C0483A; /* or #8485Bf if you prefer */
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Body text within the about box */
+.about-blurb {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Additional bullets inside the toggled area */
+.about-bullets {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.learn-more-button {
+  background-color: #C0483A; 
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.learn-more-button:hover {
+  background-color: #ECA08D;
+}
+
+/* Hidden by default (JS toggles this) */
+.hidden {
+  display: none;
+}
+
+/* The about-visual image container on the right (or below on mobile) */
+.about-visual img {
+  max-width: 240px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* =====================
+   SEE ROBIN IN ACTION
+   ===================== */
+.carousel-section {
+  background: linear-gradient(135deg, #F9DFD2 0%, #EDD0C0 100%);
+  text-align: center;
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 650px;
+}
+.carousel-section h2 {
+  font-family: 'Caprasimo', cursive;
+  color: #222E50;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+/* PHONE MOCKUP */
+.phone-mockup {
+  position: relative;
+  width: 360px;
+  height: 680px;
+  border: 6px solid #000; 
+  border-radius: 40px;
+  background-color: #fff;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+/* Top bar with speaker only */
+.phone-top {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 35px;
+}
+.speaker-bar {
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 5px;
+  background-color: #000;
+  border-radius: 3px;
+}
+
+/* The screen from top: 35px to bottom: 35px */
+.phone-screen {
+  position: absolute;
+  top: 35px;
+  left: 0; right: 0;
+  bottom: 35px;
+  overflow: hidden;
+  border-radius: 32px; 
+}
+
+/* Carousel track inside phone screen */
+.carousel-track {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+/* Each slide = 100% wide */
+.slide {
+  flex: 0 0 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 32px;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* fill the phone screen */
+  border-radius: 32px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+/* Slide captions near bottom */
+.slide-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.85);
+  color: #222E50;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  max-width: 80%;
+  text-align: center;
+  font-size: 0.85rem;
+}
+.slide-caption h3 {
+  margin: 0 0 0.2rem;
+  color: #C0483A;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Home button area at bottom */
+.phone-home-button {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 6px;
+  background-color: #999;
+  border-radius: 3px;
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 40px 10px;
   }
-  
-  .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
+
   .hero-title {
-    font-size: 2rem;
-    margin-top: 1rem;
-  }
-  
-  .logo {
-    max-width: 90px;
-    margin: 0 auto;
-    display: block;
-  }
-  
-  .tagline {
-    font-size: 1.2em;
-    margin-top: 10px;
-    font-weight: 400;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 14px 30px;
-    background-color: #ECA08D;
-    color: white;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #FFD2C6;
-    transform: scale(1.03);
-  }
-  
-  /* =====================
-     ABOUT SECTION
-     ===================== */
-  .about-flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .about-text {
-    flex: 1 1 300px;
-    max-width: 500px;
-  }
-  
-  .about-text h2 {
-    font-size: 1.8rem;
-    color: #C0483A;
-    margin-bottom: 0.5rem;
-  }
-  
-  .about-visual img {
-    max-width: 240px;
-    border-radius: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  
-  /* =====================
-     SEE ROBIN IN ACTION
-     ===================== */
-  .carousel-section {
-    background: linear-gradient(135deg, #F9DFD2 0%, #EDD0C0 100%);
-    text-align: center;
-    border-radius: 16px;
-    padding: 2rem;
-    margin: 2rem auto;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    max-width: 650px; 
-  }
-  
-  .carousel-section h2 {
-    color: #222E50;
     font-size: 1.6rem;
-    margin-bottom: 1.5rem;
   }
-  
-  /* PHONE MOCKUP */
+
+  .carousel-section {
+    padding: 1rem;
+    max-width: 90%;
+  }
+
   .phone-mockup {
-    position: relative;
-    width: 360px;
-    height: 680px;
-    /* Black border around phone */
-    border: 6px solid #000; 
-    border-radius: 40px;
-    background-color: #fff;
-    margin: 0 auto;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    overflow: hidden;
-  }
-  
-  /* ===============
-     Side Buttons
-     =============== */
-  /* Volume Buttons (left side).
-     Two separate rectangles to mimic up/down. */
-  .volume-button-up {
-    position: absolute;
-    left: -4px;
-    top: 80px; 
-    width: 4px;
-    height: 30px;
-    background-color: #111;
-    border-radius: 2px;
-  }
-  .volume-button-down {
-    position: absolute;
-    left: -4px;
-    top: 120px; 
-    width: 4px;
-    height: 30px;
-    background-color: #111;
-    border-radius: 2px;
-  }
-  /* Power Button (right side) */
-  .power-button {
-    position: absolute;
-    right: -4px;
-    top: 100px; 
-    width: 4px;
-    height: 40px;
-    background-color: #111;
-    border-radius: 2px;
-  }
-  
-  /* TOP BAR with speaker only (no camera/mic) */
-  .phone-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 35px;
-  }
-  
-  /* Speaker bar */
-  .speaker-bar {
-    position: absolute;
-    top: 10px;
-    left: calc(50% - 30px);
-    width: 60px;
-    height: 5px;
-    background-color: #000;
-    border-radius: 3px;
-  }
-  
-  /* The screen area: from top: 35px to bottom: 35px */
-  .phone-screen {
-    position: absolute;
-    top: 35px;   
-    left: 0;
-    right: 0;
-    bottom: 35px;
-    overflow: hidden;
-    border-radius: 32px; 
-  }
-  
-  /* The carousel track inside the screen */
-  .carousel-track {
-    display: flex;
-    flex-wrap: nowrap;
-    height: 100%;
-    transition: transform 0.6s ease;
-  }
-  
-  /* Each slide is exactly 100% of phone-screen’s width */
-  .slide {
-    flex: 0 0 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    border-radius: 32px; 
-  }
-  
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* fill screen fully, with possible cropping */
+    width: 300px;
+    height: 550px;
     border-radius: 32px;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
   }
-  
-  /* Slide captions near the bottom */
-  .slide-caption {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255,255,255,0.85);
-    color: #222E50;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    max-width: 80%;
-    text-align: center;
-    font-size: 0.85rem;
+  .phone-screen {
+    border-radius: 28px;
+    top: 30px;
+    bottom: 30px;
   }
-  
-  .slide-caption h3 {
-    margin: 0 0 0.2rem;
-    color: #C0483A;
-    font-size: 1rem;
-    font-weight: 700;
+  .slide {
+    border-radius: 28px;
   }
-  
-  /* HOME BUTTON */
-  .phone-home-button {
-    position: absolute;
-    bottom: 6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 6px;
-    background-color: #999;
-    border-radius: 3px;
+  .slide img {
+    border-radius: 28px;
   }
-  
-  /* =====================
-     RESPONSIVE
-     ===================== */
-  @media (max-width: 768px) {
-    .hero {
-      padding: 40px 10px;
-    }
-    .hero-title {
-      font-size: 1.6rem;
-    }
-    .carousel-section {
-      padding: 1rem;
-      max-width: 90%;
-    }
-    .phone-mockup {
-      width: 300px;
-      height: 550px;
-      border-radius: 32px;
-    }
-    .phone-screen {
-      border-radius: 28px;
-      top: 30px; 
-      bottom: 30px;
-    }
-    .slide {
-      border-radius: 28px;
-    }
-    .slide img {
-      border-radius: 28px;
-    }
-    .phone-top {
-      height: 30px;
-    }
-    .speaker-bar {
-      top: 8px;
-    }
-    .phone-home-button {
-      bottom: 5px;
-    }
-  
-    /* Adjust side buttons for smaller phone */
-    .volume-button-up {
-      top: 60px;
-      height: 25px;
-    }
-    .volume-button-down {
-      top: 90px;
-      height: 25px;
-    }
-    .power-button {
-      top: 80px;
-      height: 25px;
-    }
+
+  /* About box on mobile can remain similar or be narrower, your choice */
+  .about-info-box {
+    flex: 1 1 100%;
   }
-  
+}
