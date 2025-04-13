@@ -8,7 +8,7 @@
   <!-- Global and index-specific CSS -->
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/index.css">
-  <!-- Optionally keep Google Fonts for Inter, if you like -->
+  <!-- Optionally: Keep a Google Fonts link if you'd like "Inter" or other fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
 
 </head>
@@ -39,36 +39,35 @@
 
   <!-- ABOUT SECTION -->
   <section id="about" class="about-flex">
-    <div class="about-info-box">
-      <h2 class="robin-heading">What is Robin?</h2>
-      <p class="about-blurb">
-        Robin leverages cutting-edge AI and environmental data to help you connect with nature.  
-        Whether you’re in your backyard or on the trail, Robin listens for bird calls and identifies species instantly—no binoculars required.
+    <div class="about-text">
+      <h2>What is Robin?</h2>
+      <p>
+        Robin leverages cutting-edge AI and environmental data to help you connect with nature. Whether you’re in your backyard or on the trail, Robin listens for bird calls and identifies species instantly — no binoculars required.
       </p>
-      <ul class="about-bullets">
+      <ul>
         <li><strong>Real-time bird song recognition</strong> using your microphone</li>
         <li><strong>Localized bird forecasts</strong> based on your location</li>
-        <li><strong>Voice guidance &amp; accessibility</strong> for users of all abilities</li>
-        <li><strong>Interactive species chat</strong> for Q&amp;A about your favorite birds</li>
+        <li><strong>Voice guidance and accessibility</strong> for users of all abilities</li>
       </ul>
-      <p>
-        By analyzing acoustic patterns and location data, Robin can suggest likely bird sightings 
-        and help you learn fascinating facts about local species.  
-        <strong>Join us</strong> in exploring the world of birds—right from your phone!
-      </p>
     </div>
-
     <div class="about-visual">
       <img src="assets/img/400x800bb (1).png" alt="Robin App Sample" />
     </div>
   </section>
 
-  <!-- SEE ROBIN IN ACTION -->
+  <!-- SEE ROBIN IN ACTION (PHONE EMULATOR) -->
   <section class="carousel-section">
     <h2>See Robin in Action</h2>
 
     <!-- Phone Mockup Container -->
     <div class="phone-mockup">
+      <!-- Volume Buttons on the left -->
+      <div class="volume-button-up"></div>
+      <div class="volume-button-down"></div>
+
+      <!-- Power Button on the right -->
+      <div class="power-button"></div>
+
       <!-- Top bar with speaker only -->
       <div class="phone-top">
         <div class="speaker-bar"></div>
@@ -140,7 +139,7 @@
     <p>&copy; 2025 RobinSong. All rights reserved.</p>
   </footer>
 
-  <!-- Basic JS for auto-slide (optional) -->
+  <!-- JavaScript for Auto-Slide Carousel -->
   <script>
     // Simple auto-scrolling logic
     const track = document.querySelector('.carousel-track');
@@ -155,6 +154,7 @@
       track.style.transform = `translateX(-${currentSlide * 100}%)`;
     }
 
+    // Auto rotate every 4 seconds
     setInterval(moveToNextSlide, 4000);
   </script>
 

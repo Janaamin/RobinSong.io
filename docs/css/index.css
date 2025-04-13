@@ -1,297 +1,317 @@
-
-@font-face {
-  font-family: 'Caprasimo';
-  src: url('../fonts/Caprasimo.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'RadioCanada';
-  src: url('../fonts/RadioCanadaVariable.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+/* index.css */
 
 /* =====================
-   2) Base / Body 
+   HERO SECTION
    ===================== */
-body {
-  font-family: 'RadioCanada', 'Inter', sans-serif;  /* use RadioCanada as primary, fallback to Inter */
-  background-color: #F9DFD2;
-  color: #222E50;
-  margin: 0;
-  padding: 0;
-}
-
-/* =====================
-   3) Hero Section
-   ===================== */
-.hero {
-  position: relative;
-  background-color: #C0483A;
-  color: #fff;
-  padding: 60px 20px;
-  text-align: center;
-  border-bottom: 4px solid #ECA08D;
-}
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-.hero-title {
-  font-size: 2rem;
-  margin-top: 1rem;
-  /* Use Caprasimo for the big hero heading */
-  font-family: 'Caprasimo', cursive;
-}
-.logo {
-  max-width: 90px;
-  margin: 0 auto;
-  display: block;
-}
-.tagline {
-  font-size: 1.2em;
-  margin-top: 10px;
-  font-weight: 400;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.cta-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 14px 30px;
-  background-color: #ECA08D;
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-.cta-button:hover {
-  background-color: #FFD2C6;
-  transform: scale(1.03);
-}
-
-/* =====================
-   4) Navigation 
-   ===================== */
-nav {
-  background-color: #FFF8F4;
-  padding: 10px;
-  text-align: center;
-}
-nav a {
-  margin: 0 15px;
-  color: #C0483A;
-  text-decoration: none;
-  font-weight: 600;
-}
-nav a:hover {
-  color: #ECA08D;
-}
-
-/* =====================
-   5) About Section
-   ===================== */
-.about-flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 2rem auto;
-}
-/* The new about box for “What is Robin?” */
-.about-info-box {
-  background-color: #EDCAB9;  /* identifycard color from your palette */
-  border-radius: 16px;
-  padding: 1.5rem;
-  flex: 1 1 400px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-.robin-heading {
-  font-family: 'Caprasimo', cursive;
-  color: #C0483A; 
-  font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-.about-blurb {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
-}
-.about-bullets {
-  list-style-type: disc;
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
-.about-visual img {
-  max-width: 240px;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-/* =====================
-   6) Carousel Section
-   ===================== */
-.carousel-section {
-  background: linear-gradient(135deg, #F9DFD2 0%, #EDD0C0 100%);
-  text-align: center;
-  border-radius: 16px;
-  padding: 2rem;
-  margin: 2rem auto;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  max-width: 650px; 
-}
-.carousel-section h2 {
-  font-family: 'Caprasimo', cursive;
-  color: #222E50;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Phone mockup */
-.phone-mockup {
-  position: relative;
-  width: 360px;
-  height: 680px;
-  border: 6px solid #000;
-  border-radius: 40px;
-  background-color: #fff;
-  margin: 0 auto;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  overflow: hidden;
-}
-.phone-top {
-  position: absolute;
-  top: 0;
-  left: 0; right: 0;
-  height: 35px;
-}
-.speaker-bar {
-  position: absolute;
-  top: 10px;
-  left: calc(50% - 30px);
-  width: 60px;
-  height: 5px;
-  background-color: #000;
-  border-radius: 3px;
-}
-.phone-screen {
-  position: absolute;
-  top: 35px;
-  left: 0; right: 0; bottom: 35px;
-  overflow: hidden;
-  border-radius: 32px;
-}
-.carousel-track {
-  display: flex;
-  flex-wrap: nowrap;
-  height: 100%;
-  transition: transform 0.6s ease;
-}
-.slide {
-  flex: 0 0 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-  border-radius: 32px;
-}
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Fill screen, some cropping is ok */
-  border-radius: 32px;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.2);
-}
-.slide-caption {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(255,255,255,0.85);
-  color: #222E50;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  max-width: 80%;
-  text-align: center;
-  font-size: 0.85rem;
-}
-.slide-caption h3 {
-  margin: 0 0 0.2rem;
-  color: #C0483A;
-  font-size: 1rem;
-  font-weight: 700;
-}
-.phone-home-button {
-  position: absolute;
-  bottom: 6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 6px;
-  background-color: #999;
-  border-radius: 3px;
-}
-
-/* =====================
-   7) Support / Footer
-   ===================== */
-section {
-  background-color: #EDD0C0;
-  margin: 30px auto;
-  padding: 30px;
-  max-width: 1000px;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-section h2 {
-  color: #C0483A;
-}
-footer {
-  text-align: center;
-  font-size: 0.9em;
-  color: #666;
-  margin: 40px 0 20px;
-}
-
-/* =====================
-   8) Responsive
-   ===================== */
-@media (max-width: 768px) {
-  .hero {
-    padding: 40px 10px;
+   .hero {
+    position: relative;
+    background-color: #C0483A;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 4px solid #ECA08D;
   }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
   .hero-title {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    margin-top: 1rem;
   }
+  
+  .logo {
+    max-width: 90px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .tagline {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-weight: 400;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 30px;
+    background-color: #ECA08D;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #FFD2C6;
+    transform: scale(1.03);
+  }
+  
+  /* =====================
+     ABOUT SECTION
+     ===================== */
+  .about-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+  }
+  
+  .about-text {
+    flex: 1 1 300px;
+    max-width: 500px;
+  }
+  
+  .about-text h2 {
+    font-size: 1.8rem;
+    color: #C0483A;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-text p {
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+  
+  .about-text ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-visual img {
+    max-width: 240px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* =====================
+     CAROUSEL SECTION
+     ===================== */
   .carousel-section {
-    padding: 1rem;
-    max-width: 90%;
+    background: linear-gradient(135deg, #F9DFD2 0%, #EDD0C0 100%);
+    text-align: center;
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2rem auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 650px; 
   }
+  
+  .carousel-section h2 {
+    color: #222E50;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* PHONE MOCKUP */
   .phone-mockup {
-    width: 300px;
-    height: 550px;
-    border-radius: 32px;
+    position: relative;
+    width: 360px;
+    height: 680px;
+    border: 6px solid #000;
+    border-radius: 40px;
+    background-color: #fff;
+    margin: 0 auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
   }
+  
+  /* Volume Buttons (left) */
+  .volume-button-up {
+    position: absolute;
+    left: -4px;
+    top: 80px; 
+    width: 4px;
+    height: 30px;
+    background-color: #111;
+    border-radius: 2px;
+  }
+  
+  .volume-button-down {
+    position: absolute;
+    left: -4px;
+    top: 120px; 
+    width: 4px;
+    height: 30px;
+    background-color: #111;
+    border-radius: 2px;
+  }
+  
+  /* Power Button (right) */
+  .power-button {
+    position: absolute;
+    right: -4px;
+    top: 100px; 
+    width: 4px;
+    height: 40px;
+    background-color: #111;
+    border-radius: 2px;
+  }
+  
+  /* Top bar with speaker only */
+  .phone-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+  }
+  
+  .speaker-bar {
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 5px;
+    background-color: #000;
+    border-radius: 3px;
+  }
+  
+  /* The phone-screen */
   .phone-screen {
-    border-radius: 28px;
-    top: 30px;
-    bottom: 30px;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    bottom: 35px;
+    overflow: hidden;
+    border-radius: 32px; 
   }
+  
+  /* The carousel track inside the screen */
+  .carousel-track {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    transition: transform 0.6s ease;
+  }
+  
+  /* Each slide is 100% of phone-screen’s width */
   .slide {
-    border-radius: 28px;
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px; 
   }
+  
   .slide img {
-    border-radius: 28px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 32px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
   }
-  .about-info-box {
-    flex: 1 1 100%;
+  
+  /* Slide caption near bottom */
+  .slide-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.85);
+    color: #222E50;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    max-width: 80%;
+    text-align: center;
+    font-size: 0.85rem;
   }
-}
+  
+  .slide-caption h3 {
+    margin: 0 0 0.2rem;
+    color: #C0483A;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  
+  /* Home button at the bottom */
+  .phone-home-button {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 6px;
+    background-color: #999;
+    border-radius: 3px;
+  }
+  
+  /* =====================
+     SUPPORT & FOOTER
+     ===================== */
+  section {
+    background-color: #EDD0C0;
+    margin: 30px auto;
+    padding: 30px;
+    max-width: 1000px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  section h2 {
+    color: #C0483A;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin: 40px 0 20px;
+  }
+  
+  /* =====================
+     RESPONSIVE
+     ===================== */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 40px 10px;
+    }
+    .hero-title {
+      font-size: 1.6rem;
+    }
+    .carousel-section {
+      padding: 1rem;
+      max-width: 90%;
+    }
+    .phone-mockup {
+      width: 300px;
+      height: 550px;
+      border-radius: 32px;
+    }
+    .phone-screen {
+      border-radius: 28px;
+      top: 30px;
+      bottom: 30px;
+    }
+    .slide {
+      border-radius: 28px;
+    }
+    .slide img {
+      border-radius: 28px;
+    }
+    .volume-button-up {
+      top: 60px;
+      height: 25px;
+    }
+    .volume-button-down {
+      top: 90px;
+      height: 25px;
+    }
+    .power-button {
+      top: 80px;
+      height: 25px;
+    }
+  }
+  
