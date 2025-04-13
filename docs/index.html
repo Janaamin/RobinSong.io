@@ -8,7 +8,6 @@
   <!-- Global and index-specific CSS -->
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/index.css">
-  <!-- Optionally: Keep a Google Fonts link if you'd like "Inter" or other fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
 
 </head>
@@ -151,6 +150,7 @@
       if (currentSlide >= slides.length) {
         currentSlide = 0;
       }
+      // Shift track left
       track.style.transform = `translateX(-${currentSlide * 100}%)`;
     }
 
