@@ -1,16 +1,10 @@
-/* index.css */
 
-/* =========================
-   Custom Font Imports
-   ========================= */
-/* Adjust paths if your .ttf files are elsewhere */
 @font-face {
   font-family: 'Caprasimo';
   src: url('../fonts/Caprasimo.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'RadioCanada';
   src: url('../fonts/RadioCanadaVariable.ttf') format('truetype');
@@ -18,17 +12,19 @@
   font-style: normal;
 }
 
-/* Optional: Use RadioCanada for body text, Caprasimo for headings */
+/* =====================
+   2) Base / Body 
+   ===================== */
 body {
-  font-family: 'RadioCanada', 'Inter', sans-serif;
-  background-color: #F9DFD2; /* from your colors */
-  color: #222E50;           /* from your colors */
+  font-family: 'RadioCanada', 'Inter', sans-serif;  /* use RadioCanada as primary, fallback to Inter */
+  background-color: #F9DFD2;
+  color: #222E50;
   margin: 0;
   padding: 0;
 }
 
 /* =====================
-   HERO SECTION
+   3) Hero Section
    ===================== */
 .hero {
   position: relative;
@@ -45,6 +41,7 @@ body {
 .hero-title {
   font-size: 2rem;
   margin-top: 1rem;
+  /* Use Caprasimo for the big hero heading */
   font-family: 'Caprasimo', cursive;
 }
 .logo {
@@ -77,7 +74,25 @@ body {
 }
 
 /* =====================
-   ABOUT SECTION
+   4) Navigation 
+   ===================== */
+nav {
+  background-color: #FFF8F4;
+  padding: 10px;
+  text-align: center;
+}
+nav a {
+  margin: 0 15px;
+  color: #C0483A;
+  text-decoration: none;
+  font-weight: 600;
+}
+nav a:hover {
+  color: #ECA08D;
+}
+
+/* =====================
+   5) About Section
    ===================== */
 .about-flex {
   display: flex;
@@ -88,59 +103,32 @@ body {
   max-width: 1000px;
   margin: 2rem auto;
 }
-
-/* The new styled box for "What is Robin?" */
+/* The new about box for “What is Robin?” */
 .about-info-box {
-  background-color: #EDCAB9; /* identifycard color from your palette */
+  background-color: #EDCAB9;  /* identifycard color from your palette */
   border-radius: 16px;
   padding: 1.5rem;
   flex: 1 1 400px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-
-/* The heading inside the about box */
 .robin-heading {
   font-family: 'Caprasimo', cursive;
-  color: #C0483A; /* or #8485Bf if you prefer */
+  color: #C0483A; 
   font-size: 2rem;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
-
-/* Body text within the about box */
 .about-blurb {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1rem;
 }
-
-/* Additional bullets inside the toggled area */
 .about-bullets {
   list-style-type: disc;
   margin-left: 1.5rem;
   margin-bottom: 1rem;
+  font-size: 1rem;
 }
-
-.learn-more-button {
-  background-color: #C0483A; 
-  color: #fff;
-  border: none;
-  padding: 0.7rem 1.2rem;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-.learn-more-button:hover {
-  background-color: #ECA08D;
-}
-
-/* Hidden by default (JS toggles this) */
-.hidden {
-  display: none;
-}
-
-/* The about-visual image container on the right (or below on mobile) */
 .about-visual img {
   max-width: 240px;
   border-radius: 16px;
@@ -148,7 +136,7 @@ body {
 }
 
 /* =====================
-   SEE ROBIN IN ACTION
+   6) Carousel Section
    ===================== */
 .carousel-section {
   background: linear-gradient(135deg, #F9DFD2 0%, #EDD0C0 100%);
@@ -157,7 +145,7 @@ body {
   padding: 2rem;
   margin: 2rem auto;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  max-width: 650px;
+  max-width: 650px; 
 }
 .carousel-section h2 {
   font-family: 'Caprasimo', cursive;
@@ -166,23 +154,22 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* PHONE MOCKUP */
+/* Phone mockup */
 .phone-mockup {
   position: relative;
   width: 360px;
   height: 680px;
-  border: 6px solid #000; 
+  border: 6px solid #000;
   border-radius: 40px;
   background-color: #fff;
   margin: 0 auto;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   overflow: hidden;
 }
-
-/* Top bar with speaker only */
 .phone-top {
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0; right: 0;
   height: 35px;
 }
 .speaker-bar {
@@ -194,44 +181,35 @@ body {
   background-color: #000;
   border-radius: 3px;
 }
-
-/* The screen from top: 35px to bottom: 35px */
 .phone-screen {
   position: absolute;
   top: 35px;
-  left: 0; right: 0;
-  bottom: 35px;
+  left: 0; right: 0; bottom: 35px;
   overflow: hidden;
-  border-radius: 32px; 
+  border-radius: 32px;
 }
-
-/* Carousel track inside phone screen */
 .carousel-track {
   display: flex;
   flex-wrap: nowrap;
   height: 100%;
   transition: transform 0.6s ease;
 }
-
-/* Each slide = 100% wide */
 .slide {
   flex: 0 0 100%;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
   border-radius: 32px;
 }
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* fill the phone screen */
+  object-fit: cover; /* Fill screen, some cropping is ok */
   border-radius: 32px;
   box-shadow: 0 1px 5px rgba(0,0,0,0.2);
 }
-
-/* Slide captions near bottom */
 .slide-caption {
   position: absolute;
   bottom: 10px;
@@ -251,8 +229,6 @@ body {
   font-size: 1rem;
   font-weight: 700;
 }
-
-/* Home button area at bottom */
 .phone-home-button {
   position: absolute;
   bottom: 6px;
@@ -265,23 +241,40 @@ body {
 }
 
 /* =====================
-   RESPONSIVE
+   7) Support / Footer
+   ===================== */
+section {
+  background-color: #EDD0C0;
+  margin: 30px auto;
+  padding: 30px;
+  max-width: 1000px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+section h2 {
+  color: #C0483A;
+}
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  margin: 40px 0 20px;
+}
+
+/* =====================
+   8) Responsive
    ===================== */
 @media (max-width: 768px) {
-
   .hero {
     padding: 40px 10px;
   }
-
   .hero-title {
     font-size: 1.6rem;
   }
-
   .carousel-section {
     padding: 1rem;
     max-width: 90%;
   }
-
   .phone-mockup {
     width: 300px;
     height: 550px;
@@ -298,8 +291,6 @@ body {
   .slide img {
     border-radius: 28px;
   }
-
-  /* About box on mobile can remain similar or be narrower, your choice */
   .about-info-box {
     flex: 1 1 100%;
   }
