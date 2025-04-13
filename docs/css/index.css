@@ -557,16 +557,21 @@
   }
   
   /* Robin logo animation during load */
-  .app-logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
-    z-index: 20;
-    opacity: 0;
-  }
+  /* In index.css */
+.app-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  z-index: 20;
+  opacity: 0;
+  /* same animations as before */
+}
+
   
   .loading .app-logo {
     opacity: 1;
