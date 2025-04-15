@@ -35,24 +35,31 @@
     <a href="contact.html">Contact</a>
     <a href="team.html">Team</a>
   </nav>
+<!-- ABOUT SECTION -->
+<section id="about" class="about-flex reveal">
+  <div class="about-visual">
+    <img src="assets/img/robin72.png" alt="Robin App Sample" />
+  </div>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="about-flex">
-    <div class="about-text">
-      <h2>What is Robin?</h2>
-      <p>
-        Robin leverages cutting-edge AI and environmental data to help you connect with nature. Whether you’re in your backyard or on the trail, Robin listens for bird calls and identifies species instantly — no binoculars required.
-      </p>
-      <ul>
-        <li><strong>Real-time bird song recognition</strong> using your microphone</li>
-        <li><strong>Localized bird forecasts</strong> based on your location</li>
-        <li><strong>Voice guidance and accessibility</strong> for users of all abilities</li>
-      </ul>
-    </div>
-    <div class="about-visual">
-      <img src="assets/img/400x800bb (1).png" alt="Robin App Sample" />
-    </div>
-  </section>
+  <div class="about-text">
+    <h2><span class="accent">What&nbsp;is&nbsp;Robin?</span></h2>
+
+    <p class="lead">
+      Robin combines <strong>AI bioacoustics</strong>, <strong>predictive data</strong>,
+      and <strong>inclusive design</strong> to turn every outdoor moment into an
+      interactive nature lesson.
+    </p>
+
+    <ul class="icon-list">
+      <li><span>🎧</span> <strong>Real‑time bird song recognition</strong></li>
+      <li><span>📍</span> <strong>Location‑aware forecasts</strong> for local hotspots</li>
+      <li><span>🗣️</span> <strong>Voice‑guided &amp; screen‑reader friendly</strong></li>
+    </ul>
+
+    <a href="features.html" class="cta-secondary">See Full Feature List →</a>
+  </div>
+</section>
+
 
   <!-- SEE ROBIN IN ACTION (PHONE EMULATOR) -->
   <section class="carousel-section">
@@ -304,6 +311,15 @@
       }
     }
   </script>
+  <script>
+    /* reveal on scroll */
+    const reveals=document.querySelectorAll('.reveal');
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+    },{threshold:.2});
+    reveals.forEach(el=>io.observe(el));
+  </script>
+  
 
 </body>
 </html>

@@ -1,10 +1,41 @@
-/* features.css */
-h1, h2, h3 {
-    font-weight: 600;
-  }
-  
-  ul {
-    list-style-type: disc;
-    margin-left: 2rem;
-  }
-  
+/* =====  FEATURES PAGE  ===== */
+
+/* grid wrapper */
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1.5rem;
+  max-width:1000px;
+  margin:2rem auto;
+}
+
+/* flip‑card base */
+.card{
+  position:relative;
+  perspective:1000px;
+  cursor:pointer;
+  height:280px;
+}
+.card-front,
+.card-back{
+  position:absolute;
+  inset:0;
+  padding:1.5rem;
+  background:#FFF8F4;
+  border-radius:16px;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+  backface-visibility:hidden;
+  transition:transform .6s;
+}
+.card-front{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;}
+.card-front .emoji{font-size:2.4rem}
+.card-back{transform:rotateY(180deg);overflow:auto;}
+.card.flip .card-front{transform:rotateY(180deg);}
+.card.flip .card-back {transform:rotateY(0);}
+
+/* typography */
+.card h2{margin:0;color:#C0483A;font-size:1.3rem;font-family:'Radio Canada',sans-serif}
+.card p{margin:0;font-size:.95rem}
+.card-back h3{margin:.2rem 0 .6rem;font-size:1.1rem;color:#222E50}
+.card-back ul{padding-left:1.1rem;margin:0}
+.card-back li{margin:.3rem 0;font-size:.9rem}
