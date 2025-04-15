@@ -7,4 +7,10 @@ p a {
   p a:hover {
     color: #ECA08D;
   }
+
+  .logo {
+    max-width: 90px;
+    margin: 0 auto;
+    display: block;
+  }
   

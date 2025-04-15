@@ -5,4 +5,10 @@ article {
     padding: 20px;
     line-height: 1.6;
   }
+
+  .logo {
+    max-width: 90px;
+    margin: 0 auto;
+    display: block;
+  }
   
