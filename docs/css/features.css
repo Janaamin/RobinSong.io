@@ -1,27 +1,27 @@
-/* ===== HERO (inherits from global) ===== */
+/* ---------- HERO matches home page ---------- */
 .hero{
   background:#C0483A;color:#fff;text-align:center;
   padding:60px 20px;border-bottom:4px solid #ECA08D;
 }
+.hero-content{max-width:800px;margin:0 auto}
 .logo{max-width:90px;margin:0 auto;display:block}
 .hero-title{font-size:2rem;margin-top:1rem;font-family:'Radio Canada',sans-serif}
 
-/* ===== FEATURE GRID ===== */
+/* ---------- FEATURE GRID ---------- */
 .feature-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:1.8rem;               /* more breathing room */
+  gap:1.8rem;               /* generous gap */
   max-width:1000px;
   margin:2.5rem auto;
-  padding:0 1rem;
 }
 
-/* ===== FLIP CARD BASE ===== */
+/* ---------- FLIP‑CARD ---------- */
 .card{
   position:relative;
   perspective:1000px;
   cursor:pointer;
-  height:280px;             /* fixed height for uniform grid */
+  height:280px;             /* roomy height */
 }
 .card-front,
 .card-back{
@@ -29,45 +29,37 @@
   padding:1.4rem;
   background:#FFF8F4;
   border-radius:16px;
-  box-shadow:0 3px 10px rgba(0,0,0,.08);
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
   backface-visibility:hidden;
   transition:transform .6s;
 }
 .card-front{
-  display:flex;flex-direction:column;align-items:center;
-  justify-content:center;gap:.7rem;text-align:center
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:.8rem;text-align:center;
 }
-.card-icon{width:20px;height:20px}   /* mini logo */
+.card-icon{width:20px;height:20px}     /* tiny logo replaces emoji */
 .card-back{
   transform:rotateY(180deg);
   overflow:auto;
-  scrollbar-width:none;     /* hide FF scrollbar */
+  scrollbar-width:none;
 }
 .card-back::-webkit-scrollbar{display:none}
 .card.flip .card-front{transform:rotateY(180deg)}
 .card.flip .card-back {transform:rotateY(0)}
 
-/* standout ring */
 .standout{border:3px solid #ECA08D}
 
-/* ===== TYPOGRAPHY ===== */
-.card h2{
-  margin:0;
-  color:#C0483A;
-  font-size:1.25rem;
-  font-family:'Radio Canada',sans-serif
-}
-.card p{margin:0;font-size:.9rem}
-.card-back h3{
-  margin:.2rem 0 .55rem;
-  font-size:1.1rem;
-  color:#222E50
-}
-.card-back ul{padding-left:1.1rem;margin:0}
-.card-back li{margin:.28rem 0;font-size:.85rem;line-height:1.35}
+/* ---------- TYPOGRAPHY ---------- */
+.card h2{margin:0;color:#C0483A;font-size:1.25rem;font-family:'Radio Canada',sans-serif}
+.card p{margin:0;font-size:.93rem}
+.card-back h3{margin:.2rem 0 .55rem;font-size:1.08rem;color:#222E50}
+.card-back ul{padding-left:1.2rem;margin:0}
+.card-back li{margin:.28rem 0;font-size:.88rem}
 
-/* ===== SMALL SCREENS ===== */
+/* ---------- SMALL SCREENS ---------- */
 @media(max-width:768px){
   .hero{padding:40px 10px}.hero-title{font-size:1.6rem}
-  .feature-grid{gap:1.2rem;padding:0}
+  .feature-grid{gap:1.2rem}
+  .card{height:260px}
+  .card-back{max-height:240px}
 }
