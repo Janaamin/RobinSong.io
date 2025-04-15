@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Features · Robin</title>
 
-  <!-- Core styles -->
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/features.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
@@ -29,17 +28,17 @@
   <a href="team.html">Team</a>
 </nav>
 
-<!-- =========  FEATURE GRID  ========= -->
+<!-- ========== FEATURE GRID ========== -->
 <section class="feature-grid">
 
   <!-- Real‑Time ID -->
   <article class="card">
-    <div class="card-front">
+    <div class="card-face card-front">
       <img src="assets/img/robin72.png" class="card-icon" alt="">
       <h2>Real‑Time Sound ID</h2>
       <p>BirdNET‑powered detection in &lt; 3 s.</p>
     </div>
-    <div class="card-back">
+    <div class="card-face card-back">
       <h3>Real‑Time Bird Sound Identification</h3>
       <ul>
         <li>Multi‑species detection—even overlapping calls</li>
@@ -51,12 +50,12 @@
 
   <!-- ChatGPT -->
   <article class="card">
-    <div class="card-front">
+    <div class="card-face card-front">
       <img src="assets/img/robin72.png" class="card-icon" alt="">
       <h2>ChatGPT Bird Expert</h2>
       <p>Ask anything about the birds you hear.</p>
     </div>
-    <div class="card-back">
+    <div class="card-face card-back">
       <h3>Generative AI Interaction</h3>
       <ul>
         <li>“What does this bird eat?” “Why is it singing?”</li>
@@ -68,12 +67,12 @@
 
   <!-- Forecasts -->
   <article class="card">
-    <div class="card-front">
+    <div class="card-face card-front">
       <img src="assets/img/robin72.png" class="card-icon" alt="">
       <h2>Predictive Forecasts</h2>
       <p>Plan birding trips with 87 % accuracy.</p>
     </div>
-    <div class="card-back">
+    <div class="card-face card-back">
       <h3>Predictive Bird Forecasts</h3>
       <ul>
         <li>Five‑year eBird history + environment variables</li>
@@ -85,12 +84,12 @@
 
   <!-- TTS -->
   <article class="card">
-    <div class="card-front">
+    <div class="card-face card-front">
       <img src="assets/img/robin72.png" class="card-icon" alt="">
       <h2>Text‑to‑Speech</h2>
       <p>Full VoiceOver &amp; TalkBack support.</p>
     </div>
-    <div class="card-back">
+    <div class="card-face card-back">
       <h3>Text‑to‑Speech Compatibility</h3>
       <ul>
         <li>Seamless narration of all bird data</li>
@@ -101,12 +100,12 @@
 
   <!-- History -->
   <article class="card">
-    <div class="card-front">
+    <div class="card-face card-front">
       <img src="assets/img/robin72.png" class="card-icon" alt="">
       <h2>Bird Log History</h2>
       <p>Your personal, searchable archive.</p>
     </div>
-    <div class="card-back">
+    <div class="card-face card-back">
       <h3>Bird Identification History</h3>
       <ul>
         <li>Species &amp; scientific classification</li>
@@ -118,12 +117,12 @@
 
   <!-- Inclusive Design -->
   <article class="card">
-    <div class="card-front">
+    <div class="card-face card-front">
       <img src="assets/img/robin72.png" class="card-icon" alt="">
       <h2>Inclusive Design</h2>
       <p>High‑contrast, large‑text, haptic feedback.</p>
     </div>
-    <div class="card-back">
+    <div class="card-face card-back">
       <h3>Inclusive &amp; Intuitive UI</h3>
       <ul>
         <li>High‑contrast visuals &amp; large‑text mode</li>
@@ -135,12 +134,12 @@
 
   <!-- Cross‑platform -->
   <article class="card">
-    <div class="card-front">
+    <div class="card-face card-front">
       <img src="assets/img/robin72.png" class="card-icon" alt="">
       <h2>Cross‑Platform</h2>
       <p>Runs natively on iOS &amp; Android.</p>
     </div>
-    <div class="card-back">
+    <div class="card-face card-back">
       <h3>Cross‑Platform Compatibility</h3>
       <ul>
         <li>Built with React‑Native</li>
@@ -150,14 +149,14 @@
     </div>
   </article>
 
-  <!-- Stand‑out -->
+  <!-- Stand‑out (spans 2 columns) -->
   <article class="card standout">
-    <div class="card-front">
+    <div class="card-face card-front">
       <img src="assets/img/robin72.png" class="card-icon" alt="">
       <h2>Why Robin Stands Out</h2>
       <p>AI • Education • Accessibility</p>
     </div>
-    <div class="card-back">
+    <div class="card-face card-back">
       <h3>More Than a Birding App</h3>
       <ul>
         <li>Transforms classrooms, trails &amp; wildlife centres</li>
@@ -174,7 +173,7 @@
 </footer>
 
 <script>
-/* flip‑card toggle */
+/* Flip on tap (touch) */
 document.querySelectorAll('.card').forEach(card=>{
   card.addEventListener('click',()=>card.classList.toggle('flip'));
 });

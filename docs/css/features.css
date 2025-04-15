@@ -15,21 +15,21 @@
   margin:2.5rem auto;
   padding:0 1rem;
 }
+.standout{grid-column:span 2;} /* spans two columns on desktop */
 
-/* ---------- FLIP‑CARD ---------- */
+/* ---------- CARD BASE ---------- */
 .card{
   position:relative;
   perspective:1000px;
-  cursor:pointer;
   height:280px;
+  cursor:pointer;
 }
-.card-front,
-.card-back{
+.card-face{
   position:absolute;inset:0;
   padding:1.4rem;
   background:#FFF8F4;
   border-radius:16px;
-  box-shadow:0 2px 8px rgba(0,0,0,.1);
+  box-shadow:0 4px 10px rgba(0,0,0,.08);
   backface-visibility:hidden;
   transition:transform .6s;
 }
@@ -37,29 +37,31 @@
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   gap:.8rem;text-align:center;
 }
-.card-icon{width:20px;height:20px}
+.card-icon{width:32px;height:32px}        /* 32 px logo */
 .card-back{
   transform:rotateY(180deg);
   overflow:auto;
   scrollbar-width:none;
 }
 .card-back::-webkit-scrollbar{display:none}
-.card.flip .card-front{transform:rotateY(180deg)}
-.card.flip .card-back {transform:rotateY(0)}
 
-.standout{border:3px solid #ECA08D}
+/* hover + tap flip */
+.card:hover .card-front,
+.card.flip  .card-front{transform:rotateY(180deg)}
+.card:hover .card-back,
+.card.flip  .card-back {transform:rotateY(0)}
 
-/* Typography */
+/* ---------- TYPOGRAPHY ---------- */
 .card h2{margin:0;color:#C0483A;font-size:1.25rem;font-family:'Radio Canada',sans-serif}
-.card p{margin:0;font-size:.93rem}
+.card p{margin:0;font-size:.93rem;color:#222E50}
 .card-back h3{margin:.2rem 0 .55rem;font-size:1.08rem;color:#222E50}
 .card-back ul{padding-left:1.2rem;margin:0}
-.card-back li{margin:.28rem 0;font-size:.88rem}
+.card-back li{margin:.28rem 0;font-size:.88rem;color:#222E50}
 
 /* ---------- SMALL SCREENS ---------- */
 @media(max-width:768px){
   .hero{padding:40px 10px}.hero-title{font-size:1.6rem}
   .feature-grid{gap:1.2rem}
   .card{height:260px}
-  .card-back{max-height:240px}
+  .standout{grid-column:span 1;} /* back to single column on mobile */
 }
