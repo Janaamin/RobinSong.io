@@ -6,37 +6,36 @@
 /* ===== GRID ===== */
 .feature-grid{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:1.5rem;max-width:1000px;margin:2rem auto;
+  gap:1.2rem;max-width:1000px;margin:2rem auto;
 }
 
 /* ===== CARD ===== */
 .card{position:relative;perspective:1000px;cursor:pointer}
 .card-front,.card-back{
-  position:absolute;inset:0;padding:1.2rem;background:#FFF8F4;
+  position:absolute;inset:0;padding:1rem;background:#FFF8F4;
   border-radius:16px;box-shadow:0 2px 8px rgba(0,0,0,.1);
   backface-visibility:hidden;transition:transform .6s;
 }
 .card-front{
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:.6rem;text-align:center;height:100%;
+  gap:.5rem;text-align:center;height:100%;
 }
-.card-icon{width:24px;height:24px}          /* <<< really small logo */
-.card-back{transform:rotateY(180deg);overflow:auto;max-height:380px}
+.card-icon{width:20px;height:20px} /* <<< super‑small logo */
+.card-back{transform:rotateY(180deg);overflow:auto;max-height:340px}
 .card.flip .card-front{transform:rotateY(180deg)}
 .card.flip .card-back {transform:rotateY(0)}
 
-/* standout ring */
 .standout{border:3px solid #ECA08D}
 
 /* Typography */
-.card h2{margin:0;color:#C0483A;font-size:1.2rem;font-family:'Radio Canada',sans-serif}
-.card p{margin:0;font-size:.9rem}
-.card-back h3{margin:.2rem 0 .5rem;font-size:1.05rem;color:#222E50}
+.card h2{margin:0;color:#C0483A;font-size:1.15rem;font-family:'Radio Canada',sans-serif}
+.card p{margin:0;font-size:.85rem}
+.card-back h3{margin:.15rem 0 .45rem;font-size:1.05rem;color:#222E50}
 .card-back ul{padding-left:1.1rem;margin:0}
-.card-back li{margin:.25rem 0;font-size:.85rem}
+.card-back li{margin:.25rem 0;font-size:.83rem}
 
 /* small screens */
 @media(max-width:768px){
   .hero{padding:40px 10px}.hero-title{font-size:1.6rem}
-  .card-back{max-height:260px}
+  .card-back{max-height:240px}
 }
