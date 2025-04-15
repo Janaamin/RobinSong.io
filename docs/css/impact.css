@@ -1,0 +1,258 @@
+/* ---------- HERO ---------- */
+.hero {
+    background: #C0483A;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 4px solid #ECA08D;
+  }
+  
+  .logo {
+    max-width: 90px; /* same size as on Features page */
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+    margin-top: 1rem;
+    font-family: 'Radio Canada', sans-serif;
+  }
+  
+  /* ---------- IMPACT‑CONTENT STYLES ---------- */
+  .impact-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Inter', sans-serif;
+    color: #222E50;
+  }
+  
+  .impact-content h2 {
+    color: #C0483A;
+    border-bottom: 2px solid #ECA08D;
+    padding-bottom: .4rem;
+    margin-top: 2rem;
+  }
+  
+  .paper-entry {
+    background: #FFF8F4;
+    border-left: 4px solid #ECA08D;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  }
+  
+  .download-btn {
+    display: inline-block;
+    margin-top: .6rem;
+    background: #C0483A;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background .3s ease;
+  }
+  .download-btn:hover {
+    background: #a33c30;
+  }
+  
+  /* ---------- LAUNCH EVENT GALLERY + STYLES MOVED FROM INLINE ---------- */
+  .launch-event {
+    margin: 3rem 0;
+    padding: 1.5rem;
+    background: #FFF8F4;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+  }
+  
+  .launch-event.visible {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .launch-event h3 {
+    text-align: center;
+    margin: 1.5rem 0;
+    color: #222E50;
+    font-family: 'Radio Canada', sans-serif;
+  }
+  
+  /* Gallery Container */
+  .gallery-container {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: #F9DFD2;
+    border-radius: 12px;
+  }
+  
+  /* Image Gallery */
+  .event-gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem 0;
+    -ms-overflow-style: none;  /* Hide scrollbar in IE/Edge */
+    scrollbar-width: none;     /* Hide scrollbar in Firefox */
+  }
+  
+  .event-gallery::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome/Safari/Opera */
+  }
+  
+  .gallery-item {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    background: white;
+  }
+  
+  .gallery-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 3/2;
+    display: block;
+  }
+  
+  .caption {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    color: #222E50;
+    text-align: center;
+  }
+  
+  /* Gallery Navigation */
+  .gallery-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  
+  .gallery-btn {
+    background: #C0483A;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  .gallery-btn:hover {
+    background: #a33c30;
+  }
+  
+  .gallery-indicators {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ECA08D;
+    cursor: pointer;
+  }
+  
+  .indicator.active {
+    background: #C0483A;
+  }
+  
+  /* Event Summary & Highlights */
+  .event-summary {
+    margin-top: 2rem;
+  }
+  
+  .event-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .highlight-item {
+    flex: 1 1 250px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  .highlight-icon {
+    font-size: 1.8rem;
+  }
+  
+  .highlight-text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .highlight-text strong {
+    color: #C0483A;
+    margin-bottom: 0.2rem;
+  }
+  
+  .highlight-text span {
+    font-size: 0.85rem;
+    color: #555;
+  }
+  
+  /* ---------- REVEAL / ANIMATION ---------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s;
+  }
+  .visible {
+    opacity: 1;
+    transform: none;
+  }
+  
+  /* ---------- APP STORE, WHY ROBIN, COMMUNITY, ETC. ---------- */
+  /* (No changes needed, already styled by .impact-content rules) */
+  
+  /* ---------- RESPONSIVE ---------- */
+  @media (min-width: 768px) {
+    .event-gallery {
+      flex-wrap: wrap;
+      overflow-x: visible;
+    }
+    .gallery-item {
+      flex: 0 0 calc(50% - 0.5rem);
+    }
+    .gallery-nav {
+      display: none; /* Hide navigation on larger screens */
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .gallery-item {
+      flex: 0 0 calc(33.333% - 0.67rem);
+    }
+  }
+  
+  /* Additional media queries from original code if needed */
+  @media (max-width: 768px){
+    .hero {
+      padding: 40px 10px;
+    }
+    .hero-title {
+      font-size: 1.6rem;
+    }
+  }
+  
