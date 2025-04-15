@@ -648,5 +648,19 @@
       top: 70px;
       height: 25px;
     }
+
+    .about-text .accent        { color:#C0483A; }
+.about-text .lead          { font-size:1.1rem; margin-bottom:1rem; }
+.icon-list                 { list-style:none; padding:0; margin:0 0 1rem; }
+.icon-list li              { display:flex; gap:.6rem; margin:.4rem 0; }
+.icon-list li span         { font-size:1.3rem; }
+.cta-secondary             { color:#ECA08D; text-decoration:none; font-weight:600; }
+.cta-secondary:hover       { color:#C0483A; }
+
+/* simple fade‑in reveal */
+.reveal { opacity:0; transform:translateY(40px); transition:all .6s ease; }
+.reveal.visible { opacity:1; transform:none; }
+
+
   }
   
