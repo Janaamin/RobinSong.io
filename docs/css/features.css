@@ -1,9 +1,8 @@
-/* ---------- HERO matches home page ---------- */
+/* ---------- HERO ---------- */
 .hero{
   background:#C0483A;color:#fff;text-align:center;
   padding:60px 20px;border-bottom:4px solid #ECA08D;
 }
-.hero-content{max-width:800px;margin:0 auto}
 .logo{max-width:90px;margin:0 auto;display:block}
 .hero-title{font-size:2rem;margin-top:1rem;font-family:'Radio Canada',sans-serif}
 
@@ -11,9 +10,10 @@
 .feature-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:1.8rem;               /* generous gap */
+  gap:1.8rem;
   max-width:1000px;
   margin:2.5rem auto;
+  padding:0 1rem;
 }
 
 /* ---------- FLIP‑CARD ---------- */
@@ -21,7 +21,7 @@
   position:relative;
   perspective:1000px;
   cursor:pointer;
-  height:280px;             /* roomy height */
+  height:280px;
 }
 .card-front,
 .card-back{
@@ -37,7 +37,7 @@
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   gap:.8rem;text-align:center;
 }
-.card-icon{width:20px;height:20px}     /* tiny logo replaces emoji */
+.card-icon{width:20px;height:20px}
 .card-back{
   transform:rotateY(180deg);
   overflow:auto;
@@ -49,7 +49,7 @@
 
 .standout{border:3px solid #ECA08D}
 
-/* ---------- TYPOGRAPHY ---------- */
+/* Typography */
 .card h2{margin:0;color:#C0483A;font-size:1.25rem;font-family:'Radio Canada',sans-serif}
 .card p{margin:0;font-size:.93rem}
 .card-back h3{margin:.2rem 0 .55rem;font-size:1.08rem;color:#222E50}

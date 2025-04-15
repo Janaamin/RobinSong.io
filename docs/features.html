@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Features · Robin</title>
 
+  <!-- Core styles -->
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/features.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
@@ -28,7 +29,7 @@
   <a href="team.html">Team</a>
 </nav>
 
-<!-- ========== FEATURE GRID ========== -->
+<!-- =========  FEATURE GRID  ========= -->
 <section class="feature-grid">
 
   <!-- Real‑Time ID -->
@@ -173,9 +174,9 @@
 </footer>
 
 <script>
-/* flip‑card interaction */
-document.querySelectorAll('.card').forEach(c=>{
-  c.addEventListener('click',()=>c.classList.toggle('flip'));
+/* flip‑card toggle */
+document.querySelectorAll('.card').forEach(card=>{
+  card.addEventListener('click',()=>card.classList.toggle('flip'));
 });
 </script>
 </body>
