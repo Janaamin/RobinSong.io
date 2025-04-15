@@ -39,3 +39,10 @@
   .hero{padding:40px 10px}.hero-title{font-size:1.6rem}
   .card-back{max-height:240px}
 }
+
+/* ---------- SPACING FIX ---------- */
+.feature-grid{ gap:1.8rem; }   /* was 1.2rem */
+
+.card{
+  min-height:260px;            /* restore vertical space so cards don’t overlap */
+}
