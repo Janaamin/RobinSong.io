@@ -87,48 +87,76 @@
       
       <!-- Image Gallery -->
       <div class="event-gallery">
+        <!-- Example images. Adjust or add more as needed. -->
         <div class="gallery-item">
-          <img src="assets/pics/launch1.jpg" alt="Opening presentation at Robin launch event" class="gallery-img">
-          <div class="caption">Opening presentation introducing Robin's features</div>
+          <img src="css/assets/pics/launch2.jpg" alt="Live demo of the Robin app" class="gallery-img">
+          <div class="caption">The Robin Team</div>
         </div>
-        
+
         <div class="gallery-item">
-          <img src="assets/pics/launch2.jpg" alt="Live demo of the Robin app" class="gallery-img">
-          <div class="caption">Live demonstration of real-time bird identification</div>
+          <img src="css/assets/pics/launch1.jpg" alt="Opening presentation" class="gallery-img">
+          <div class="caption">Group photo with the Robin team and attendees</div>
         </div>
-        
+
         <div class="gallery-item">
-          <img src="assets/pics/launch3.jpg" alt="Attendees testing the app outdoors" class="gallery-img">
-          <div class="caption">Attendees testing Robin on the nature trail</div>
+          <img src="css/assets/pics/launch3.jpg" alt="Attendees testing the app" class="gallery-img">
+          <div class="caption">The Robin Team with Dean Kridli</div>
         </div>
-        
+
         <div class="gallery-item">
-          <img src="assets/pics/launch4.jpg" alt="Accessibility testing with visually impaired users" class="gallery-img">
+          <img src="css/assets/pics/launch4.jpg" alt="Accessibility testing" class="gallery-img">
+          <div class="caption">The team with Dr. Song &amp; Dr. Sirja Das</div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="css/assets/pics/launch5.jpg" alt="Q&A session" class="gallery-img">
+          <div class="caption">The Robin team with Dr. Song &amp; Dr. Bruce Maxim</div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="css/assets/pics/launch6.jpg" alt="Group photo" class="gallery-img">
+          <div class="caption">Attendees Of the Launch</div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="css/assets/pics/launch7.jpg" alt="Testing outdoors" class="gallery-img">
+          <div class="caption">The Robin Team with Provost Gabriella</div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="css/assets/pics/launch8.jpg" alt="Accessibility test" class="gallery-img">
           <div class="caption">Accessibility testing with our guest Donna</div>
         </div>
-        
+
         <div class="gallery-item">
-          <img src="assets/pics/launch5.jpg" alt="Q&A session with the development team" class="gallery-img">
-          <div class="caption">Q&A session with the development team</div>
+          <img src="css/assets/pics/launch9.jpg" alt="Team discussion" class="gallery-img">
+          <div class="caption">Team Discussion</div>
         </div>
-        
+
         <div class="gallery-item">
-          <img src="assets/pics/launch6.jpg" alt="Group photo of attendees and team" class="gallery-img">
-          <div class="caption">Group photo with the Robin team and attendees</div>
+          <img src="css/assets/pics/launch10.jpg" alt="EIC Space" class="gallery-img">
+          <div class="caption">EIC Space</div>
         </div>
       </div>
       
       <!-- Gallery Navigation -->
       <div class="gallery-nav">
         <button id="prev-btn" class="gallery-btn">Previous</button>
+
         <div class="gallery-indicators">
+          <!-- Must match # of slides. If 10 slides, need 10 indicators. -->
           <span class="indicator active"></span>
           <span class="indicator"></span>
           <span class="indicator"></span>
           <span class="indicator"></span>
           <span class="indicator"></span>
           <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
         </div>
+
         <button id="next-btn" class="gallery-btn">Next</button>
       </div>
     </div>
@@ -231,7 +259,6 @@ document.addEventListener('DOMContentLoaded',()=>{
   const launchEvent=document.querySelector('.launch-event');
   io.observe(launchEvent);
 
-
   // Photo gallery logic
   const gallery=document.querySelector('.event-gallery');
   const prevBtn=document.getElementById('prev-btn');
@@ -255,6 +282,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     updateIndicators(index);
   }
 
+  // Manual previous/next button logic
   prevBtn.addEventListener('click',()=>{
     currentIndex=(currentIndex>0)?currentIndex-1:items.length-1;
     scrollToItem(currentIndex);
@@ -282,6 +310,12 @@ document.addEventListener('DOMContentLoaded',()=>{
       updateIndicators(newIndex);
     }
   });
+
+  // AUTO-ADVANCE (REVOLVE) EVERY 5 SECONDS
+  setInterval(()=>{
+    // Move to "next" item
+    nextBtn.click();
+  },5000);
 });
 </script>
 

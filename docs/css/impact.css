@@ -54,11 +54,12 @@
     text-decoration: none;
     transition: background .3s ease;
   }
+  
   .download-btn:hover {
     background: #a33c30;
   }
   
-  /* ---------- LAUNCH EVENT GALLERY + STYLES MOVED FROM INLINE ---------- */
+  /* ---------- LAUNCH EVENT GALLERY + STYLES ---------- */
   .launch-event {
     margin: 3rem 0;
     padding: 1.5rem;
@@ -107,7 +108,7 @@
   }
   
   .gallery-item {
-    flex: 0 0 100%;
+    flex: 0 0 100%; /* so each item is the width of the container */
     scroll-snap-align: start;
     border-radius: 8px;
     overflow: hidden;
@@ -149,6 +150,7 @@
     font-weight: 600;
     transition: background 0.3s ease;
   }
+  
   .gallery-btn:hover {
     background: #a33c30;
   }
@@ -223,10 +225,8 @@
     transform: none;
   }
   
-  /* ---------- APP STORE, WHY ROBIN, COMMUNITY, ETC. ---------- */
-  /* (No changes needed, already styled by .impact-content rules) */
-  
-  /* ---------- RESPONSIVE ---------- */
+  /* Remove or comment out the media queries that displayed multi-column on wide screens */
+  /*
   @media (min-width: 768px) {
     .event-gallery {
       flex-wrap: wrap;
@@ -236,7 +236,7 @@
       flex: 0 0 calc(50% - 0.5rem);
     }
     .gallery-nav {
-      display: none; /* Hide navigation on larger screens */
+      display: none; 
     }
   }
   
@@ -245,6 +245,7 @@
       flex: 0 0 calc(33.333% - 0.67rem);
     }
   }
+  */
   
   /* Additional media queries from original code if needed */
   @media (max-width: 768px){
