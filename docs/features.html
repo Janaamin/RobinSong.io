@@ -28,154 +28,185 @@
   <a href="team.html">Team</a>
 </nav>
 
-<!-- ========== FEATURE GRID ========== -->
-<section class="feature-grid">
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <button class="pill active" data-filter="all">All</button>
+  <button class="pill" data-filter="ai">AI & Data</button>
+  <button class="pill" data-filter="access">Accessibility & UX</button>
+</div>
 
-  <!-- Real‑Time ID -->
-  <article class="card">
-    <div class="card-face card-front">
-      <img src="assets/img/robin72.png" class="card-icon" alt="">
-      <h2>Real‑Time Sound ID</h2>
-      <p>BirdNET‑powered detection in &lt; 3 s.</p>
-    </div>
-    <div class="card-face card-back">
-      <h3>Real‑Time Bird Sound Identification</h3>
-      <ul>
-        <li>Multi‑species detection—even overlapping calls</li>
-        <li>Reliable in urban, rural &amp; natural soundscapes</li>
-        <li>Average detection speed &lt; 3 seconds</li>
-      </ul>
-    </div>
-  </article>
+<!-- WRAPPER -->
+<div class="feature-wrapper">
+  <section class="feature-grid">
 
-  <!-- ChatGPT -->
-  <article class="card">
-    <div class="card-face card-front">
-      <img src="assets/img/robin72.png" class="card-icon" alt="">
-      <h2>ChatGPT Bird Expert</h2>
-      <p>Ask anything about the birds you hear.</p>
-    </div>
-    <div class="card-face card-back">
-      <h3>Generative AI Interaction</h3>
-      <ul>
-        <li>“What does this bird eat?” “Why is it singing?”</li>
-        <li>Accurate, source‑verified answers</li>
-        <li>Voice input &amp; text‑to‑speech replies</li>
-      </ul>
-    </div>
-  </article>
+    <!-- Real‑Time ID -->
+    <article class="card" data-cat="ai">
+      <div class="card-face card-front">
+        <img src="assets/img/robin72.png" class="card-icon" alt="">
+        <h3>Real‑Time Sound ID</h3>
+        <p>Identify birds in real‑time using BirdNET.</p>
+      </div>
+      <div class="card-face card-back">
+        <h4>Real‑Time Bird Sound Identification</h4>
+        <p>Open the app and let Robin listen—no manual input required.</p>
+        <ul>
+          <li>Multi‑species detection for overlapping calls</li>
+          <li>Reliable in urban, rural &amp; natural soundscapes</li>
+          <li>Average detection speed &lt; 3 seconds</li>
+        </ul>
+      </div>
+    </article>
 
-  <!-- Forecasts -->
-  <article class="card">
-    <div class="card-face card-front">
-      <img src="assets/img/robin72.png" class="card-icon" alt="">
-      <h2>Predictive Forecasts</h2>
-      <p>Plan birding trips with 87 % accuracy.</p>
-    </div>
-    <div class="card-face card-back">
-      <h3>Predictive Bird Forecasts</h3>
-      <ul>
-        <li>Five‑year eBird history + environment variables</li>
-        <li>Monthly hotspot predictions</li>
-        <li>Visual &amp; audio explanations</li>
-      </ul>
-    </div>
-  </article>
+    <!-- ChatGPT -->
+    <article class="card" data-cat="ai">
+      <div class="card-face card-front">
+        <img src="assets/img/robin72.png" class="card-icon" alt="">
+        <h3>ChatGPT Bird Expert</h3>
+        <p>Ask “Why is it singing?”—get answers.</p>
+      </div>
+      <div class="card-face card-back">
+        <h4>Generative AI Interaction</h4>
+        <p>Transforms identification into exploration with conversational AI.</p>
+        <ul>
+          <li>Diet, behaviour, migration questions</li>
+          <li>Accurate, source‑verified answers</li>
+          <li>Voice input &amp; text‑to‑speech replies</li>
+        </ul>
+      </div>
+    </article>
 
-  <!-- TTS -->
-  <article class="card">
-    <div class="card-face card-front">
-      <img src="assets/img/robin72.png" class="card-icon" alt="">
-      <h2>Text‑to‑Speech</h2>
-      <p>Full VoiceOver &amp; TalkBack support.</p>
-    </div>
-    <div class="card-face card-back">
-      <h3>Text‑to‑Speech Compatibility</h3>
-      <ul>
-        <li>Seamless narration of all bird data</li>
-        <li>Ideal for visually‑impaired &amp; hands‑busy users</li>
-      </ul>
-    </div>
-  </article>
+    <!-- Forecasts -->
+    <article class="card" data-cat="ai">
+      <div class="card-face card-front">
+        <img src="assets/img/robin72.png" class="card-icon" alt="">
+        <h3>Predictive Forecasts</h3>
+        <p>Plan outings with 87 % hotspot accuracy.</p>
+      </div>
+      <div class="card-face card-back">
+        <h4>Predictive Bird Forecasts</h4>
+        <p>Five years of eBird data + environmental variables.</p>
+        <ul>
+          <li>Monthly predictions tailored to local hotspots</li>
+          <li>87 % accuracy rate</li>
+          <li>Visual and audio explanations</li>
+        </ul>
+      </div>
+    </article>
 
-  <!-- History -->
-  <article class="card">
-    <div class="card-face card-front">
-      <img src="assets/img/robin72.png" class="card-icon" alt="">
-      <h2>Bird Log History</h2>
-      <p>Your personal, searchable archive.</p>
-    </div>
-    <div class="card-face card-back">
-      <h3>Bird Identification History</h3>
-      <ul>
-        <li>Species &amp; scientific classification</li>
-        <li>Date, time &amp; GPS location</li>
-        <li>Photo &amp; description</li>
-      </ul>
-    </div>
-  </article>
+    <!-- TTS -->
+    <article class="card" data-cat="access">
+      <div class="card-face card-front">
+        <img src="assets/img/robin72.png" class="card-icon" alt="">
+        <h3>Text‑to‑Speech</h3>
+        <p>Hands‑free, inclusive navigation.</p>
+      </div>
+      <div class="card-face card-back">
+        <h4>Text‑to‑Speech Compatibility</h4>
+        <p>Built for visually‑impaired users and hands‑busy scenarios.</p>
+        <ul>
+          <li>Seamless with VoiceOver &amp; TalkBack</li>
+          <li>All bird data narrated automatically</li>
+          <li>Ideal for outdoor exploration</li>
+        </ul>
+      </div>
+    </article>
 
-  <!-- Inclusive Design -->
-  <article class="card">
-    <div class="card-face card-front">
-      <img src="assets/img/robin72.png" class="card-icon" alt="">
-      <h2>Inclusive Design</h2>
-      <p>High‑contrast, large‑text, haptic feedback.</p>
-    </div>
-    <div class="card-face card-back">
-      <h3>Inclusive &amp; Intuitive UI</h3>
-      <ul>
-        <li>High‑contrast visuals &amp; large‑text mode</li>
-        <li>Optional haptic confirmations</li>
-        <li>Streamlined tab navigation</li>
-      </ul>
-    </div>
-  </article>
+    <!-- History -->
+    <article class="card" data-cat="access">
+      <div class="card-face card-front">
+        <img src="assets/img/robin72.png" class="card-icon" alt="">
+        <h3>Bird Log History</h3>
+        <p>Automatic, searchable journal.</p>
+      </div>
+      <div class="card-face card-back">
+        <h4>Bird Identification History</h4>
+        <p>Every identification is saved for future reference.</p>
+        <ul>
+          <li>Species &amp; scientific classification</li>
+          <li>Date, time &amp; GPS location</li>
+          <li>Photo and description</li>
+        </ul>
+      </div>
+    </article>
 
-  <!-- Cross‑platform -->
-  <article class="card">
-    <div class="card-face card-front">
-      <img src="assets/img/robin72.png" class="card-icon" alt="">
-      <h2>Cross‑Platform</h2>
-      <p>Runs natively on iOS &amp; Android.</p>
-    </div>
-    <div class="card-face card-back">
-      <h3>Cross‑Platform Compatibility</h3>
-      <ul>
-        <li>Built with React‑Native</li>
-        <li>Optimised for screen‑readers</li>
-        <li>Consistent UX across devices</li>
-      </ul>
-    </div>
-  </article>
+    <!-- Inclusive Design -->
+    <article class="card" data-cat="access">
+      <div class="card-face card-front">
+        <img src="assets/img/robin72.png" class="card-icon" alt="">
+        <h3>Inclusive Design</h3>
+        <p>High‑contrast visuals, large text, haptics.</p>
+      </div>
+      <div class="card-face card-back">
+        <h4>Inclusive &amp; Intuitive UI</h4>
+        <p>Designed from the ground up for accessibility and simplicity.</p>
+        <ul>
+          <li>High‑contrast visuals &amp; large‑text options</li>
+          <li>Optional haptic feedback confirmations</li>
+          <li>Streamlined tab‑based navigation</li>
+        </ul>
+      </div>
+    </article>
 
-  <!-- Stand‑out (spans 2 columns) -->
-  <article class="card standout">
-    <div class="card-face card-front">
-      <img src="assets/img/robin72.png" class="card-icon" alt="">
-      <h2>Why Robin Stands Out</h2>
-      <p>AI • Education • Accessibility</p>
-    </div>
-    <div class="card-face card-back">
-      <h3>More Than a Birding App</h3>
-      <ul>
-        <li>Transforms classrooms, trails &amp; wildlife centres</li>
-        <li>Empowers visually‑impaired users through sound</li>
-        <li>Turns every outing into an interactive lesson</li>
-      </ul>
-    </div>
-  </article>
+    <!-- Cross‑platform -->
+    <article class="card" data-cat="access">
+      <div class="card-face card-front">
+        <img src="assets/img/robin72.png" class="card-icon" alt="">
+        <h3>Cross‑Platform</h3>
+        <p>React‑Native app for iOS &amp; Android.</p>
+      </div>
+      <div class="card-face card-back">
+        <h4>Cross‑Platform Compatibility</h4>
+        <p>Consistent, accessible experience across devices.</p>
+        <ul>
+          <li>Built with React Native for efficiency</li>
+          <li>Optimised for screen‑readers</li>
+          <li>Smooth performance on a wide range of hardware</li>
+        </ul>
+      </div>
+    </article>
 
-</section>
+    <!-- Stand‑out -->
+    <article class="card standout" data-cat="access">
+      <div class="card-face card-front">
+        <img src="assets/img/robin72.png" class="card-icon" alt="">
+        <h3>Why Robin Stands Out</h3>
+        <p>AI • Education • Accessibility</p>
+      </div>
+      <div class="card-face card-back">
+        <h4>More Than a Birding App</h4>
+        <p>Robin unites intelligent tech, ecology &amp; inclusive design.</p>
+        <ul>
+          <li>For students, birders &amp; nature lovers</li>
+          <li>Accessible in classrooms, trails &amp; wildlife centres</li>
+          <li>Lets visually‑impaired users enjoy nature through sound</li>
+        </ul>
+      </div>
+    </article>
+
+  </section>
+</div>
 
 <footer>
   <p>&copy; 2025 RobinSong. All rights reserved.</p>
 </footer>
 
 <script>
-/* Flip on tap (touch) */
-document.querySelectorAll('.card').forEach(card=>{
-  card.addEventListener('click',()=>card.classList.toggle('flip'));
+/* flip on tap */
+document.querySelectorAll('.card').forEach(c=>{
+  c.addEventListener('click',()=>c.classList.toggle('flip'));
+});
+
+/* filter pills */
+const pills=document.querySelectorAll('.pill');
+pills.forEach(p=>{
+  p.addEventListener('click',()=>{
+    pills.forEach(x=>x.classList.remove('active'));
+    p.classList.add('active');
+    const cat=p.dataset.filter;
+    document.querySelectorAll('.card').forEach(card=>{
+      card.style.display=(cat==='all'||card.dataset.cat===cat)?'block':'none';
+    });
+  });
 });
 </script>
 </body>
