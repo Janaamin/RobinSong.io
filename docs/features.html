@@ -5,17 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Features · Robin</title>
 
+  <!-- CSS -->
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/features.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
+<!-- HERO -------------------------------------------------------->
 <header class="hero">
-  <img src="assets/img/robin72.png" alt="Robin Logo" class="logo">
-  <h1 class="hero-title">Explore Robin’s Capabilities</h1>
+  <div class="hero-content">
+    <!-- ✅ same path & class as on index.html -->
+    <img src="assets/img/robin72.png" alt="Robin Logo" class="logo" />
+    <h1 class="hero-title">Explore Robin’s Capabilities</h1>
+  </div>
 </header>
 
+<!-- NAV -->
 <nav>
   <a href="index.html">Home</a>
   <a href="features.html">Features</a>
@@ -26,105 +32,37 @@
   <a href="team.html">Team</a>
 </nav>
 
-<!-- FEATURE GRID -->
+<!-- FEATURE GRID (flip‑cards) ----------------------------------->
 <section class="feature-grid">
 
-  <!-- Card 1 -->
   <article class="card">
-    <div class="card-front">
-      <span class="emoji">🎧</span>
-      <h2>Real‑Time Sound ID</h2>
-      <p>BirdNET‑powered, multi‑species detection in <2 s.</p>
-    </div>
-    <div class="card-back">
-      <h3>Details</h3>
-      <ul>
-        <li>Works in noisy urban &amp; natural soundscapes</li>
-        <li>Average detection speed&nbsp;&lt;&nbsp;3 s</li>
-        <li>Handles overlapping calls</li>
-      </ul>
-    </div>
+    <div class="card-front"><span class="emoji">🎧</span><h2>Real‑Time Sound ID</h2><p>BirdNET‑powered, multi‑species detection in &lt;2 s.</p></div>
+    <div class="card-back"><h3>Details</h3><ul><li>Works in noisy soundscapes</li><li>&lt; 3 s average speed</li><li>Handles overlapping calls</li></ul></div>
   </article>
 
-  <!-- Card 2 -->
   <article class="card">
-    <div class="card-front">
-      <span class="emoji">🧠</span>
-      <h2>ChatGPT Bird Expert</h2>
-      <p>Ask “Why is this robin singing?”—get instant answers.</p>
-    </div>
-    <div class="card-back">
-      <h3>Details</h3>
-      <ul>
-        <li>Voice or text input</li>
-        <li>Cites ornithology sources</li>
-        <li>Text‑to‑speech replies</li>
-      </ul>
-    </div>
+    <div class="card-front"><span class="emoji">🧠</span><h2>ChatGPT Bird Expert</h2><p>Ask “Why is this robin singing?”—get instant answers.</p></div>
+    <div class="card-back"><h3>Details</h3><ul><li>Voice or text input</li><li>Cites ornithology sources</li><li>Text‑to‑speech replies</li></ul></div>
   </article>
 
-  <!-- Card 3 -->
   <article class="card">
-    <div class="card-front">
-      <span class="emoji">⏰</span>
-      <h2>Predictive Forecasts</h2>
-      <p>87 % accuracy using 5 yrs of eBird data.</p>
-    </div>
-    <div class="card-back">
-      <h3>Details</h3>
-      <ul>
-        <li>Monthly hotspot predictions</li>
-        <li>Visual &amp; audio explanations</li>
-      </ul>
-    </div>
+    <div class="card-front"><span class="emoji">⏰</span><h2>Predictive Forecasts</h2><p>87 % accuracy using 5 yrs of eBird data.</p></div>
+    <div class="card-back"><h3>Details</h3><ul><li>Monthly hotspot predictions</li><li>Visual &amp; audio explanations</li></ul></div>
   </article>
 
-  <!-- Card 4 -->
   <article class="card">
-    <div class="card-front">
-      <span class="emoji">🗣️</span>
-      <h2>Text‑to‑Speech</h2>
-      <p>Full VoiceOver &amp; TalkBack support.</p>
-    </div>
-    <div class="card-back">
-      <h3>Details</h3>
-      <ul>
-        <li>Hands‑free navigation</li>
-        <li>Automatic bird info narration</li>
-      </ul>
-    </div>
+    <div class="card-front"><span class="emoji">🗣️</span><h2>Text‑to‑Speech</h2><p>Full VoiceOver &amp; TalkBack support.</p></div>
+    <div class="card-back"><h3>Details</h3><ul><li>Hands‑free navigation</li><li>Automatic narration</li></ul></div>
   </article>
 
-  <!-- Card 5 -->
   <article class="card">
-    <div class="card-front">
-      <span class="emoji">📖</span>
-      <h2>Bird Log History</h2>
-      <p>Auto‑saves every ID with time &amp; GPS.</p>
-    </div>
-    <div class="card-back">
-      <h3>Details</h3>
-      <ul>
-        <li>Species photo &amp; description</li>
-        <li>Searchable personal archive</li>
-      </ul>
-    </div>
+    <div class="card-front"><span class="emoji">📖</span><h2>Bird Log History</h2><p>Auto‑saves every ID with time &amp; GPS.</p></div>
+    <div class="card-back"><h3>Details</h3><ul><li>Photo &amp; description</li><li>Searchable archive</li></ul></div>
   </article>
 
-  <!-- Card 6 -->
   <article class="card">
-    <div class="card-front">
-      <span class="emoji">🎨</span>
-      <h2>Inclusive Design</h2>
-      <p>High‑contrast, haptic feedback, large‑text mode.</p>
-    </div>
-    <div class="card-back">
-      <h3>Details</h3>
-      <ul>
-        <li>Accessible on iOS &amp; Android</li>
-        <li>React‑Native cross‑platform</li>
-      </ul>
-    </div>
+    <div class="card-front"><span class="emoji">🎨</span><h2>Inclusive Design</h2><p>High‑contrast, haptic feedback, large‑text mode.</p></div>
+    <div class="card-back"><h3>Details</h3><ul><li>iOS &amp; Android</li><li>React‑Native build</li></ul></div>
   </article>
 
 </section>
@@ -134,9 +72,9 @@
 </footer>
 
 <script>
-/*  FLIP‑CARD ACCORDION  */
-document.querySelectorAll('.card').forEach(card=>{
-  card.addEventListener('click',()=>card.classList.toggle('flip'));
+/* flip‑card interaction */
+document.querySelectorAll('.card').forEach(c=>{
+  c.addEventListener('click',()=>c.classList.toggle('flip'));
 });
 </script>
 </body>
