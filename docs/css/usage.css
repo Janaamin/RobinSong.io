@@ -1,16 +1,76 @@
 /* usage.css */
-ol {
-    margin-left: 2rem;
-    font-size: 1em;
-  }
-  
-  li {
-    margin-bottom: 0.5rem;
-  }
 
-  .logo {
-    max-width: 90px;
-    margin: 0 auto;
-    display: block;
-  }
-  
+/* Container for the usage page content */
+.usage-content {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* STEPS SECTION */
+.steps-section {
+  background-color: #FFF8F4;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.steps-section h2 {
+  color: #C0483A;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.steps-section ol {
+  margin-left: 2rem;
+  font-size: 1em;
+  color: #222E50;
+  list-style: decimal inside;
+}
+.steps-section li {
+  margin-bottom: 0.5rem;
+}
+
+/* VIDEO TUTORIAL SECTION */
+.video-section {
+  background-color: #F9DFD2;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.video-section h2 {
+  color: #C0483A;
+  margin-bottom: 1rem;
+}
+.video-section p {
+  color: #222E50;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Container to center the embedded video */
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.video-container iframe {
+  border: none;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  /* Ensures responsiveness */
+}
+
+/* LOGO & HERO OVERRIDES (if needed) */
+.logo {
+  max-width: 90px;
+  margin: 0 auto;
+  display: block;
+}
+.hero-title {
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+}

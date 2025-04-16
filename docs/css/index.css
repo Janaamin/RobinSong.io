@@ -9,23 +9,19 @@
     text-align: center;
     border-bottom: 4px solid #ECA08D;
   }
-  
   .hero-content {
     max-width: 800px;
     margin: 0 auto;
   }
-  
   .hero-title {
     font-size: 2rem;
     margin-top: 1rem;
   }
-  
   .logo {
     max-width: 90px;
     margin: 0 auto;
     display: block;
   }
-  
   .tagline {
     font-size: 1.2em;
     margin-top: 10px;
@@ -34,7 +30,6 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
   .cta-button {
     display: inline-block;
     margin-top: 20px;
@@ -47,41 +42,32 @@
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(192, 72, 58, 0.2);
   }
-  
   .cta-button:hover {
     background-color: #FFD2C6;
     transform: scale(1.03);
   }
-  
-  /* Button press effect */
   .cta-button:active {
     transform: translateY(2px);
     box-shadow: 0 2px 3px rgba(192, 72, 58, 0.1);
   }
   
-  /* =====================
-     NAV
-     ===================== */
+  /* NAV */
   nav {
     background-color: #FFF8F4;
     padding: 10px;
     text-align: center;
   }
-  
   nav a {
     margin: 0 15px;
     color: #C0483A;
     text-decoration: none;
     font-weight: 600;
   }
-  
   nav a:hover {
     color: #ECA08D;
   }
   
-  /* =====================
-     ABOUT SECTION
-     ===================== */
+  /* ABOUT SECTION */
   .about-flex {
     display: flex;
     flex-wrap: wrap;
@@ -91,38 +77,54 @@
     max-width: 1000px;
     margin: 2rem auto;
   }
-  
-  .about-text {
-    flex: 1 1 300px;
-    max-width: 500px;
-  }
-  
-  .about-text h2 {
-    font-size: 1.8rem;
-    color: #C0483A;
-    margin-bottom: 0.5rem;
-  }
-  
-  .about-text p {
-    margin-bottom: 1rem;
-    line-height: 1.4;
-  }
-  
-  .about-text ul {
-    list-style: disc;
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
   .about-visual img {
     max-width: 240px;
     border-radius: 16px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
+  .about-text {
+    flex: 1 1 300px;
+    max-width: 500px;
+  }
+  .about-text h2 {
+    font-size: 1.8rem;
+    color: #C0483A;
+    margin-bottom: 0.5rem;
+  }
+  .about-text p {
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+  .icon-list {
+    list-style: none;
+    padding: 0;
+  }
+  .icon-list li {
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .icon-list li span {
+    font-size: 1.2rem;
+  }
+  .accent {
+    color: #C0483A;
+  }
+  .lead {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .cta-secondary {
+    color: #ECA08D;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .cta-secondary:hover {
+    color: #C0483A;
+  }
   
-  /* =====================
-     CAROUSEL SECTION
-     ===================== */
+  /* CAROUSEL SECTION */
   .carousel-section {
     background: linear-gradient(135deg, #F9DFD2 0%, #EDD0C0 100%);
     text-align: center;
@@ -130,457 +132,77 @@
     padding: 2rem;
     margin: 2rem auto;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    max-width: 650px; 
+    max-width: 650px;
   }
-  
   .carousel-section h2 {
     color: #222E50;
     font-size: 1.6rem;
     margin-bottom: 1.5rem;
   }
   
-  /* 3D tilt effect container */
-  .phone-container {
-    perspective: 1000px;
-    margin: 0 auto;
+  /* Simple carousel container */
+  .simple-carousel {
+    position: relative;
+    overflow: hidden;
     width: 100%;
-    max-width: 400px;
-  }
-  
-  /* PHONE MOCKUP */
-  .phone-mockup {
-    position: relative;
-    width: 360px;
-    height: 680px;
-    border: 6px solid #000;
-    border-radius: 40px;
-    background-color: #fff;
+    max-width: 360px; /* same width as your images, or adjust */
     margin: 0 auto;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    overflow: hidden;
-    transform-style: preserve-3d;
-    transition: transform 0.3s ease;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
-  
-  /* Phone reflection effect */
-  .phone-reflection {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background: linear-gradient(
-      135deg,
-      rgba(255,255,255,0.05) 0%,
-      rgba(255,255,255,0) 50%
-    );
-    pointer-events: none;
-    z-index: 10;
-    border-radius: 32px;
-  }
-  
-  /* Ringer switch on the left side (above volume buttons) */
-  .ringer-switch {
-    position: absolute;
-    left: -6px;
-    top: 50px;
-    width: 6px;
-    height: 20px;
-    background-color: #111;
-    border-radius: 3px;
-  }
-  
-  /* Volume Buttons (left) */
-  .volume-button-up {
-    position: absolute;
-    left: -6px;
-    top: 80px; 
-    width: 6px;
-    height: 30px;
-    background-color: #111;
-    border-radius: 3px;
-  }
-  
-  .volume-button-down {
-    position: absolute;
-    left: -6px;
-    top: 120px; 
-    width: 6px;
-    height: 30px;
-    background-color: #111;
-    border-radius: 3px;
-  }
-  
-  /* Power Button (right) */
-  .power-button {
-    position: absolute;
-    right: -6px;
-    top: 100px; 
-    width: 6px;
-    height: 40px;
-    background-color: #111;
-    border-radius: 3px;
-  }
-  
-  /* Top bar with speaker only */
-  .phone-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 35px;
-  }
-  
-  .speaker-bar {
-    position: absolute;
-    top: 10px;
-    left: calc(50% - 30px);
-    width: 60px;
-    height: 5px;
-    background-color: #000;
-    border-radius: 3px;
-    /* Pulse animation for speaker */
-    animation: pulse 2s infinite;
-  }
-  
-  /* Realistic notch and dynamic island */
-  .phone-notch {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 30px;
-    background-color: #000;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    z-index: 5;
-  }
-  
-  /* The phone-screen */
-  .phone-screen {
-    position: absolute;
-    top: 35px;
-    left: 0;
-    right: 0;
-    bottom: 35px;
-    overflow: hidden;
-    border-radius: 32px; 
-    /* Add subtle inner shadow to phone screen */
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
-  }
-  
-  /* Status bar for phone */
-  .status-bar {
-    position: absolute;
-    top: 5px;
-    left: 0;
-    right: 0;
-    height: 20px;
-    padding: 0 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 10px;
-    color: #333;
-    z-index: 6;
-  }
-  
-  .status-left {
-    display: flex;
-    align-items: center;
-  }
-  
-  .signal-bars {
-    display: flex;
-    align-items: flex-end;
-    height: 10px;
-    gap: 1px;
-  }
-  
-  .bar {
-    width: 3px;
-    background-color: #333;
-    border-radius: 1px;
-  }
-  
-  .bar-1 { height: 4px; }
-  .bar-2 { height: 6px; }
-  .bar-3 { height: 8px; }
-  .bar-4 { height: 10px; }
-  
-  .wifi {
-    margin-left: 5px;
-    width: 12px;
-    height: 10px;
-    position: relative;
-  }
-  
-  .wifi:before {
-    content: "";
-    position: absolute;
-    border: 2px solid #333;
-    border-radius: 50% 50% 0 0;
-    width: 12px;
-    height: 6px;
-    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
-  }
-  
-  .status-right {
-    display: flex;
-    align-items: center;
-  }
-  
-  .battery {
-    width: 16px;
-    height: 8px;
-    border: 1px solid #333;
-    border-radius: 2px;
-    position: relative;
-    margin-left: 5px;
-  }
-  
-  .battery:after {
-    content: "";
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    width: 10px;
-    height: 4px;
-    background-color: #333;
-    border-radius: 1px;
-  }
-  
-  .battery:before {
-    content: "";
-    position: absolute;
-    top: 2px;
-    right: -3px;
-    width: 2px;
-    height: 4px;
-    background-color: #333;
-    border-radius: 0 2px 2px 0;
-  }
-  
-  /* The carousel track inside the screen */
   .carousel-track {
     display: flex;
-    flex-wrap: nowrap;
-    height: 100%;
-    /* Smoother carousel transitions */
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
-  /* Each slide is 100% of phone-screen’s width */
   .slide {
-    flex: 0 0 100%;
+    min-width: 100%;
     position: relative;
-    display: flex;
-    align-items: stretch; 
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 32px; 
-    transition: opacity 0.3s ease; /* smoother fade */
   }
-  
   .slide img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    object-position: 50% 50%;
-    border-radius: 32px;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
-    transform: scale(1.02);
-    transition: transform 0.8s ease-out;
+    height: auto;
+    display: block;
+    border-radius: 16px;
   }
-  
-  .current-slide img {
-    transform: scale(1);
-  }
-  
-  /* Larger caption overlay at bottom */
   .slide-caption {
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 1.2rem;  
-    background: linear-gradient(
-      0deg,
-      rgba(255,255,255,1) 25%,
-      rgba(255,255,255,0.7) 60%,
-      rgba(255,255,255,0) 100%
-    );
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.85);
     color: #222E50;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
-  
   .slide-caption h3 {
-    margin-top: 0;
-    margin-bottom: 0.4rem;
+    margin: 0 0 0.2rem;
     color: #C0483A;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
   }
-  
-  .slide-caption p {
-    margin-top: 0;
-    font-size: 1rem;
-  }
-  
-  /* Home button at the bottom */
-  .phone-home-button {
-    position: absolute;
-    bottom: 6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 6px;
-    background-color: #999;
-    border-radius: 3px;
-  }
-  
-  /* Progress indicators at bottom of phone */
-  .progress-indicators {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
+  .progress-dots {
     display: flex;
     justify-content: center;
-    gap: 8px;
-    z-index: 10;
+    gap: 0.4rem;
+    margin-top: 0.8rem;
   }
-  
-  .progress-dot {
+  .dot {
     width: 8px;
     height: 8px;
-    border-radius: 50%;
     background-color: rgba(255,255,255,0.5);
+    border-radius: 50%;
     transition: all 0.3s ease;
+    cursor: pointer;
   }
-  
-  .progress-dot.active {
+  .dot.active {
     background-color: #C0483A;
-    width: 20px;
+    width: 16px;
     border-radius: 4px;
   }
   
-  /* Feature highlight callouts */
-  .feature-callout {
-    position: absolute;
-    width: 200px;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.5s ease;
-    pointer-events: none;
-    z-index: 100;
-  }
-  
-  .feature-callout::after {
-    content: '';
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background-color: rgba(255, 255, 255, 0.9);
-    transform: rotate(45deg);
-  }
-  
-  .callout-right {
-    left: calc(100% + 20px);
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .callout-right::after {
-    left: -6px;
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
-  }
-  
-  .callout-left {
-    right: calc(100% + 20px);
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .callout-left::after {
-    right: -6px;
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
-  }
-  
-  .feature-callout.active {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Keyframes for speaker pulse and loading pulses */
-  @keyframes pulse {
-    0% { opacity: 0.5; }
-    50% { opacity: 1; }
-    100% { opacity: 0.5; }
-  }
-  
-  /* App loading animation */
-  @keyframes loadApp {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  .phone-screen:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle, #C0483A, #9c3b30);
-    opacity: 0;
-    z-index: 15;
-    pointer-events: none;
-  }
-  
-  /* Loading state triggers the radial flash and hidden carousel */
-  .loading .phone-screen:after {
-    animation: loadApp 2s ease-out forwards;
-  }
-  
-  .loading .carousel-track {
-    opacity: 0;
-    animation: loadApp 1s ease-out 1s forwards; /* fade in after 1s */
-  }
-  
-  /* Robin logo animation during load */
-  /* In index.css */
-.app-logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 80px;
-  max-height: 80px;
-  width: auto;
-  height: auto;
-  z-index: 20;
-  opacity: 0;
-  /* same animations as before */
-}
-
-  
-  .loading .app-logo {
-    opacity: 1;
-    animation: pulse 1.5s infinite, loadApp 0.5s ease-out forwards;
-  }
-  
-  /* =====================
-     SUPPORT & FOOTER
-     ===================== */
+  /* SECTIONS & FOOTER */
   section {
     background-color: #EDD0C0;
     margin: 30px auto;
@@ -589,11 +211,9 @@
     border-radius: 16px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
-  
   section h2 {
     color: #C0483A;
   }
-  
   footer {
     text-align: center;
     font-size: 0.9em;
@@ -601,9 +221,18 @@
     margin: 40px 0 20px;
   }
   
-  /* =====================
-     RESPONSIVE
-     ===================== */
+  /* Reveal on scroll */
+  .reveal {
+    opacity:0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+  }
+  .reveal.visible {
+    opacity:1;
+    transform: none;
+  }
+  
+  /* RESPONSIVE */
   @media (max-width: 768px) {
     .hero {
       padding: 40px 10px;
@@ -615,52 +244,8 @@
       padding: 1rem;
       max-width: 90%;
     }
-    .phone-mockup {
-      width: 300px;
-      height: 550px;
-      border-radius: 32px;
+    .simple-carousel {
+      max-width: 300px;
     }
-    .phone-screen {
-      border-radius: 28px;
-      top: 30px;
-      bottom: 30px;
-    }
-    .slide {
-      border-radius: 28px;
-    }
-    .slide img {
-      border-radius: 28px;
-    }
-    /* Adjust side buttons for smaller phone */
-    .ringer-switch {
-      top: 40px;
-      height: 18px;
-    }
-    .volume-button-up {
-      top: 65px;
-      height: 25px;
-    }
-    .volume-button-down {
-      top: 95px;
-      height: 25px;
-    }
-    .power-button {
-      top: 70px;
-      height: 25px;
-    }
-
-    .about-text .accent        { color:#C0483A; }
-.about-text .lead          { font-size:1.1rem; margin-bottom:1rem; }
-.icon-list                 { list-style:none; padding:0; margin:0 0 1rem; }
-.icon-list li              { display:flex; gap:.6rem; margin:.4rem 0; }
-.icon-list li span         { font-size:1.3rem; }
-.cta-secondary             { color:#ECA08D; text-decoration:none; font-weight:600; }
-.cta-secondary:hover       { color:#C0483A; }
-
-/* simple fade‑in reveal */
-.reveal { opacity:0; transform:translateY(40px); transition:all .6s ease; }
-.reveal.visible { opacity:1; transform:none; }
-
-
   }
   
