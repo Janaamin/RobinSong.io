@@ -12,6 +12,7 @@
   }
   
   .team-container {
+    margin-bottom: 24px;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -32,7 +33,14 @@
   .team-photo {
     width: 100%;
     max-width: 150px;
+    max-height: 150px;
     border-radius: 50%;
     margin-bottom: 1rem;
+  }
+
+  .logo {
+    max-width: 90px;
+    margin: 0 auto;
+    display: block;
   }
   
