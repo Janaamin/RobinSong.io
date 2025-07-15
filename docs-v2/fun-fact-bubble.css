@@ -1,0 +1,109 @@
+/* Fun Fact Bubble (Global) */
+@keyframes chatBubbleIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px) scale(0.95); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0) scale(1); 
+    }
+}
+
+.fun-fact-bubble {
+    position: fixed;
+    right: 2.2vw;
+    bottom: 2.2vw;
+    background: linear-gradient(135deg, #fffaf6 80%, #fff1e6 100%);
+    border-radius: 20px 20px 20px 8px;
+    box-shadow: 
+        0 8px 32px rgba(244,91,60,0.15), 
+        0 4px 16px rgba(244,91,60,0.08),
+        0 2px 8px rgba(0,0,0,0.05);
+    border: 1.5px solid var(--primary-color, #f45b3c);
+    padding: 0.6em 0.7em 0.6em 0.5em;
+    min-width: 200px;
+    max-width: 300px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color, #f45b3c);
+    letter-spacing: 0.01em;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: default;
+    user-select: none;
+    animation: chatBubbleIn 1.2s 0.5s forwards;
+    opacity: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.chatbot-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 0;
+    object-fit: contain;
+    overflow: visible;
+    flex-shrink: 0;
+    background: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chatbot-logo:focus,
+.chatbot-logo:active {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+
+.chatbot-logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(244,91,60,0.3);
+}
+
+.fun-fact-bubble .fun-fact-text {
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 120px;
+    text-align: left;
+    display: inline-block;
+    line-height: 1.4;
+    font-size: 0.75rem;
+    flex: 1;
+}
+
+.fun-fact-bubble:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 12px 40px rgba(244,91,60,0.2), 
+        0 6px 20px rgba(244,91,60,0.1),
+        0 3px 10px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 600px) {
+    .fun-fact-bubble {
+        right: 2vw;
+        left: 2vw;
+        min-width: 120px;
+        max-width: 90vw;
+        font-size: 0.85rem;
+        padding: 0.5em 0.5em 0.5em 0.4em;
+    }
+    
+    .chatbot-logo {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .fun-fact-bubble .fun-fact-text {
+        font-size: 0.8rem;
+    }
+} 

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us · Robin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="fun-fact-bubble.css">
+    <script defer src="js/main.js"></script>
+    <script defer src="js/formspree-config.js"></script>
+    <script defer src="js/contact.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="index.html" class="logo">Robin
+              <span class="logo-subtitle">Bird Song ID</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="features.html">Features</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="impact.html">Impact</a></li>
+                <li><a href="getting-started.html">Getting Started</a></li>
+                <li><a href="educators.html">Educators</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Page Header - Matching site design -->
+        <section class="page-header">
+            <h1>Get in Touch</h1>
+            <p>Have questions about Robin? Want to collaborate? We'd love to hear from you. Send us a message and we'll get back to you as soon as possible.</p>
+            <div class="header-decoration">
+                <div class="decoration-line"></div>
+                <div class="decoration-dot"></div>
+                <div class="decoration-line"></div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="form-container">
+                        <div class="form-header">
+                            <h2>Send us a Message</h2>
+                            <p>We typically respond within 24 hours</p>
+                        </div>
+                        
+                        <form id="contactForm" action="https://formspree.io/f/xpwrbqqz" method="POST" class="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">
+                                    <span class="label-text">Full Name</span>
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="name" name="name" required class="form-input">
+                                    <div class="input-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                            <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="error-message" id="nameError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">
+                                    <span class="label-text">Email Address</span>
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="email" id="email" name="email" required class="form-input">
+                                    <div class="input-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="error-message" id="emailError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">
+                                    <span class="label-text">Subject</span>
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <select id="subject" name="subject" required class="form-input">
+                                        <option value="">Select a subject</option>
+                                        <option value="General Inquiry">General Inquiry</option>
+                                        <option value="Technical Support">Technical Support</option>
+                                        <option value="Feedback">Feedback & Suggestions</option>
+                                        <option value="Partnership">Partnership Opportunity</option>
+                                        <option value="Education">Educational Integration</option>
+                                        <option value="Accessibility">Accessibility Questions</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <div class="input-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                            <path d="M14 2H6A2 2 0 0 0 4 4V20A2 2 0 0 0 6 22H18A2 2 0 0 0 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="error-message" id="subjectError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">
+                                    <span class="label-text">Message</span>
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <textarea id="message" name="message" rows="6" required class="form-input" placeholder="Tell us about your inquiry..."></textarea>
+                                    <div class="input-icon textarea-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                            <path d="M21 15A2 2 0 0 1 19 17H7L4 20V5A2 2 0 0 1 6 3H19A2 2 0 0 1 21 5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="error-message" id="messageError"></div>
+                            </div>
+
+                            <!-- Hidden fields to ensure both emails receive the message -->
+                            <input type="hidden" name="_replyto" value="chirpwithrobin@gmail.com">
+                            <input type="hidden" name="_subject" value="New Contact Form Submission - Robin">
+                            <input type="hidden" name="_next" value="">
+
+                            <button type="submit" class="submit-btn" id="submitBtn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading">
+                                    <svg class="loading-spinner" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="31.416" stroke-dashoffset="31.416"/>
+                                    </svg>
+                                </span>
+                            </button>
+                        </form>
+
+                        <!-- Success Message -->
+                        <div id="successMessage" class="success-message">
+                            <div class="success-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M22 11.08V12A10 10 0 1 1 5.68 3.49" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="22,4 12,14.01 9,11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Message Sent Successfully!</h3>
+                            <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <div class="info-header">
+                            <h3>Get in Touch</h3>
+                            <p>Multiple ways to reach our team</p>
+                        </div>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="method-content">
+                                    <h4>Email</h4>
+                                    <a href="mailto:chirpwithrobin@gmail.com" class="contact-link">chirpwithrobin@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M21 10C21 17 12 23 12 23S3 17 3 10A9 9 0 0 1 12 1A9 9 0 0 1 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="method-content">
+                                    <h4>Location</h4>
+                                    <p>University of Michigan–Dearborn</p>
+                                    <p>Computer and Information Science</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="method-content">
+                                    <h4>Response Time</h4>
+                                    <p>We typically respond within 24 hours during business days</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div class="social-section">
+                            <h4>Follow Our Journey</h4>
+                            <div class="social-links">
+                                <a href="#" class="social-link instagram" aria-label="Follow us on Instagram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z" stroke="currentColor" stroke-width="2"/>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-link linkedin" aria-label="Connect with us on LinkedIn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M16 8A6 6 0 0 1 18 20V14H22V8A6 6 0 0 0 16 2A6 6 0 0 0 10 8V14H14V20A6 6 0 0 1 16 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Quick answers to common questions</p>
+                </div>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I get started with Robin?</h3>
+                            <span class="faq-toggle">⌄</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Download Robin from your app store, grant the necessary permissions, and start exploring! Our voice-guided interface will help you identify birds in your area.</p>
+                            <div class="faq-meta">
+                                <span class="faq-category">Getting Started</span>
+                                <span class="faq-read-time">1 min read</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Is Robin accessible for visually impaired users?</h3>
+                            <span class="faq-toggle">⌄</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! Robin was designed with accessibility in mind. The app features voice-guided navigation and audio descriptions to make birdwatching accessible to everyone.</p>
+                            <div class="faq-meta">
+                                <span class="faq-category">Accessibility</span>
+                                <span class="faq-read-time">1 min read</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I use Robin in my classroom?</h3>
+                            <span class="faq-toggle">⌄</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! Robin is perfect for educational settings. We offer special features for teachers and can help you integrate it into your science curriculum.</p>
+                            <div class="faq-meta">
+                                <span class="faq-category">Education</span>
+                                <span class="faq-read-time">30 sec read</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How accurate is Robin's bird identification?</h3>
+                            <span class="faq-toggle">⌄</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Robin uses advanced AI trained on extensive datasets to provide highly accurate bird identification. The app continuously learns and improves its accuracy over time.</p>
+                            <div class="faq-meta">
+                                <span class="faq-category">Technology</span>
+                                <span class="faq-read-time">2 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Robin. All rights reserved.</p>
+    </footer>
+
+    <script defer src="fun-fact-bubble.js"></script>
+    <div class="fun-fact-bubble" style="display:none">
+        <img src="assets/img/chatbird3.png" alt="Robin Chat" class="chatbot-logo">
+        <span class="fun-fact-text">Did you know? Robins can fly up to 36 mph!</span>
+    </div>
+</body>
+</html> 
