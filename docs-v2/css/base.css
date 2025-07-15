@@ -1,0 +1,296 @@
+:root {
+    --primary-color: #C0483A;       /* Was a modern blue, now your primary red */
+    --primary-dark: #A03D30;        /* A darker shade of your primary red */
+    --secondary-color: #ECA08D;     /* Your original secondary color */
+    --background-color: #FFF8F4;    /* Your original background color */
+    --surface-color: #FFFFFF;
+    --text-color: #222E50;          /* Your original accent color, used for primary text */
+    --text-muted-color: #7F8C8D;    /* Your original secondary text color */
+    --border-color: #EAE0DA;        /* A new border color derived from your palette */
+
+    --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --header-font-weight: 600;
+    --body-font-weight: 400;
+
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-weight: var(--body-font-weight);
+}
+
+/* Navigation */
+.main-header {
+    padding: 1.5rem 2rem;
+}
+
+.main-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: inline-block;
+    font-weight: var(--header-font-weight);
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    position: relative;
+    line-height: 1.1;
+    vertical-align: top;
+}
+.logo-subtitle {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    letter-spacing: 0.02em;
+    margin-top: 0.08em;
+    text-shadow: 0 1px 2px rgba(192,72,58,0.08);
+    line-height: 1.1;
+}
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(135deg, var(--text-color), var(--text-muted-color));
+    border-radius: 2px;
+    opacity: 0.8;
+    transition: background var(--transition);
+}
+
+.logo.active {
+    color: var(--primary-color);
+}
+
+.logo.active::after {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted-color);
+    font-weight: 500;
+    transition: all var(--transition);
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    letter-spacing: 0.02em;
+    background: linear-gradient(135deg, var(--text-muted-color), var(--text-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-links a:hover {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transform: translateY(-1px);
+}
+
+.nav-links a.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+    opacity: 0.8;
+}
+
+/* Common Components */
+.btn {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: var(--radius);
+    font-weight: 700;
+    transition: all var(--transition);
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    margin-left: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: var(--header-font-weight);
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+}
+
+.section-description {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-muted-color);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+}
+
+/* Page Header */
+.page-header {
+    max-width: 1200px;
+    margin: 4rem auto 2rem;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: var(--header-font-weight);
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: var(--text-muted-color);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Header Decoration */
+.header-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.decoration-line {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    border-radius: 1px;
+}
+
+.decoration-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(192, 72, 58, 0.3);
+}
+
+/* Container utility */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+/* Footer */
+.main-footer {
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-muted-color);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .header-decoration {
+        gap: 0.5rem;
+    }
+
+    .decoration-line {
+        width: 40px;
+    }
+} 
