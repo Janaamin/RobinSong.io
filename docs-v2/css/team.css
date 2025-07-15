@@ -1,0 +1,439 @@
+/* Page Header Enhancements */
+.page-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Enhanced Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    padding: 0 2rem;
+}
+
+/* Enhanced Team Cards */
+.team-card {
+    background: linear-gradient(135deg, var(--surface-color) 0%, rgba(255, 248, 244, 0.8) 100%);
+    border-radius: var(--radius);
+    padding: 0;
+    text-align: center;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(192, 72, 58, 0.1);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Card Header with Photo */
+.card-header {
+    position: relative;
+    padding: 2rem 2rem 1rem;
+}
+
+/* Photo Container */
+.photo-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.photo-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--surface-color);
+    box-shadow: 
+        0 8px 25px rgba(192, 72, 58, 0.2),
+        0 0 0 2px var(--primary-color);
+}
+
+/* Social Links */
+.social-links {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    color: var(--text-muted-color);
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.social-link:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(192, 72, 58, 0.3);
+}
+
+.social-link.linkedin:hover {
+    background: #0077b5;
+}
+
+/* Card Content */
+.card-content {
+    padding: 0 2rem 2rem;
+}
+
+.card-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--text-color);
+}
+
+.role {
+    display: block;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-content p {
+    color: var(--text-muted-color);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Special Thanks Section */
+.special-thanks {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    padding: 0 2rem;
+}
+
+.special-thanks h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: var(--header-font-weight);
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    position: relative;
+}
+
+.special-thanks h2::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    border-radius: 2px;
+}
+
+.special-thanks .team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+/* Clients Section */
+.clients-section {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    padding: 0 2rem;
+}
+
+.clients-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: var(--header-font-weight);
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    position: relative;
+}
+
+.clients-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    border-radius: 2px;
+}
+
+/* Enhanced Client Card */
+.client-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background: linear-gradient(135deg, var(--surface-color) 0%, rgba(255, 248, 244, 0.8) 100%);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(192, 72, 58, 0.1);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.client-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.client-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+        0 15px 35px rgba(192, 72, 58, 0.15),
+        0 0 0 1px rgba(192, 72, 58, 0.2);
+}
+
+.client-card:hover::before {
+    opacity: 1;
+}
+
+.client-photo {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.client-photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--surface-color);
+    box-shadow: 
+        0 8px 25px rgba(192, 72, 58, 0.2),
+        0 0 0 2px var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.client-card:hover .client-photo img {
+    transform: scale(1.05);
+}
+
+.client-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--text-color);
+}
+
+.client-info span {
+    display: block;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.client-info p {
+    color: var(--text-muted-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Enhanced EIC Team */
+.eic-team {
+    background: linear-gradient(135deg, var(--surface-color) 0%, rgba(255, 248, 244, 0.8) 100%);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(192, 72, 58, 0.1);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.eic-team::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.eic-team h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.eic-team > p {
+    text-align: center;
+    color: var(--text-muted-color);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.eic-team > p a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.eic-team > p a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.eic-members {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.eic-member {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(192, 72, 58, 0.05) 0%, rgba(236, 160, 141, 0.05) 100%);
+    border-radius: var(--radius);
+    border: 1px solid rgba(192, 72, 58, 0.1);
+}
+
+.eic-member.full-width {
+    grid-column: 1 / -1;
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.eic-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--surface-color);
+    box-shadow: 
+        0 4px 15px rgba(192, 72, 58, 0.2),
+        0 0 0 1px var(--primary-color);
+    flex-shrink: 0;
+}
+
+.eic-info {
+    flex: 1;
+}
+
+.eic-info h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.eic-info p {
+    color: var(--text-muted-color);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive Design for Team */
+@media (max-width: 1200px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .team-card {
+        padding: 0;
+    }
+    
+    .card-header {
+        padding: 1.5rem 1.5rem 1rem;
+    }
+    
+    .card-content {
+        padding: 0 1.5rem 1.5rem;
+    }
+    
+    .photo-container img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .client-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .client-photo img {
+        align-self: center;
+    }
+
+    .special-thanks,
+    .clients-section {
+        padding: 0 1rem;
+    }
+
+    .special-thanks h2,
+    .clients-section h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-links {
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+    
+    .social-link {
+        width: 32px;
+        height: 32px;
+    }
+} 
