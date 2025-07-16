@@ -1,214 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Features · Robin</title>
-
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/features.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Robin's features - AI-powered birdwatching companion">
+  <meta name="theme-color" content="#2C3E50">
+  
+  <title>Features - Robin</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/modern.css">
 </head>
 <body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<header class="hero">
-  <div class="hero-content">
-    <img src="assets/img/robin72.png" alt="Robin Logo" class="logo"/>
-    <h1 class="hero-title">Explore Robin’s Capabilities</h1>
-  </div>
-</header>
+  <!-- Navigation -->
+  <nav class="nav-container">
+    <div class="nav-content">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/img/robin72.png" alt="Robin Logo" width="40" height="40">
+      </a>
+      
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <div class="nav-links">
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="usage.html" class="nav-link">How to Use</a>
+        <a href="impact.html" class="nav-link">Impact</a>
+        <a href="team.html" class="nav-link">Team</a>
+        <a href="permissions.html" class="nav-link">Permissions</a>
+        <a href="privacy.html" class="nav-link">Privacy</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+          <span class="light-icon">☀️</span>
+          <span class="dark-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </nav>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="features.html">Features</a>
-  <a href="team.html">Team</a>
-  <a href="impact.html">Impact</a>
-  <a href="usage.html">How to Use</a>
-  <a href="permissions.html">Permissions</a>
-  <a href="privacy.html">Privacy</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <!-- Features Section -->
+  <main id="main-content" class="section">
+    <div class="container">
+      <h1 class="section-title animate-on-scroll">Key Features</h1>
+      <p class="section-description animate-on-scroll">
+        Discover how Robin's innovative features make birdwatching accessible and enjoyable for everyone.
+      </p>
+      
+      <div class="grid grid-3">
+        <div class="card animate-on-scroll">
+          <div class="card-icon">🎧</div>
+          <h3>Real-time Bird Song Recognition</h3>
+          <p>Instantly identify bird species through their unique songs and calls using advanced AI technology.</p>
+          <ul class="feature-list">
+            <li>Advanced AI bioacoustics</li>
+            <li>Instant species identification</li>
+            <li>High accuracy recognition</li>
+          </ul>
+        </div>
+        
+        <div class="card animate-on-scroll">
+          <div class="card-icon">📍</div>
+          <h3>Location-aware Forecasts</h3>
+          <p>Get predictions about which birds you're likely to encounter based on your location and time of day.</p>
+          <ul class="feature-list">
+            <li>Local hotspot predictions</li>
+            <li>Time-based forecasts</li>
+            <li>Seasonal patterns</li>
+          </ul>
+        </div>
+        
+        <div class="card animate-on-scroll">
+          <div class="card-icon">🗣️</div>
+          <h3>Voice-guided Experience</h3>
+          <p>Fully accessible interface with voice commands and screen reader support for visually impaired users.</p>
+          <ul class="feature-list">
+            <li>Voice commands</li>
+            <li>Screen reader support</li>
+            <li>Audio feedback</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
 
-<!-- FILTER BAR -->
-<div class="filter-bar">
-  <button class="pill active" data-filter="all">All</button>
-  <button class="pill" data-filter="ai">AI & Data</button>
-  <button class="pill" data-filter="access">Accessibility & UX</button>
-</div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h3>Robin</h3>
+          <p>Your AI-powered birdwatching companion.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="usage.html">How to Use</a></li>
+            <li><a href="impact.html">Impact</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="permissions.html">Permissions</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Robin. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-<!-- WRAPPER -->
-<div class="feature-wrapper">
-  <section class="feature-grid">
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
 
-    <!-- Real‑Time ID -->
-    <article class="card" data-cat="ai">
-      <div class="card-face card-front">
-        <img src="assets/img/robin72.png" class="card-icon" alt="">
-        <h3>Real‑Time Sound ID</h3>
-        <p>Identify birds in real‑time using BirdNET.</p>
-      </div>
-      <div class="card-face card-back">
-        <h4>Real‑Time Bird Sound Identification</h4>
-        <p>Open the app and let Robin listen—no manual input required.</p>
-        <ul>
-          <li>Multi‑species detection for overlapping calls</li>
-          <li>Reliable in urban, rural &amp; natural soundscapes</li>
-          <li>Average detection speed &lt; 3 seconds</li>
-        </ul>
-      </div>
-    </article>
-
-    <!-- ChatGPT -->
-    <article class="card" data-cat="ai">
-      <div class="card-face card-front">
-        <img src="assets/img/robin72.png" class="card-icon" alt="">
-        <h3>ChatGPT Bird Expert</h3>
-        <p>Ask “Why is it singing?”—get answers.</p>
-      </div>
-      <div class="card-face card-back">
-        <h4>Generative AI Interaction</h4>
-        <p>Transforms identification into exploration with conversational AI.</p>
-        <ul>
-          <li>Diet, behaviour, migration questions</li>
-          <li>Accurate, source‑verified answers</li>
-          <li>Voice input &amp; text‑to‑speech replies</li>
-        </ul>
-      </div>
-    </article>
-
-    <!-- Forecasts -->
-    <article class="card" data-cat="ai">
-      <div class="card-face card-front">
-        <img src="assets/img/robin72.png" class="card-icon" alt="">
-        <h3>Predictive Forecasts</h3>
-        <p>Plan outings with 87 % hotspot accuracy.</p>
-      </div>
-      <div class="card-face card-back">
-        <h4>Predictive Bird Forecasts</h4>
-        <p>Five years of eBird data + environmental variables.</p>
-        <ul>
-          <li>Monthly predictions tailored to local hotspots</li>
-          <li>87 % accuracy rate</li>
-          <li>Visual and audio explanations</li>
-        </ul>
-      </div>
-    </article>
-
-    <!-- TTS -->
-    <article class="card" data-cat="access">
-      <div class="card-face card-front">
-        <img src="assets/img/robin72.png" class="card-icon" alt="">
-        <h3>Text‑to‑Speech</h3>
-        <p>Hands‑free, inclusive navigation.</p>
-      </div>
-      <div class="card-face card-back">
-        <h4>Text‑to‑Speech Compatibility</h4>
-        <p>Built for visually‑impaired users and hands‑busy scenarios.</p>
-        <ul>
-          <li>Seamless with VoiceOver &amp; TalkBack</li>
-          <li>All bird data narrated automatically</li>
-          <li>Ideal for outdoor exploration</li>
-        </ul>
-      </div>
-    </article>
-
-    <!-- History -->
-    <article class="card" data-cat="access">
-      <div class="card-face card-front">
-        <img src="assets/img/robin72.png" class="card-icon" alt="">
-        <h3>Bird Log History</h3>
-        <p>Automatic, searchable journal.</p>
-      </div>
-      <div class="card-face card-back">
-        <h4>Bird Identification History</h4>
-        <p>Every identification is saved for future reference.</p>
-        <ul>
-          <li>Species &amp; scientific classification</li>
-          <li>Date, time &amp; GPS location</li>
-          <li>Photo and description</li>
-        </ul>
-      </div>
-    </article>
-
-    <!-- Inclusive Design -->
-    <article class="card" data-cat="access">
-      <div class="card-face card-front">
-        <img src="assets/img/robin72.png" class="card-icon" alt="">
-        <h3>Inclusive Design</h3>
-        <p>High‑contrast visuals, large text, haptics.</p>
-      </div>
-      <div class="card-face card-back">
-        <h4>Inclusive &amp; Intuitive UI</h4>
-        <p>Designed from the ground up for accessibility and simplicity.</p>
-        <ul>
-          <li>High‑contrast visuals &amp; large‑text options</li>
-          <li>Optional haptic feedback confirmations</li>
-          <li>Streamlined tab‑based navigation</li>
-        </ul>
-      </div>
-    </article>
-
-    <!-- Cross‑platform -->
-    <article class="card" data-cat="access">
-      <div class="card-face card-front">
-        <img src="assets/img/robin72.png" class="card-icon" alt="">
-        <h3>Cross‑Platform</h3>
-        <p>React‑Native app for iOS &amp; Android.</p>
-      </div>
-      <div class="card-face card-back">
-        <h4>Cross‑Platform Compatibility</h4>
-        <p>Consistent, accessible experience across devices.</p>
-        <ul>
-          <li>Built with React Native for efficiency</li>
-          <li>Optimised for screen‑readers</li>
-          <li>Smooth performance on a wide range of hardware</li>
-        </ul>
-      </div>
-    </article>
-
-    <!-- Stand‑out -->
-    <article class="card standout" data-cat="access">
-      <div class="card-face card-front">
-        <img src="assets/img/robin72.png" class="card-icon" alt="">
-        <h3>Why Robin Stands Out</h3>
-        <p>AI • Education • Accessibility</p>
-      </div>
-      <div class="card-face card-back">
-        <h4>More Than a Birding App</h4>
-        <p>Robin unites intelligent tech, ecology &amp; inclusive design.</p>
-        <ul>
-          <li>For students, birders &amp; nature lovers</li>
-          <li>Accessible in classrooms, trails &amp; wildlife centres</li>
-          <li>Lets visually‑impaired users enjoy nature through sound</li>
-        </ul>
-      </div>
-    </article>
-
-  </section>
-</div>
-
-<footer>
-  <p>&copy; 2025 RobinSong. All rights reserved.</p>
-</footer>
-
-<script>
-/* flip on tap */
-document.querySelectorAll('.card').forEach(c=>{
-  c.addEventListener('click',()=>c.classList.toggle('flip'));
-});
-
-/* filter pills */
-const pills=document.querySelectorAll('.pill');
-pills.forEach(p=>{
-  p.addEventListener('click',()=>{
-    pills.forEach(x=>x.classList.remove('active'));
-    p.classList.add('active');
-    const cat=p.dataset.filter;
-    document.querySelectorAll('.card').forEach(card=>{
-      card.style.display=(cat==='all'||card.dataset.cat===cat)?'block':'none';
-    });
-  });
-});
-</script>
+  <!-- Scripts -->
+  <script type="module" src="js/modern.js"></script>
 </body>
 </html>
