@@ -1,179 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Robin: Bird Song ID</title>
-
-  <!-- Global and index-specific CSS -->
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Robin: AI-powered birdwatching companion for enthusiasts, learners, and visually impaired users">
+  <meta name="theme-color" content="#2C3E50">
+  
+  <title>Robin: Intelligent Bird Observation App</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/modern.css">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Robin: Intelligent Bird Observation App">
+  <meta property="og:description" content="AI-powered birdwatching companion for enthusiasts, learners, and visually impaired users">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta property="og:url" content="https://janaamin.github.io/RobinSong.io/">
 </head>
 <body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- HERO SECTION -->
-  <header class="hero">
+  <!-- Navigation -->
+  <nav class="nav-container">
+    <div class="nav-content">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/img/robin72.png" alt="Robin Logo" width="40" height="40">
+      </a>
+      
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <div class="nav-links">
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="usage.html" class="nav-link">How to Use</a>
+        <a href="impact.html" class="nav-link">Impact</a>
+        <a href="team.html" class="nav-link">Team</a>
+        <a href="permissions.html" class="nav-link">Permissions</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+          <span class="light-icon">☀️</span>
+          <span class="dark-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="main-content">
     <div class="hero-content">
-      <img src="assets/img/robin72.png" alt="Robin Logo" class="logo" />
-      <h1 class="hero-title">Discover Birds Through Sound</h1>
-      <p class="tagline">
-        Robin is your AI-powered birdwatching companion. Identify birds in real-time, explore local habitats, and learn as you listen.
+      <h1 class="hero-title animate-on-scroll">
+        Discover Birds Through Sound
+      </h1>
+      <p class="hero-subtitle animate-on-scroll">
+        Robin is your AI-powered birdwatching companion. Identify birds in real-time, 
+        explore local habitats, and learn as you listen.
       </p>
-      <a href="#about" class="cta-button">Explore the App</a>
+      <div class="hero-cta animate-on-scroll">
+        <a href="features.html" class="btn btn-primary">Explore Features</a>
+        <a href="#download" class="btn btn-secondary">Download App</a>
+      </div>
     </div>
   </header>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="features.html">Features</a>
-    <a href="team.html">Team</a>
-    <a href="impact.html">Impact</a>
-    <a href="usage.html">How to Use</a>
-    <a href="permissions.html">Permissions</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <!-- ABOUT SECTION -->
-  <section id="about" class="about-flex reveal">
-    <div class="about-visual">
-      <img src="assets/img/robin72.png" alt="Robin App Sample" />
-    </div>
-    <div class="about-text">
-      <h2><span class="accent">What&nbsp;is&nbsp;Robin?</span></h2>
-      <p class="lead">
-        Robin combines <strong>AI bioacoustics</strong>, <strong>predictive data</strong>,
-        and <strong>inclusive design</strong> to turn every outdoor moment into an
-        interactive nature lesson.
+  <!-- What is Robin Section -->
+  <section id="what-is-robin" class="section">
+    <div class="container text-center">
+      <h2 class="section-title animate-on-scroll">What is Robin?</h2>
+      <p class="section-description animate-on-scroll" style="max-width: 600px; margin: 0 auto;">
+        Robin is an intelligent, accessible bird observation app designed for everyone—birdwatchers, students, and visually impaired users. Experience real-time bird song recognition, location-based forecasts, and a voice-guided interface. Discover more about Robin's features and how it can transform your outdoor adventures.
       </p>
-      <ul class="icon-list">
-        <li><span>🎧</span> <strong>Real‑time bird song recognition</strong></li>
-        <li><span>📍</span> <strong>Location‑aware forecasts</strong> for local hotspots</li>
-        <li><span>🗣️</span> <strong>Voice‑guided &amp; screen‑reader friendly</strong></li>
-      </ul>
-      <a href="features.html" class="cta-secondary">See Full Feature List →</a>
+      <a href="features.html" class="btn btn-primary mt-3">Learn More</a>
     </div>
   </section>
 
-  <!-- SEE ROBIN IN ACTION (SIMPLE CAROUSEL) -->
-  <section class="carousel-section">
-    <h2>See Robin in Action</h2>
-    <div class="simple-carousel">
-      <!-- Carousel track with multiple slides -->
-      <div class="carousel-track">
-        <!-- Slide 1 -->
-        <div class="slide current-slide">
-          <img src="assets/img/iden.png" alt="Instant Forecast">
-          <div class="slide-caption">
-            <h3>Instant Forecast</h3>
-            <p>Get real-time bird forecasts using your device’s microphone.</p>
-          </div>
+  <!-- How It Works Section (See Robin in Action) -->
+  <section id="how-it-works" class="section bg-alt">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">See Robin in Action</h2>
+      <div class="steps">
+        <div class="step animate-on-scroll">
+          <div class="step-number">1</div>
+          <h3>Open the App</h3>
+          <p>Launch Robin and allow microphone access when prompted.</p>
+          <img src="assets/img/iden.png" alt="App Interface" class="step-image">
         </div>
-        <!-- Slide 2 -->
-        <div class="slide">
-          <img src="assets/img/forecast.png" alt="Live Detection">
-          <div class="slide-caption">
-            <h3>Live Detection</h3>
-            <p>Experience immediate bird sound detection as it happens.</p>
-          </div>
+        <div class="step animate-on-scroll">
+          <div class="step-number">2</div>
+          <h3>Listen</h3>
+          <p>Point your device towards the bird sounds you want to identify.</p>
+          <img src="assets/img/forecast.png" alt="Live Detection" class="step-image">
         </div>
-        <!-- Slide 3 -->
-        <div class="slide">
-          <img src="assets/img/robinChat.png" alt="Species Info">
-          <div class="slide-caption">
-            <h3>Species Information</h3>
-            <p>View detailed info on identified bird species.</p>
-          </div>
+        <div class="step animate-on-scroll">
+          <div class="step-number">3</div>
+          <h3>Get Results</h3>
+          <p>Receive instant identification and detailed information about the detected birds.</p>
+          <img src="assets/img/robinChat.png" alt="Species Info" class="step-image">
         </div>
-        <!-- Slide 4 -->
-        <div class="slide">
-          <img src="assets/img/exampchat.png" alt="Interactive Map">
-          <div class="slide-caption">
-            <h3>Interactive Maps</h3>
-            <p>Explore maps showing nearby bird sightings.</p>
-          </div>
-        </div>
-        <!-- Slide 5 -->
-        <div class="slide">
-          <img src="assets/img/history.png" alt="History & Trends">
-          <div class="slide-caption">
-            <h3>History & Trends</h3>
-            <p>Review your past birdwatching activities and trends.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Progress Dots -->
-      <div class="progress-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
       </div>
     </div>
   </section>
 
-  <!-- SUPPORT SECTION -->
-  <section>
-    <h2>Need Help?</h2>
-    <p>
-      Visit our <a href="contact.html">Contact</a> page or email us at
-      <a href="mailto:robinsd2024@gmail.com">robinsd2024@gmail.com</a>.
-    </p>
+  <!-- Teaser Cards Section -->
+  <section id="teasers" class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="card animate-on-scroll">
+          <h3>Meet the Team</h3>
+          <p>Get to know the passionate people behind Robin and their mission to make birdwatching accessible for all.</p>
+          <a href="team.html" class="btn btn-secondary">Our Team</a>
+        </div>
+        <div class="card animate-on-scroll">
+          <h3>Our Impact</h3>
+          <p>See how Robin is making a difference in education, accessibility, and conservation in the community.</p>
+          <a href="impact.html" class="btn btn-secondary">Learn More</a>
+        </div>
+        <div class="card animate-on-scroll">
+          <h3>Contact Us</h3>
+          <p>Have questions or feedback? Reach out to the Robin team—we'd love to hear from you!</p>
+          <a href="contact.html" class="btn btn-secondary">Contact</a>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 RobinSong. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h3>Robin</h3>
+          <p>Your AI-powered birdwatching companion.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="usage.html">How to Use</a></li>
+            <li><a href="impact.html">Impact</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="permissions.html">Permissions</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Robin. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script>
-    // Basic fade-in on scroll
-    const reveals = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver(entries=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting) e.target.classList.add('visible');
-      });
-    },{threshold:0.2});
-    reveals.forEach(el=>revealObserver.observe(el));
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
 
-    // Simple auto-rotating carousel
-    const track = document.querySelector('.carousel-track');
-    const slides = Array.from(track.querySelectorAll('.slide'));
-    const dots = Array.from(document.querySelectorAll('.progress-dots .dot'));
-
-    let currentIndex = 0;
-
-    function updateCarousel() {
-      // Remove current-slide from all slides
-      slides.forEach(slide => slide.classList.remove('current-slide'));
-      // Add current-slide to the new one
-      slides[currentIndex].classList.add('current-slide');
-
-      // Move track left
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-      // Update dots
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[currentIndex].classList.add('active');
-    }
-
-    function autoRotate() {
-      currentIndex++;
-      if (currentIndex >= slides.length) currentIndex = 0;
-      updateCarousel();
-    }
-
-    // Initialize
-    updateCarousel();
-
-    // Auto-rotate every 4 seconds
-    setInterval(autoRotate, 4000);
-
-    // If you'd like to add swipe or click logic, you could expand here
-  </script>
+  <!-- Scripts -->
+  <script type="module" src="js/modern.js"></script>
 </body>
 </html>
