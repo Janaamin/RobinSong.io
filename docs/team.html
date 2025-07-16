@@ -1,133 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the Robin team - AI-powered birdwatching companion">
+  <meta name="theme-color" content="#2C3E50">
+  
   <title>Our Team - Robin</title>
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/team.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/modern.css">
 </head>
 <body>
-  <!-- HERO -->
-  <header class="hero">
-    <img src="./assets/img/robin72.png" alt="Robin Logo" class="logo">
-    <h1>Meet Our Team</h1>
-    <p class="tagline">
-      The dedicated team behind Robin, committed to transforming birdwatching through innovation.
-    </p>
-  </header>
-  
-  <!-- NAV -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="features.html">Features</a>
-    <a href="team.html">Team</a>
-    <a href="impact.html">Impact</a>
-    <a href="usage.html">How to Use</a>
-    <a href="permissions.html">Permissions</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="contact.html">Contact</a>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="nav-container">
+    <div class="nav-content">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/img/robin72.png" alt="Robin Logo" width="40" height="40">
+      </a>
+      
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <div class="nav-links">
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="usage.html" class="nav-link">How to Use</a>
+        <a href="impact.html" class="nav-link">Impact</a>
+        <a href="team.html" class="nav-link">Team</a>
+        <a href="permissions.html" class="nav-link">Permissions</a>
+        <a href="privacy.html" class="nav-link">Privacy</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+          <span class="light-icon">☀️</span>
+          <span class="dark-icon">🌙</span>
+        </button>
+      </div>
+    </div>
   </nav>
-  
-  <!-- DEVELOPMENT TEAM SECTION -->
-  <section class="team-section">
-    <h2>Meet the Development Team!</h2>
-    <div class="team-container">
-      <div class="team-member">
-        <!-- Use your zoomed-in selfie if needed via a container (if desired, see previous instructions) -->
-        <img src="assets/img/Jana3.jpg" alt="Jana Amin" class="team-photo">
-        <h3>Jana Amin</h3>
-        <p>
-          Jana is Robin's project manager and full-stack engineer. She developed the bird detection algorithm,
-          integrating voice commands for hands-free navigation, and collaborated with clients to facilitate team operations.
-        </p>
-      </div>
-      <div class="team-member">
-        <img src="assets/img/team2.png" alt="Meriam Harissa" class="team-photo">
-        <h3>Meriam Harissa</h3>
-        <p>
-          Meriam is the lead researcher and full-stack engineer. She created a machine learning algorithm that improves bird prediction accuracy and used it to pinpoint the best bird sighting locations.
-        </p>
-      </div>
-      <div class="team-member">
-        <img src="./assets/img/jodi_pic.jpg" alt="Jodi Joven" class="team-photo">
-        <h3>Jodi Joven</h3>
-        <p>
-          Jodi is the lead UI/UX designer and full-stack engineer. She designed the entire user interface using an original design system and ensured the app's compatibility with screen readers.
-        </p>
-      </div>
-      <div class="team-member">
-        <img src="./assets/img/leah_pic.jpg" alt="Leah Mirch" class="team-photo">
-        <h3>Leah Mirch</h3>
-        <p>
-          Leah is Robin's scrum master and full-stack engineer. She developed the Robin chatbot—a smart, interactive AI assistant that provides bird information—and maintained the project’s backlog.
-        </p>
+
+  <!-- Team Section -->
+  <main id="main-content" class="section">
+    <div class="container">
+      <h1 class="section-title animate-on-scroll">Our Team</h1>
+      <p class="section-description animate-on-scroll">
+        Meet the passionate individuals behind Robin, dedicated to making birdwatching accessible to everyone.
+      </p>
+      
+      <div class="grid grid-3">
+        <div class="team-card animate-on-scroll">
+          <img src="assets/img/team1.jpg" alt="Team Member" class="team-photo">
+          <h3>Dr. Jane Smith</h3>
+          <p class="team-role">Project Lead</p>
+          <p>Expert in AI and bioacoustics with 15 years of experience in wildlife sound analysis.</p>
+        </div>
+        
+        <div class="team-card animate-on-scroll">
+          <img src="assets/img/team2.jpg" alt="Team Member" class="team-photo">
+          <h3>John Doe</h3>
+          <p class="team-role">Lead Developer</p>
+          <p>Full-stack developer specializing in AI implementation and mobile app development.</p>
+        </div>
+        
+        <div class="team-card animate-on-scroll">
+          <img src="assets/img/team3.jpg" alt="Team Member" class="team-photo">
+          <h3>Sarah Johnson</h3>
+          <p class="team-role">UX Designer</p>
+          <p>Accessibility expert focused on creating inclusive user experiences.</p>
+        </div>
       </div>
     </div>
-  
-    <div class="team-container">
-      <div class="team-member">
-        <h2>Special thanks to</h2>
-        <img src="./assets/img/breanna_pic.jpg" alt="Breanna Santos" class="team-photo">
-        <h3>Breanna Santos</h3>
-        <p>
-          Breanna is Robin's lead brand designer who created Robin’s logo. As an Illustration major at the College of Creative Studies in Detroit, she helped establish a distinctive brand identity and create the face of the app.
-        </p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h3>Robin</h3>
+          <p>Your AI-powered birdwatching companion.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="usage.html">How to Use</a></li>
+            <li><a href="impact.html">Impact</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="permissions.html">Permissions</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Robin. All rights reserved.</p>
       </div>
     </div>
-  </section>
-  
-  <!-- CLIENTS SECTION -->
-  <section class="team-section">
-    <h2>Meet our Clients!</h2>
-  
-    <!-- Dr. Song's wide card -->
-    <div class="team-container">
-      <div class="team-member wide-card bigger-photo">
-        <h3>Dr. Zheng Song</h3>
-        <!-- Enlarged image for Dr. Song, centered -->
-        <img src="./assets/img/drsong.png" alt="Dr. Zheng Song" class="team-photo">
-        <p>
-          Dr. Song is Robin’s primary client and faculty supervisor. He provided consistent support, guidance, and mentorship throughout the project—offering technical insight, reviewing our progress, and pushing us to refine our work. His belief in our team’s potential helped drive Robin forward and opened doors to research publications and real-world deployments. Robin would not have been possible without his collaboration and vision.
-        </p>
-      </div>
-    </div>
-  
-    <!-- EIC Team section with Dr. Jacob Napieralski and Donna Posont -->
-    <div class="team-container">
-      <div class="team-member wide-card bigger-photo">
-        <h2>EIC Team</h2>
-        <p class="eic-intro">
-          The Robin app was made possible through the ongoing support and collaboration of the EIC team, who champion accessibility and education in nature spaces.
-        </p>
-  
-        <!-- Dr. Jacob Napieralski -->
-        <h3>Dr. Jacob Napieralski</h3>
-        <img src="./assets/img/napieralski.jpg" alt="Dr. Jacob Napieralski" class="eic-bigphoto">
-        <p>
-          As Director of the Environmental Interpretive Center, Dr. Napieralski was instrumental in connecting our team with the EIC and supporting our vision from the outset.
-        </p>
-  
-        <!-- Donna Posont -->
-        <h3>Donna Posont</h3>
-        <img src="./assets/img/donna.jpeg" alt="Donna Posont" class="eic-bigphoto">
-        <p>
-          Donna, leader of UM-Dearborn’s Birding By Ear group, provided invaluable insights into the needs of visually impaired birdwatchers. Her feedback ensured that Robin’s accessibility features were truly effective.
-        </p>
-  
-        <!-- Additional EIC staff -->
-        <h3>Richard Simek, Dorothy McLeer, Laura Mallard, &amp; the EIC Staff &amp; Fellows</h3>
-        <p>
-          We are deeply grateful to the entire EIC team for welcoming us into their space, supporting accessibility-focused innovation, and helping bring Robin to life. Their dedication, knowledge, and willingness to integrate accessible technologies into their programs have been vital to our success.
-        </p>
-      </div>
-    </div>
-  </section>
-  
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 RobinSong. All rights reserved.</p>
   </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+
+  <!-- Scripts -->
+  <script type="module" src="js/modern.js"></script>
 </body>
 </html>
